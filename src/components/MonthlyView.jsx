@@ -1,18 +1,19 @@
 import React from 'react';
-import './MonthlyView.css'; // Import your CSS file
 
 const MonthlyView = ({ year, month, newsData }) => {
     return (
-        <div className="monthly-view-card">
-            <h2>{`${month} ${year} News`}</h2>
+        <div className="table-mini">
+
             {Object.keys(newsData).map(day => (
-                <div key={day} className="day-card">
-                    <h3>{`${month} ${day}, ${year}`}</h3>
+                <div key={day}>
                     <ul>
+                        <h3>{`${month} ${day}, ${year}`}</h3>
                         {newsData[day].map((article, index) => (
                             <li key={index}>
-                                <strong>{article.headline}</strong> - {article.source}
-                                <p>{article.summary}</p>
+                                <a href={article.source} target='_blank'>
+                                    <strong>{article.headline}</strong>
+                                    <p>{article.summary}</p>
+                                </a>
                             </li>
                         ))}
                     </ul>
