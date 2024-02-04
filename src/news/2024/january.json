@@ -35,6 +35,90 @@
             "summary": "Summary of another news article 2."
         }
     ],
+    "04": [
+        {
+            "headline": "Another Headline 1",
+            "source": "News Outlet 3",
+            "summary": "Summary of another news article 1."
+        },
+        {
+            "headline": "Another Headline 2",
+            "source": "News Outlet 4",
+            "summary": "Summary of another news article 2."
+        }
+    ],
+    "05": [
+        {
+            "headline": "Another Headline 1",
+            "source": "News Outlet 3",
+            "summary": "Summary of another news article 1."
+        },
+        {
+            "headline": "Another Headline 2",
+            "source": "News Outlet 4",
+            "summary": "Summary of another news article 2."
+        }
+    ],
+    "06": [
+        {
+            "headline": "Another Headline 1",
+            "source": "News Outlet 3",
+            "summary": "Summary of another news article 1."
+        },
+        {
+            "headline": "Another Headline 2",
+            "source": "News Outlet 4",
+            "summary": "Summary of another news article 2."
+        }
+    ],
+    "07": [
+        {
+            "headline": "Another Headline 1",
+            "source": "News Outlet 3",
+            "summary": "Summary of another news article 1."
+        },
+        {
+            "headline": "Another Headline 2",
+            "source": "News Outlet 4",
+            "summary": "Summary of another news article 2."
+        }
+    ],
+    "08": [
+        {
+            "headline": "Another Headline 1",
+            "source": "News Outlet 3",
+            "summary": "Summary of another news article 1."
+        },
+        {
+            "headline": "Another Headline 2",
+            "source": "News Outlet 4",
+            "summary": "Summary of another news article 2."
+        }
+    ],
+    "09": [
+        {
+            "headline": "Another Headline 1",
+            "source": "News Outlet 3",
+            "summary": "Summary of another news article 1."
+        },
+        {
+            "headline": "Another Headline 2",
+            "source": "News Outlet 4",
+            "summary": "Summary of another news article 2."
+        }
+    ],
+    "10": [
+        {
+            "headline": "Another Headline 1",
+            "source": "News Outlet 3",
+            "summary": "Summary of another news article 1."
+        },
+        {
+            "headline": "Another Headline 2",
+            "source": "News Outlet 4",
+            "summary": "Summary of another news article 2."
+        }
+    ],
     "31": [
         {
             "headline": "Final Headline 1",

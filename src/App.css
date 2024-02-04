@@ -8,6 +8,51 @@ body {
 	background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
+nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 3rem;
+	overflow: hidden;
+
+	background-color: #169348;
+	visibility: visible;
+	overflow-x: scroll;
+}
+
+.scroll-left {
+	position: fixed;
+	left: 0;
+	padding: 0 1rem;
+	background-color: #169348;
+	cursor: pointer;
+}
+
+.scroll-right {
+	position: fixed;
+	right: 0;
+	padding: 0 0.8rem;
+	background-color: #169348;
+	cursor: pointer;
+}
+nav .nav-list {
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+}
+nav ul {
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1rem;
+}
+nav ul li {
+	padding: 1rem;
+}
 .container {
 	display: flex;
 	flex-direction: column;
@@ -21,9 +66,8 @@ body {
 	top: 2rem;
 	margin: auto 0;
 	border: 0.1px solid #21ab58;
-	/* color: var(--color-text); */
 	width: 40rem;
-	height: 80vh;
+	height: 50rem;
 	border-radius: 1.5rem;
 	overflow-y: scroll;
 	border-collapse: collapse;
@@ -72,5 +116,6 @@ h3 {
 @media (max-width: 768px) {
 	.table-mini {
 		max-width: 90%;
+		height: 85%;
 	}
 }
