@@ -2,6 +2,7 @@ import React from 'react';
 
 const MonthlyView = ({ year, month, newsData }) => {
     return (
+
         <div className="table-mini">
 
             {Object.keys(newsData).map(day => (
@@ -20,6 +21,7 @@ const MonthlyView = ({ year, month, newsData }) => {
                 </div>
             ))}
         </div>
+
     );
 };
 
