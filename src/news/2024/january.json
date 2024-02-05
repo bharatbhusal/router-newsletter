@@ -91,5 +91,41 @@
             "source": "https://twitter.com/cryptorubic/status/1742908747872395624?s=61&t=G56SEngcJLLbK0caxBa1aw",
             "summary": "xyfinance added as another briding option."
         }
+    ],
+    "10": [
+        {
+            "headline": "CelerNetwork",
+            "source": "https://blog.celer.network/2024/01/02/celer-cbridge-expands-support-for-brc-20-bridging-between-btc-and-evm/",
+            "summary": "Expending to support BRC-20 in two phases."
+        },
+        {
+            "headline": "ZetaChain",
+            "source": "https://twitter.com/zetablockchain/status/1742415468760052173?s=61&t=41jBH3Gl_hZ1bIrgZ0nwBg",
+            "summary": "CurveFinance will integrate ZetaChain for native BTC support for cross-chain swaps and omnichain asset pools."
+        }
+    ],
+    "11": [
+        {
+            "headline": "CelerNetwork",
+            "source": "https://blog.celer.network/2024/01/02/celer-cbridge-expands-support-for-brc-20-bridging-between-btc-and-evm/",
+            "summary": "Expending to support BRC-20 in two phases."
+        },
+        {
+            "headline": "ZetaChain",
+            "source": "https://twitter.com/zetablockchain/status/1742415468760052173?s=61&t=41jBH3Gl_hZ1bIrgZ0nwBg",
+            "summary": "CurveFinance will integrate ZetaChain for native BTC support for cross-chain swaps and omnichain asset pools."
+        }
+    ],
+    "31": [
+        {
+            "headline": "CelerNetwork",
+            "source": "https://blog.celer.network/2024/01/02/celer-cbridge-expands-support-for-brc-20-bridging-between-btc-and-evm/",
+            "summary": "Expending to support BRC-20 in two phases."
+        },
+        {
+            "headline": "ZetaChain",
+            "source": "https://twitter.com/zetablockchain/status/1742415468760052173?s=61&t=41jBH3Gl_hZ1bIrgZ0nwBg",
+            "summary": "CurveFinance will integrate ZetaChain for native BTC support for cross-chain swaps and omnichain asset pools."
+        }
     ]
 }

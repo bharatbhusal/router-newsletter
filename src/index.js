@@ -22,12 +22,12 @@ const initializeApp = async () => {
     // Getting the DOM element with the id "root"
     const divContainer = document.getElementById("root");
 
-    // Creating a root for the React application using createRoot and associating it with the divContainer
+    // Creating a root for the React application using createRoot and associating it with the divContainer  
     const root = createRoot(divContainer);
 
     const router = createBrowserRouter([
         {
-            path: "/",
+            path: "/router-newsletter",
             element: <App />,
             errorElement: <>Error Page</>,
             children: [
