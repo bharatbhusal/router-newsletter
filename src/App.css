@@ -137,6 +137,10 @@ strong {
 	color: var(--color-white);
 	font-size: 20px;
 	margin: 0.4rem 0 0 0;
+	cursor: pointer;
+}
+.download button:hover {
+	background-color: #326087;
 }
 
 @media (max-width: 768px) {
