@@ -137,9 +137,9 @@ h3 {
 
 .download button {
 	border-radius: 2rem;
-	padding: 0.3rem 0.7rem;
+	padding: 0.3rem 2rem;
 	background-color: #169348;
-	color: var(--color-text);
+	color: var(--color-white);
 	font-size: 1rem;
 	margin: 0.4rem;
 	z-index: 1;

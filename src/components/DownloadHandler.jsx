@@ -1,6 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const NewsTextFileGenerator = ({ newsData, selectedDay, selectedMonth }) => {
+const DownloadHandler = () => {
+    const handleDownloadToday = () => {
+        return <NewsTextFileGenerator />;
+    };
+
+    return (
+        <div className='download'>
+            {handleDownloadToday()}
+        </div>
+    );
+};
+
+const NewsTextFileGenerator = () => {
+    const [selectedDay, setSelectedDay] = useState(null);
+    const [selectedMonth, setSelectedMonth] = useState(null);
+    const [newsData, setNewsData] = useState({});
+
+    useEffect(() => {
+        const getTodayDate = () => {
+            const currentDate = new Date();
+            const year = currentDate.getFullYear();
+            const month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Months are 0-based
+            const day = currentDate.getDate().toString().padStart(2, '0');
+            setSelectedDay(day);
+            setSelectedMonth(month);
+        };
+
+        const loadNewsData = async () => {
+            getTodayDate();
+            try
+            {
+                const currentMonth = new Date().toLocaleString('default', { month: 'long' }).toLowerCase();
+                const loadedNewsData = await import(`../news/2024/${currentMonth}.json`);
+                setNewsData(loadedNewsData);
+            } catch (error)
+            {
+                console.error('Error loading news data:', error);
+            }
+        };
+
+        loadNewsData();
+    }, []);
+
     // Function to generate the text content for a specific day
     const generateTextContent = () => {
         let textContent = '';
@@ -54,4 +96,4 @@ const NewsTextFileGenerator = ({ newsData, selectedDay, selectedMonth }) => {
     );
 };
 
-export default NewsTextFileGenerator;
+export default DownloadHandler;
