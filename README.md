@@ -1,6 +1,3 @@
-Certainly! Here's a refactored `README.md` file that includes information about the technologies used in your "Router Protocol Daily Newsletter" React app:
-
-
 # Router Protocol Daily Newsletter
 
 Welcome to the Router Protocol Daily Newsletter app! This React application provides a daily summary of news and updates related to Router Protocol and various blockchain projects.
