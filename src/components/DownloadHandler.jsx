@@ -61,9 +61,9 @@ const NewsTextFileGenerator = () => {
             textContent += `Hi Guys.\n\n`;
 
             // Loop through each article for the selected day
-            newsData[selectedDay].forEach((article, index) => {
+            newsData[selectedDay].forEach((article) => {
                 // Add article details to the text content
-                textContent += `${index + 1}. ${article.headline}\n${article.source}\n${article.summary}\n\n`;
+                textContent += `${article.headline}\n${article.summary}\n${article.source}\n\n`;
             });
             textContent += `\n\n${dateString}.\nGoodnight.\nThank You.`;
         }
@@ -91,7 +91,7 @@ const NewsTextFileGenerator = () => {
 
     return (
         <div className='download'>
-            <button onClick={handleDownload}>Download News Summary for {selectedMonth}-{selectedDay}</button>
+            <button onClick={handleDownload}>Download Today's News Summary</button>
         </div>
     );
 };
