@@ -1,10 +1,18 @@
 import React from 'react';
 
 const MonthlyView = ({ year, month, newsData }) => {
+
+    if (!newsData || Object.keys(newsData).length === 0)
+    {
+        return <div className="table-mini">
+            <div className="future">
+                You are in the future
+            </div>
+        </div>;
+    }
+
     return (
-
         <div className="table-mini">
-
             {Object.keys(newsData).map(day => (
                 <div key={day}>
                     <ul>
@@ -21,7 +29,6 @@ const MonthlyView = ({ year, month, newsData }) => {
                 </div>
             ))}
         </div>
-
     );
 };
 

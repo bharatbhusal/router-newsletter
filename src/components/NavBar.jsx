@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     const containerRef = useRef(null);
@@ -25,7 +26,12 @@ const NavBar = () => {
                     'May', 'June', 'July', 'August',
                     'September', 'October', 'November', 'December'
                 ].map((month, index) => (
-                    <li key={index}>{month}</li>
+                    <NavLink key={index} to={`${month.toLocaleLowerCase()}`} className={({ isActive, isPending }) =>
+                        isActive
+                            ? "active"
+                            : isPending
+                                ? "pending"
+                                : ""}>{month}</NavLink>
                 ))}
             </ul>
             <div onClick={scrollRight} className='scroll-right'>➡</div>

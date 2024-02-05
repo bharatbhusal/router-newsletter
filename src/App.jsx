@@ -3,6 +3,7 @@ import "./App.css";
 import MonthlyView from './components/MonthlyView';
 import january from "./news/2024/january.json";
 import NavBar from './components/NavBar';
+import { Outlet } from 'react-router-dom';
 
 
 const App = () => {
@@ -11,7 +12,7 @@ const App = () => {
     return (
         <div style={{ gap: "0.4rem" }}>
             <div className='container'>
-                <MonthlyView year="2024" month="January" newsData={january} />
+                <Outlet />
             </div>
             <NavBar />
         </div>
