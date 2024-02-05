@@ -1,9 +1,86 @@
 {
-    "05": [
+    "01": [
         {
-            "headline": "",
-            "source": "",
-            "summary": ""
+            "headline": "Rubic",
+            "source": "https://twitter.com/cryptorubic/status/1752720074010513891?s=61&t=6Bar2G5v-ODLcRoaDWWxBA",
+            "summary": "Odosprotocol added in Rubic. Provides routing options to base, zksync era, optimism, etc."
+        },
+        {
+            "headline": "LiFi",
+            "source": "https://twitter.com/lifiprotocol/status/1752730995957129458?s=61&t=6Bar2G5v-ODLcRoaDWWxBA",
+            "summary": "Spot and perp futures exchange, print3r integrated with LiFi."
+        },
+        {
+            "headline": "Wormhole",
+            "source": "https://twitter.com/wormholecrypto/status/1752733057373688098?s=61&t=6Bar2G5v-ODLcRoaDWWxBA",
+            "summary": "Wormhole ZK. Upgrade in message verification."
+        },
+        {
+            "headline": "Chainlink",
+            "source": "https://twitter.com/xswap_link/status/1752738522228822303?s=61&t=6Bar2G5v-ODLcRoaDWWxBA",
+            "summary": "Cross-chain swap powered by Chainlink - XSwap."
+        },
+        {
+            "headline": "Squid",
+            "source": "https://twitter.com/squidrouter/status/1752744770646990850?s=61&t=6Bar2G5v-ODLcRoaDWWxBA",
+            "summary": "Squid Raises $4m in Strategic Funding Round led by Polychain Capital."
+        },
+        {
+            "headline": "Cashmere",
+            "source": "https://twitter.com/cashmerelabs/status/1752787654578426166?s=61&t=Ax5IE1rSo6vn9henBh6B1Q",
+            "summary": "Unified cross-chain liquidity layer between EVM and non-EVM ecosystems."
+        },
+        {
+            "headline": "Picasso Network",
+            "source": "https://twitter.com/picasso_network/status/1752801497824293215?s=61&t=Ax5IE1rSo6vn9henBh6B1Q",
+            "summary": "Marginfi collaborating to integrate lst and utilize it in Solana restaking layer."
+        },
+        {
+            "headline": "ZetaChain",
+            "source": "https://twitter.com/zetablockchain/status/1752870988990357546?s=61&t=Ax5IE1rSo6vn9henBh6B1Q",
+            "summary": "Launched Mainnet beta."
+        },
+        {
+            "headline": "Pike Finance",
+            "source": "https://twitter.com/pikefinance/status/1753074356719395206?s=61&t=Ax5IE1rSo6vn9henBh6B1Q",
+            "summary": "Mainnet live. Borrow, lend, leverage, and earn across any chain. Access liquidity from across all of DeFi, natively."
+        }
+    ],
+    "02": [
+        {
+            "headline": "Dymension",
+            "source": "https://twitter.com/wormholecrypto/status/1753070772858617915?s=61&t=yf3mFZ-DVGCTwmiLz6GqCA",
+            "summary": "Wormhole will be integrating Dymension. Users can transfer their assets to RollApps and leverage Dymension's shared liquidity."
+        },
+        {
+            "headline": "Arkham",
+            "source": "https://twitter.com/arkhamintel/status/1753096574958199091?s=61&t=yf3mFZ-DVGCTwmiLz6GqCA",
+            "summary": "Arkham will be providing data on over $173M of Total Value Locked (TVL), as well as the over 2.6M unique addresses on-chain."
+        },
+        {
+            "headline": "Bridge",
+            "source": "https://twitter.com/0x70626a/status/1753102238350979293?s=61&t=yf3mFZ-DVGCTwmiLz6GqCA",
+            "summary": "Fully on-chain, transparent and permissionless design of Bridge."
+        },
+        {
+            "headline": "Linea",
+            "source": "https://twitter.com/lineabuild/status/1753221942901932160?s=61&t=yf3mFZ-DVGCTwmiLz6GqCA",
+            "summary": "Universesatoshi - gaming project on Linea."
+        },
+        {
+            "headline": "Orbiter Finance",
+            "source": "https://x.com/TransitFinance/status/1753258823731527987?s=20",
+            "summary": "Transit swap integrates Orbiter API."
+        },
+        {
+            "headline": "Renzo Protocol",
+            "source": "https://twitter.com/renzoprotocol/status/1753040512150274209?s=61&t=yf3mFZ-DVGCTwmiLz6GqCA",
+            "summary": "Restaking on Arbitrum."
+        },
+        {
+            "headline": "Chainlink",
+            "source": "https://twitter.com/chainlink/status/1753435671006777849?s=61&t=yf3mFZ-DVGCTwmiLz6GqCA",
+            "summary": "Dypius integrated CCIP."
         }
     ]
 }
