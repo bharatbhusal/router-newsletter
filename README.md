@@ -13,7 +13,6 @@ Welcome to the Router Protocol Daily Newsletter app! This React application prov
   - [Navigation](#navigation)
   - [Download Today's News Summary](#download-todays-news-summary)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
