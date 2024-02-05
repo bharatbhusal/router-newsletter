@@ -7,12 +7,10 @@ import DownloadHandler from './components/DownloadHandler';
 
 const App = () => {
     return (
-        // <div style={{ gap: "0.4rem" }}>
         <div className='container'>
             <DownloadHandler />
             <Outlet />
             <NavBar />
-            {/* </div> */}
         </div>
     );
 };

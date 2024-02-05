@@ -5,7 +5,7 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100vh;
-	background-image: linear-gradient(to right, #434343 0%, black 100%);
+	background-image: linear-gradient(to right, var(--color-bg) 0%, black 100%);
 }
 
 .container {
@@ -13,92 +13,84 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	gap: 1rem;
+	gap: 0.8rem;
 	height: 100vh;
 }
 
 nav {
-	/* position: fixed; */
-
 	bottom: 0;
 	width: 100%;
-
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	height: 3rem;
-	overflow: hidden;
-
-	background-color: #169348;
-	visibility: visible;
+	background-color: var(--color-accent);
 	overflow-x: scroll;
+	overflow: visible;
+	min-height: 3rem;
+}
+
+.scroll-left,
+.scroll-right {
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	height: 100%;
 }
 
 .scroll-left {
-	/* position: fixed; */
 	left: 0;
-	padding: 0 10px;
-	background-color: #169348;
-	cursor: pointer;
 }
 
 .scroll-right {
-	/* position: fixed; */
 	right: 0;
-	padding: 10px;
-	background-color: #169348;
-	cursor: pointer;
 }
+
 nav .nav-list {
 	overflow-x: scroll;
-	scroll-behavior: smooth;
-	margin: 0;
-}
-nav ul {
-	width: 90%;
 	display: flex;
-	justify-content: space-between;
+	scroll-behavior: smooth;
 	align-items: center;
+	width: 85%;
 }
-nav ul a {
+
+nav .nav-list a {
 	padding: 1rem;
+	width: 100%;
+	height: 100%;
 }
+
 nav ul a:hover {
-	background-color: #323e30;
-	z-index: 1;
+	background-color: #fb8500;
 }
+
 .table-mini {
 	padding: 1rem;
-
 	top: 2.7rem;
 	margin: auto 0;
-	border: 0.1px solid #21ab58;
+	border: 1px solid var(--color-accent);
 	width: 40rem;
 	height: 50rem;
 	border-radius: 1.5rem;
 	overflow-y: scroll;
 	border-collapse: collapse;
 	visibility: visible;
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.12) 0px 2px 4px,
-		rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 6px 6px,
-		rgba(0, 0, 0, 0.09) 0px 2px 2px;
-	background-image: linear-gradient(to top, #434343 0%, black 100%);
+	box-shadow: var(--box-shadow);
+	background-image: linear-gradient(to top, var(--color-bg) 0%, black 100%);
 }
 
 .table-mini ul li {
 	border-radius: 1.5rem;
 	overflow: hidden;
-	color: var(--color-text);
+	color: #8ecae6;
 	padding: 0.4rem 1rem;
-	background-color: #3f4b42;
+	background-color: #454946;
 	cursor: pointer;
-	height: 100%;
 	height: fit-content;
 	margin: 0.5rem 0;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	min-height: 5rem;
 }
 
 .table-mini ul li a {
@@ -107,7 +99,7 @@ nav ul a:hover {
 
 .table-mini ul li p {
 	width: 100%;
-	font-size: small;
+	font-size: 12px;
 	font-style: italic;
 }
 
@@ -117,16 +109,18 @@ nav ul a:hover {
 }
 
 h3 {
-	font-size: larger;
+	font-size: large;
+}
+strong {
+	color: #fb8500;
 }
 
 .active {
-	background-color: #434343;
-	z-index: 1;
+	background-color: #fb8500;
 }
+
 .pending {
-	background-color: #323e30;
-	z-index: 1;
+	background-color: #43434310;
 }
 
 .future {
@@ -139,23 +133,26 @@ h3 {
 
 .download button {
 	border-radius: 2rem;
-	padding: 0.3rem 2rem;
-	background-color: #169348;
+	padding: 1rem 2rem;
+	background-color: var(--color-accent);
 	color: var(--color-white);
-	font-size: 1rem;
-	margin: 0.4rem;
-	z-index: 1;
-	width: 40rem;
+	font-size: 20px;
+	margin: 0.4rem 0 0 0;
 }
+
 @media (max-width: 768px) {
+	.container {
+		height: 90vh;
+	}
 	.table-mini {
 		max-width: 90%;
 	}
-	.download button {
-		width: fit-content;
+	.active,
+	.pending {
+		border-radius: 1rem 1rem 0 0;
 	}
+
 	nav ul a:hover {
-		background-color: #434343;
-		z-index: 1;
+		border-radius: 1rem 1rem 0 0;
 	}
 }

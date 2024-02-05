@@ -7,19 +7,19 @@ const NavBar = () => {
     const scrollLeft = () => {
         if (containerRef.current)
         {
-            containerRef.current.scrollLeft -= 100; // Adjust the scroll distance as needed
+            containerRef.current.scrollLeft -= 200; // Adjust the scroll distance as needed
         }
     };
 
     const scrollRight = () => {
         if (containerRef.current)
         {
-            containerRef.current.scrollLeft += 100; // Adjust the scroll distance as needed
+            containerRef.current.scrollLeft += 200; // Adjust the scroll distance as needed
         }
     };
     return (
         <nav>
-            <div onClick={scrollLeft} className='scroll-left'>⬅</div>
+            <div onClick={scrollLeft} className='scroll-left'>👈🏻</div>
             <ul ref={containerRef} className='nav-list'>
                 {[
                     'January', 'February', 'March', 'April',
@@ -34,7 +34,7 @@ const NavBar = () => {
                                 : ""}>{month}</NavLink>
                 ))}
             </ul>
-            <div onClick={scrollRight} className='scroll-right'>➡</div>
+            <div onClick={scrollRight} className='scroll-right'>👉🏻</div>
         </nav>
     )
 }
