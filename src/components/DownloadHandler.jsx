@@ -65,7 +65,7 @@ const NewsTextFileGenerator = () => {
                 // Add article details to the text content
                 textContent += `${article.headline}\n${article.summary}\n${article.source}\n\n`;
             });
-            textContent += `\n\n${dateString}.\nGoodnight.\nThank You.`;
+            textContent += `\n\nHosted: https://bharatbhusal.github.io/router-newsletter\n${dateString}.\nGoodnight.\nThank You.`;
         }
 
         return textContent;
