@@ -17,21 +17,46 @@ const MonthlyView = ({ year, month, newsData }) => {
 
     return (
         <div className="table-mini">
-            {sortedDays.map(day => (
-                <div key={day}>
-                    <ul>
-                        <h3>{`${month} ${day}, ${year}`}</h3>
-                        {newsData[day].map((article, index) => (
-                            <li key={index}>
-                                <a href={article.source} target='_blank'>
-                                    <strong>{article.headline}</strong>
-                                    <p>{article.summary}</p>
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            ))}
+            {sortedDays.map(day => {
+                const unpaddedDay = parseInt(day, 10); // Remove leading zero
+                const monthNameToNumber = {
+                    January: 0,
+                    February: 1,
+                    March: 2,
+                    April: 3,
+                    May: 4,
+                    June: 5,
+                    July: 6,
+                    August: 7,
+                    September: 8,
+                    October: 9,
+                    November: 10,
+                    December: 11,
+                };
+
+                // Assuming month is the name of the month (e.g., "January")
+                const monthNumber = monthNameToNumber[month];
+
+                const date = new Date(year, monthNumber, unpaddedDay); // Use the converted month number
+
+                const dayOfWeek = date.toLocaleString('en-US', { weekday: 'long' });
+
+                return (
+                    <div key={day}>
+                        <ul>
+                            <h3>{`${month} ${unpaddedDay}, ${year} | ${dayOfWeek}`}</h3>
+                            {newsData[day].map((article, index) => (
+                                <li key={index}>
+                                    <a href={article.source} target='_blank'>
+                                        <strong>{article.headline}</strong>
+                                        <p>{article.summary}</p>
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                );
+            })}
         </div>
     );
 };

@@ -85,13 +85,13 @@ const NewsTextFileGenerator = () => {
             document.body.removeChild(link);
         } else
         {
-            alert(`No news available for ${selectedDay}`);
+            alert(`No news available for ${selectedMonth}-${selectedDay}`);
         }
     };
 
     return (
         <div className='download'>
-            <button onClick={handleDownload}>Download News Summary for {selectedMonth} {selectedDay}</button>
+            <button onClick={handleDownload}>Download News Summary for {selectedMonth}-{selectedDay}</button>
         </div>
     );
 };
