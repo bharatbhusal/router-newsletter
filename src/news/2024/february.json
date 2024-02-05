@@ -82,5 +82,47 @@
             "source": "https://twitter.com/chainlink/status/1753435671006777849?s=61&t=yf3mFZ-DVGCTwmiLz6GqCA",
             "summary": "Dypius integrated CCIP."
         }
+    ],
+    "05": [
+        {
+            "headline": "Farcaster",
+            "source": "https://twitter.com/0xrahulk/status/1754164985805337012?s=61&t=lZI_mISVz_o61DaWm5NKCQ",
+            "summary": "Introducing Ferps - Simplifying the future of Finance. One-click long/short positions, smart wallets, and gas fees are covered, courtesy of @biconomy and @FetcchX."
+        },
+        {
+            "headline": "Particle",
+            "source": "https://twitter.com/particlentwrk/status/1754475309720846437?s=61&t=lZI_mISVz_o61DaWm5NKCQ",
+            "summary": "Launchpad is now live. MerlinLayer2 is the first project on the launchpad. A Native Bitcoin Layer2 powered by BitMapTech, building upon the native assets, protocols, and products on Bitcoin Layer1, to make BTC fun again."
+        },
+        {
+            "headline": "Orbiter",
+            "source": "https://twitter.com/i/web/status/1754429699785457878",
+            "summary": "Berachain testnet integrated into orbiter finance. An EVM-equivalent L1 built on the Cosmos SDK and powered by Proof of Liquidity."
+        },
+        {
+            "headline": "XY Finance",
+            "source": "https://twitter.com/xyfinance/status/1753368356122681453?s=61&t=lZI_mISVz_o61DaWm5NKCQ",
+            "summary": "XY finance, bridge aggregator integrated AcrossProtocol."
+        },
+        {
+            "headline": "AltLayer",
+            "source": "https://twitter.com/alt_layer/status/1754444450703515835?s=61&t=lZI_mISVz_o61DaWm5NKCQ",
+            "summary": "First provider to build and support Arbitrum orbit with EigenDA."
+        },
+        {
+            "headline": "Rubic",
+            "source": "https://twitter.com/cryptorubic/status/1754477250970304951?s=61&t=lZI_mISVz_o61DaWm5NKCQ",
+            "summary": "Received Grant from SpaceIDProtocol."
+        },
+        {
+            "headline": "Buildadera",
+            "source": "https://x.com/KodiakFi/status/1754490009368039481?s=20",
+            "summary": "Kodiak raised $2M in seed round and incubated by buildabera. Berachain's native liquidity hub."
+        },
+        {
+            "headline": "Shardeum",
+            "source": "https://shardeum.org/blog/shardeum-shm-airdrop-phase-1/",
+            "summary": "Phase 1 Airdrop Program."
+        }
     ]
 }
