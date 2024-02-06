@@ -1,6 +1,6 @@
 # Router Protocol Daily Newsletter
 
-Welcome to the Router Protocol Daily Newsletter app! This React application provides a daily summary of news and updates related to Router Protocol and various blockchain projects.
+Welcome to the [Router Protocol Daily Newsletter](https://router-newsletter.vercel.app) app! This React application provides a daily summary of news and updates related to Router Protocol and various blockchain projects.
 
 ## Table of Contents
 - [Overview](#overview)
