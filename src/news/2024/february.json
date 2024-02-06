@@ -124,5 +124,52 @@
             "source": "https://shardeum.org/blog/shardeum-shm-airdrop-phase-1/",
             "summary": "Phase 1 Airdrop Program."
         }
+    ],
+    "06": [
+        {
+            "headline": "ENS and DNS",
+            "source": "https://www.coindesk.com/tech/2024/02/05/web-registry-godaddy-ethereum-name-service-connect-domain-names-with-crypto-wallets/?utm_campaign=coindesk_main&utm_source=twitter&utm_medium=social&utm_content=editorial&utm_term=organic",
+            "summary": "Web Registry GoDaddy, Ethereum Name Service Connect Domain Names With Crypto Wallets. Users will be able to link their internet domain names to their ENS addresses."
+        },
+        {
+            "headline": "Sudoswap",
+            "source": "https://twitter.com/sudoswap/status/1753536785181782253?s=61&t=p72ahUImAW1gKx2BuNKXBw",
+            "summary": "Sudoswap is now live on Base."
+        },
+        {
+            "headline": "Oxngmi's new Dapp",
+            "source": "https://twitter.com/0xngmi/status/1754243629588087072?s=61&t=oAxfIi0gWx0TepmTmI4d-g",
+            "summary": "Allows token swaps without initial ETH. it uses permits to do a swap that requires no initial ETH, so you can get your first ETH."
+        },
+        {
+            "headline": "Dymension",
+            "source": "https://twitter.com/jake_xbt/status/1754853344458256691?s=61&t=zezb93g1Z1TBJ4UQPyfXJQ",
+            "summary": "Mainnet is live. Validators were not able to reach consensus because there was a bad validator in the set. Chorus One, with 34.8% of the staked tokens delegated to it."
+        },
+        {
+            "headline": "Hypr Network",
+            "source": "https://twitter.com/hypr_network/status/1754582866254868514?s=61&t=zezb93g1Z1TBJ4UQPyfXJQ",
+            "summary": "Collaborating with hyperlane to bring permissionless interoperability and bridging to the ecosystem."
+        },
+        {
+            "headline": "Hyperlane and hashi-based Interchain Security Module",
+            "source": "https://twitter.com/hashialliance/status/1754586079095611843?s=61&t=zezb93g1Z1TBJ4UQPyfXJQ",
+            "summary": "The new Hashi-ISM allows Hyperlane Apps to access Hashi’s 17+ adapters for additive security. By specifying the Hashi ISM, message recipients can leverage Hashi’s additive security and have their message verified by multiple cross-chain rails."
+        },
+        {
+            "headline": "LayerZero",
+            "source": "https://twitter.com/gelatonetwork/status/1753353961480798448?s=61&t=zezb93g1Z1TBJ4UQPyfXJQ",
+            "summary": "Gelato bringing L0 v2 to all Gelato RaaS solving interoperability in a world of hundreds of thousands of L2s, App Chains, & Rollups."
+        },
+        {
+            "headline": "4 buzz words in Crypto",
+            "source": "https://twitter.com/i/web/status/1754733592813396123",
+            "summary": "Arjun from LiFi shares some insights on currently trending tech and word in the space. Interop, Modularity, RWA and AI."
+        },
+        {
+            "headline": "Connext",
+            "source": "https://twitter.com/connextnetwork/status/1754882692707930393?s=61&t=zezb93g1Z1TBJ4UQPyfXJQ",
+            "summary": "Now live in Metisl2."
+        }
     ]
 }
