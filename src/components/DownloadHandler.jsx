@@ -22,7 +22,7 @@ const NewsTextFileGenerator = () => {
             const currentDate = new Date();
             const year = currentDate.getFullYear();
             const month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Months are 0-based
-            const day = currentDate.getDate().toString().padStart(2, '0');
+            const day = (currentDate.getDate() - 1).toString().padStart(2, '0');
             setSelectedDay(day);
             setSelectedMonth(month);
         };
@@ -51,7 +51,7 @@ const NewsTextFileGenerator = () => {
         if (newsData[selectedDay])
         {
             // Add day and date to the text content
-            const dateString = new Date(`2024-${selectedMonth}-${selectedDay}`).toLocaleDateString('en-US', {
+            const dateString = new Date(`2024-${selectedMonth}-${selectedDay - 1}`).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',
