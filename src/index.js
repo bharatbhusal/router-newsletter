@@ -27,7 +27,7 @@ const initializeApp = async () => {
 
     const router = createBrowserRouter([
         {
-            path: "/router-newsletter",
+            path: "",
             element: <App />,
             errorElement: <>Error Page</>,
             children: [

@@ -16,7 +16,7 @@ Welcome to the Router Protocol Daily Newsletter app! This React application prov
 
 ## Overview
 
-The "Router Protocol Daily Newsletter" app is designed to keep you informed about the latest developments, partnerships, and news within the Router Protocol ecosystem and the broader blockchain community. The app features a user-friendly interface that allows you to navigate through daily news articles and download a summary of today's news.
+The "Router Protocol Daily Newsletter" app is designed to keep you informed about the latest developments, partnerships, and news within the interoperability ecosystem and the broader blockchain community. The app features a user-friendly interface that allows you to navigate through daily news articles and download a summary of today's news.
 
 ## Features
 
