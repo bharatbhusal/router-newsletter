@@ -18,65 +18,81 @@ body {
 }
 
 nav {
-	bottom: 0;
+	top: 0;
 	width: 100%;
+	height: 6rem;
+	position: fixed;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	background-color: var(--color-accent);
-	overflow-x: scroll;
-	overflow: visible;
-	min-height: 3rem;
+	padding: 0 3rem;
 }
 
-.scroll-left,
-.scroll-right {
-	padding: 0 10px;
+nav img {
+	width: 20rem;
+	margin-left: -6rem;
+}
+nav > div {
 	display: flex;
+	gap: 20%;
+	justify-content: space-around;
 	align-items: center;
+}
+
+nav .dropdown {
 	cursor: pointer;
-	height: 100%;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
 }
-
-.scroll-left {
-	left: 0;
-}
-
-.scroll-right {
-	right: 0;
-}
-
-nav .nav-list {
-	overflow-x: scroll;
-	display: flex;
-	scroll-behavior: smooth;
-	align-items: center;
-	width: 85%;
-}
-
-nav .nav-list a {
-	padding: 1rem;
-	width: 100%;
-	height: 100%;
-}
-
-nav ul a:hover {
+nav .dropdown:hover {
 	background-color: #fb8500;
+}
+/* Dropdown container (hidden by default) */
+nav .dropdown-content {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	text-decoration: none;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	border-radius: 0.5rem;
+	transform: translate(-10%, 5%);
+	max-height: 620px;
+}
+
+/* Show the dropdown menu when button is clicked */
+nav .dropdown-content.show {
+	display: block;
+}
+
+/* Style the dropdown menu items */
+nav .dropdown-content a {
+	color: black;
+	padding: 13px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+/* Change color of dropdown items on hover */
+nav .dropdown-content a:hover {
+	background-color: #ddd;
 }
 
 .table-mini {
 	padding: 1rem;
-	top: 2.7rem;
 	margin: auto 0;
 	border: 1px solid var(--color-accent);
-	width: 40rem;
-	height: 50rem;
+	width: 30rem;
+	height: 75vh;
 	border-radius: 1.5rem;
 	overflow-y: scroll;
 	border-collapse: collapse;
 	visibility: visible;
 	box-shadow: var(--box-shadow);
 	background-image: linear-gradient(to top, var(--color-bg) 0%, black 100%);
+	max-width: 90%;
 }
 
 .table-mini ul li {
@@ -138,24 +154,12 @@ strong {
 	font-size: 20px;
 	margin: 0.4rem 0 0 0;
 	cursor: pointer;
+	display: none;
 }
 .download button:hover {
 	background-color: #326087;
 }
 
-@media (max-width: 768px) {
-	.container {
-		height: 90vh;
-	}
-	.table-mini {
-		max-width: 90%;
-	}
-	.active,
-	.pending {
-		border-radius: 1rem 1rem 0 0;
-	}
-
-	nav ul a:hover {
-		border-radius: 1rem 1rem 0 0;
-	}
+/* For Mobile Phones (portrait and landscape) and Tablets (portrait)*/
+@media only screen and (max-width: 768px) {
 }

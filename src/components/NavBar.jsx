@@ -1,42 +1,39 @@
-import React, { useRef } from 'react'
+import React, { useState } from 'react';
+import { FaDownload } from "react-icons/fa6";
+import { IoMenuSharp } from "react-icons/io5";
+import RouterLogo from "../assets/logo.svg";
 import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
-    const containerRef = useRef(null);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    const scrollLeft = () => {
-        if (containerRef.current)
-        {
-            containerRef.current.scrollLeft -= 200; // Adjust the scroll distance as needed
-        }
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
     };
 
-    const scrollRight = () => {
-        if (containerRef.current)
-        {
-            containerRef.current.scrollLeft += 200; // Adjust the scroll distance as needed
-        }
-    };
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
     return (
         <nav>
-            <div onClick={scrollLeft} className='scroll-left'>👈🏻</div>
-            <ul ref={containerRef} className='nav-list'>
-                {[
-                    'January', 'February', 'March', 'April',
-                    'May', 'June', 'July', 'August',
-                    'September', 'October', 'November', 'December'
-                ].map((month, index) => (
-                    <NavLink key={index} to={`${month.toLocaleLowerCase()}`} className={({ isActive, isPending }) =>
-                        isActive
-                            ? "active"
-                            : isPending
-                                ? "pending"
-                                : ""}>{month}</NavLink>
-                ))}
-            </ul>
-            <div onClick={scrollRight} className='scroll-right'>👉🏻</div>
+            <img src={RouterLogo} alt="router logo" />
+            <div>
+                <div className="dropdown" onClick={toggleDropdown}>
+                    Month
+                    {isDropdownOpen && (
+                        <div className="dropdown-content">
+                            {months.map((month, index) => (
+
+                                <NavLink key={index} to={month.toLocaleLowerCase()}>{month}</NavLink>
+                            ))}
+                        </div>
+                    )}
+                </div>
+                <div className="download">
+                    <FaDownload />
+                </div>
+            </div>
         </nav>
-    )
+    );
 }
 
-export default NavBar
+export default NavBar;
