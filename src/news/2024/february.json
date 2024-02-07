@@ -171,5 +171,47 @@
             "source": "https://twitter.com/connextnetwork/status/1754882692707930393?s=61&t=zezb93g1Z1TBJ4UQPyfXJQ",
             "summary": "Now live in Metisl2."
         }
+    ],
+    "07": [
+        {
+            "headline": "Succinct Network",
+            "source": "https://blog.succinct.xyz/succinct-network/",
+            "summary": "The Protocol for Programmable Truth. A decentralized prover network where provers compete for the privilege of generating your ZK proof."
+        },
+        {
+            "headline": "Astar Network",
+            "source": "https://twitter.com/astarnetwork/status/1754939265203765618?s=61&t=pLoglZGJfMYkTsrYOwE2mQ",
+            "summary": "Astar zkEVM will plug into Polygon's Aggregation Layer and LxLy bridge."
+        },
+        {
+            "headline": "SuperVerse",
+            "source": "https://twitter.com/superversedao/status/1754944007564869770?s=61&t=pLoglZGJfMYkTsrYOwE2mQ",
+            "summary": "SUPER is going cross-chain through integration with LayerZero."
+        },
+        {
+            "headline": "Owlto",
+            "source": "https://twitter.com/owlto_finance/status/1755061359916863538?s=61&t=pLoglZGJfMYkTsrYOwE2mQ",
+            "summary": "Integration with modenetwork."
+        },
+        {
+            "headline": "LiFi",
+            "source": "https://twitter.com/flooz_xyz/status/1755141547283108050?s=61&t=pLoglZGJfMYkTsrYOwE2mQ",
+            "summary": "Flooz integrates with LiFi. Traders can now swap their assets across 8+ chains supported by LiFi."
+        },
+        {
+            "headline": "deBridge",
+            "source": "https://twitter.com/debridgefinance/status/1755230101279752609?s=61&t=pLoglZGJfMYkTsrYOwE2mQ",
+            "summary": "deBridge IaaS is officially live. Neon_EVM as the first user. Any team can make their ecosystem instantly accessible from EVM or SVM chains with single subscription."
+        },
+        {
+            "headline": "ChainFlip",
+            "source": "https://twitter.com/chainflip/status/1755231737481945544?s=61&t=pLoglZGJfMYkTsrYOwE2mQ",
+            "summary": "Introduces chainflipBot. It keeps track of swaps, liquidity movements and validator stats."
+        },
+        {
+            "headline": "Omni Network",
+            "source": "https://twitter.com/omnifdn/status/1755232047772193029?s=61&t=pLoglZGJfMYkTsrYOwE2mQ",
+            "summary": "ManataNetwork also leverages Open Liquidity."
+        }
     ]
 }
