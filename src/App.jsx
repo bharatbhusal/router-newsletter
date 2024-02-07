@@ -12,8 +12,8 @@ const App = () => {
     return (
         <div className='container'>
             <NewsTextFileGenerator />
-            {/* <Outlet /> */}
-            {/* <NavBar /> */}
+            <Outlet />
+            <NavBar />
 
         </div>
     );
