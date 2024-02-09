@@ -8,8 +8,8 @@ const App = () => {
 
     return (
         <div className='container flex flex-column space-between'>
-            <Outlet />
             <NavBar />
+            <Outlet />
             <Footer />
         </div>
     );
