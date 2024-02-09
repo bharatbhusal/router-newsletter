@@ -50,6 +50,7 @@ nav .dropdown:hover {
 }
 /* Dropdown container (hidden by default) */
 nav .dropdown-content {
+	/* display: none; */
 	display: flex;
 	flex-direction: column;
 	position: absolute;
@@ -59,39 +60,28 @@ nav .dropdown-content {
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
 	border-radius: 0.5rem;
-	transform: translate(-10%, 5%);
+	transform: translate(-2rem, 1rem);
 	max-height: 620px;
+	border-radius: 0.5rem;
+	/* visibility: hidden; */
 }
-
-/* Show the dropdown menu when button is clicked */
-nav .dropdown-content.show {
-	display: block;
+nav .download.dropdown-content {
+	transform: translate(-6.8rem, 1rem);
 }
-
 /* Style the dropdown menu items */
-nav .dropdown-content a {
+nav .dropdown-content a,
+li {
 	color: black;
 	padding: 13px 16px;
 	text-decoration: none;
 	display: block;
+	border-radius: 0.5rem;
 }
 
 /* Change color of dropdown items on hover */
-nav .dropdown-content a:hover {
+nav .dropdown-content a:hover,
+nav .dropdown-content li:hover {
 	background-color: #ddd;
-}
-
-.download {
-	color: var(--color-white);
-	font-size: 20px;
-	/* margin: 0.4rem 0 0 0; */
-	cursor: pointer;
-
-	padding: 0.5rem 0.6rem;
-	border-radius: 0.5rem;
-}
-.download:hover {
-	background-color: #fb8500;
 }
 
 .table-mini {

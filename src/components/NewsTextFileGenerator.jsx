@@ -7,6 +7,11 @@ const NewsTextFileGenerator = () => {
     const [today, setToday] = useState(null);
     const [currentMonth, setCurrentMonth] = useState(null);
     const [newsData, setNewsData] = useState(null);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
 
     useEffect(() => {
         const loadNewsData = async () => {
@@ -68,7 +73,9 @@ const NewsTextFileGenerator = () => {
         {
             alert(`No news available for ${currentMonth} ${parseInt(newsData.day)}`);
         }
-    };// Function to handle download as PDF file
+    };
+
+    // Function to handle download as PDF file
     const handleDownloadPdf = () => {
         const textContent = generateTextContent();
         if (textContent)
@@ -108,10 +115,14 @@ const NewsTextFileGenerator = () => {
 
 
     return (
-        <div>
-            <div title='Download as PDF File' className="download" onClick={handleDownloadPdf}>
-                <FaDownload />
-            </div>
+        <div className="dropdown" onClick={toggleDropdown}>
+            <FaDownload />
+            {isDropdownOpen && (
+                <div className="download dropdown-content">
+                    <li onClick={handleDownloadTxt}>Download Text File</li>
+                    <li onClick={handleDownloadPdf}>Download PDF File</li>
+                </div>
+            )}
         </div>
     );
 };
