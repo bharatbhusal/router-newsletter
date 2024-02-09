@@ -6,7 +6,7 @@ export const generateTextContent = (newsData, month, day) => {
     if (newsData)
     {
         const greeting = "Hi Guys."
-        const farewale = `Host: https://router-newsletter.vercel.app\n${month} ${day}, 2024.\nThank you.\nGoodnight.`
+        const farewale = `Host: https://router-newsletter.vercel.app\n${month} ${parseInt(day)}, 2024.\nThank you.\nGoodnight.`
         const content = newsData.map(each => `${each.headline}\n${each.summary}\n${each.source}\n\n`).join('');
         return `${greeting}\n\n${content}\n\n${farewale}`;
     }
@@ -23,7 +23,7 @@ export const textDownloader = (textContent, fileName) => {
         // Create a temporary anchor element
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
-        link.download = `New-${fileName}`; // Set the file name for download
+        link.download = `News-${fileName}`; // Set the file name for download
 
         // Append the anchor element to the DOM and trigger a click event
         document.body.appendChild(link);

@@ -78,7 +78,7 @@ nav .months a:hover {
 }
 
 .table-mini {
-	padding: 1.5rem 1rem;
+	padding: 1rem;
 	margin: auto 0;
 	border: 1px solid var(--color-accent);
 	width: 30rem;
@@ -93,8 +93,8 @@ nav .months a:hover {
 	overflow: hidden;
 }
 .table-mini .table-mini-inner {
-	border-radius: 1.5rem;
-	height: 71vh;
+	border-radius: 0.5rem;
+	height: 72vh;
 	overflow-y: scroll;
 }
 .table-mini ul .daily-header {
@@ -111,6 +111,7 @@ nav .months a:hover {
 	justify-content: space-around;
 	cursor: pointer;
 	border-radius: 0.5rem;
+	z-index: 1;
 }
 .table-mini ul .daily-header .download:hover {
 	background-color: #fb8500;
