@@ -15,6 +15,7 @@ body {
 	justify-content: space-between;
 	gap: 0.8rem;
 	height: 100vh;
+	background-image: url("./assets/hover.png");
 }
 
 nav {
@@ -32,25 +33,23 @@ nav img {
 	width: 20rem;
 	margin-left: -6rem;
 }
+
 nav > div {
 	display: flex;
 	gap: 10%;
 	justify-content: space-around;
 	align-items: center;
-	/* width: 10rem; */
 }
 
-nav .dropdown {
+nav .month {
 	cursor: pointer;
 	padding: 0.5rem;
 	border-radius: 0.5rem;
-}
-nav .dropdown:hover {
+	width: 10rem;
 	background-color: #fb8500;
 }
-/* Dropdown container (hidden by default) */
-nav .dropdown-content {
-	/* display: none; */
+
+nav .months {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
@@ -60,17 +59,13 @@ nav .dropdown-content {
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
 	border-radius: 0.5rem;
-	transform: translate(-2rem, 1rem);
+	transform: translate(0rem, 22rem);
 	max-height: 620px;
 	border-radius: 0.5rem;
-	/* visibility: hidden; */
+	width: 10rem;
 }
-nav .download.dropdown-content {
-	transform: translate(-6.8rem, 1rem);
-}
-/* Style the dropdown menu items */
-nav .dropdown-content a,
-li {
+
+nav .months a {
 	color: black;
 	padding: 13px 16px;
 	text-decoration: none;
@@ -78,9 +73,7 @@ li {
 	border-radius: 0.5rem;
 }
 
-/* Change color of dropdown items on hover */
-nav .dropdown-content a:hover,
-nav .dropdown-content li:hover {
+nav .months a:hover {
 	background-color: #ddd;
 }
 
@@ -97,6 +90,25 @@ nav .dropdown-content li:hover {
 	box-shadow: var(--box-shadow);
 	background-image: linear-gradient(to top, var(--color-bg) 0%, black 100%);
 	max-width: 90%;
+}
+
+.table-mini ul .daily-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.table-mini ul .daily-header .download {
+	width: 2.5rem;
+	height: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	cursor: pointer;
+	border-radius: 0.5rem;
+}
+.table-mini ul .daily-header .download:hover {
+	background-color: #fb8500;
 }
 
 .table-mini ul li {
@@ -148,8 +160,4 @@ strong {
 	align-items: center;
 	height: 100%;
 	font-weight: bolder;
-}
-
-/* For Mobile Phones (portrait and landscape) and Tablets (portrait)*/
-@media only screen and (max-width: 768px) {
 }

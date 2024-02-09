@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaDownload } from "react-icons/fa6";
+import { generateTextContent, pdfDownloader, textDownloader } from '../utils/downloader';
 
 const MonthlyView = ({ year, month, newsData }) => {
-
     if (!newsData || Object.keys(newsData).length === 0)
     {
         return (
@@ -15,10 +16,21 @@ const MonthlyView = ({ year, month, newsData }) => {
 
     const sortedDays = Object.keys(newsData).sort((a, b) => parseInt(b, 10) - parseInt(a, 10));
 
+    const DownloadOption = ({ newsDay }) => {
+        const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+        return (
+            <div className="download" onClick={() => textDownloader(generateTextContent(newsData[newsDay], month, newsDay), `${month}-${newsDay}`)}>
+                <FaDownload />
+            </div>
+        )
+    }
+
+
     return (
         <div className="table-mini">
             {sortedDays.map(day => {
-                const unpaddedDay = parseInt(day, 10); // Remove leading zero
+                const unpaddedDay = parseInt(day, 10);
                 const monthNameToNumber = {
                     January: 0,
                     February: 1,
@@ -44,7 +56,10 @@ const MonthlyView = ({ year, month, newsData }) => {
                 return (
                     <div key={day}>
                         <ul>
-                            <h3>{`${month} ${unpaddedDay}, ${year} | ${dayOfWeek}`}</h3>
+                            <div className='daily-header'>
+                                <h3>{`${month} ${unpaddedDay}, ${year} | ${dayOfWeek}`}</h3>
+                                <DownloadOption newsDay={day} />
+                            </div>
                             {newsData[day].map((article, index) => (
                                 <li key={index}>
                                     <a href={article.source} target='_blank'>
