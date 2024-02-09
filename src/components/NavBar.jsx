@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { FaDownload } from "react-icons/fa6";
-import { IoMenuSharp } from "react-icons/io5";
 import RouterLogo from "../assets/logo.svg";
 import { NavLink } from 'react-router-dom';
+import NewsTextFileGenerator from './NewsTextFileGenerator';
 
 const NavBar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -28,9 +27,8 @@ const NavBar = () => {
                         </div>
                     )}
                 </div>
-                <div className="download">
-                    <FaDownload />
-                </div>
+                <NewsTextFileGenerator />
+
             </div>
         </nav>
     );

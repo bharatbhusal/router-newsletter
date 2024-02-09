@@ -34,9 +34,10 @@ nav img {
 }
 nav > div {
 	display: flex;
-	gap: 20%;
+	gap: 10%;
 	justify-content: space-around;
 	align-items: center;
+	/* width: 10rem; */
 }
 
 nav .dropdown {
@@ -78,6 +79,19 @@ nav .dropdown-content a {
 /* Change color of dropdown items on hover */
 nav .dropdown-content a:hover {
 	background-color: #ddd;
+}
+
+.download {
+	color: var(--color-white);
+	font-size: 20px;
+	/* margin: 0.4rem 0 0 0; */
+	cursor: pointer;
+
+	padding: 0.5rem 0.6rem;
+	border-radius: 0.5rem;
+}
+.download:hover {
+	background-color: #fb8500;
 }
 
 .table-mini {
@@ -144,20 +158,6 @@ strong {
 	align-items: center;
 	height: 100%;
 	font-weight: bolder;
-}
-
-.download button {
-	border-radius: 2rem;
-	padding: 1rem 2rem;
-	background-color: var(--color-accent);
-	color: var(--color-white);
-	font-size: 20px;
-	margin: 0.4rem 0 0 0;
-	cursor: pointer;
-	display: none;
-}
-.download button:hover {
-	background-color: #326087;
 }
 
 /* For Mobile Phones (portrait and landscape) and Tablets (portrait)*/

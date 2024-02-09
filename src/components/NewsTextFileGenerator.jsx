@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { getToday, getYesterday } from '../utils/dateTimeHandler'; // Import the timeHandler object
+import { getToday } from '../utils/dateTimeHandler'; // Import the timeHandler object
+import { FaDownload } from "react-icons/fa6";
 
 
 const NewsTextFileGenerator = () => {
@@ -76,8 +77,8 @@ const NewsTextFileGenerator = () => {
     };
 
     return (
-        <div className='download'>
-            <button onClick={handleDownload}>Download Latest News Summary</button>
+        <div title='Download latest Newsletter' className="download" onClick={handleDownload}>
+            <FaDownload />
         </div>
     );
 };

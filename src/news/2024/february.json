@@ -213,5 +213,62 @@
             "source": "https://twitter.com/omnifdn/status/1755232047772193029?s=61&t=pLoglZGJfMYkTsrYOwE2mQ",
             "summary": "ManataNetwork also leverages Open Liquidity."
         }
+    ],
+    "08": [
+        {
+            "headline": "Astria",
+            "source": "https://twitter.com/astriaorg/status/1755253039999373468?s=61&t=l46dH6ci-Mvf6V-bnCbD7A",
+            "summary": "A shared sequencer network."
+        },
+        {
+            "headline": "Axelar Network",
+            "source": "https://x.com/axelarnetwork/status/1755256788457263568?s=20",
+            "summary": "No code Interchain Token service. Enables quick creation or transformation of tokens across different blockchain networks. Facilitates 1:1 token bridging across all EVM chains supported by Axelar."
+        },
+        {
+            "headline": "LayerZero",
+            "source": "https://twitter.com/layerzero_labs/status/1755328079235604861?s=61&t=l46dH6ci-Mvf6V-bnCbD7A",
+            "summary": "Angle Protocol transitions to a fully on-chain governance setup leveraging layerzero for cross chain voting."
+        },
+        {
+            "headline": "PersistenceOne",
+            "source": "https://twitter.com/ux_xyz/status/1755347912748392910?s=61&t=l46dH6ci-Mvf6V-bnCbD7A",
+            "summary": "Brings restaking to cosmos. Along with restaking comes 'leveraged' restaking by borrowing LSTs."
+        },
+        {
+            "headline": "Orbiter",
+            "source": "https://twitter.com/orbiter_finance/status/1755504639892701602?s=61&t=zzYQc1VXYxCts31KJ72nVw",
+            "summary": "Integrates with modenetwork."
+        },
+        {
+            "headline": "Meson",
+            "source": "https://twitter.com/mesonfi/status/1755505063605477596?s=61&t=zzYQc1VXYxCts31KJ72nVw",
+            "summary": "Cross-chain support to Conflux Network's Bitcoin Layer2 solution. Seamless BTC cross-chain swap between Conflux's Bitcoin L2 and other blockchains, further strengthening the adoption of BTC assets."
+        },
+        {
+            "headline": "Socket",
+            "source": "https://twitter.com/socketdottech/status/1755578356282916892?s=61&t=zzYQc1VXYxCts31KJ72nVw",
+            "summary": "1M ARB for socket ecosystem. 700k for any bridges in Socket APIs, SDK, or Plugin. 300k for bridging to arbitrum and orbit chains. From Feb 12th to March 31st."
+        },
+        {
+            "headline": "Allbridge",
+            "source": "https://twitter.com/allbridge_io/status/1755592522334699708?s=61&t=zzYQc1VXYxCts31KJ72nVw",
+            "summary": "Adds Base as 9th supported chain."
+        },
+        {
+            "headline": "Superform Labs",
+            "source": "https://twitter.com/superformxyz/status/1755592417552826617?s=61&t=zzYQc1VXYxCts31KJ72nVw",
+            "summary": "Raised $6.5M. Live in early access on 7 chains. Superform is The Universal Yield Marketplace. Users: Discover vaults, manage positions, and get instant access using any token from any chain."
+        },
+        {
+            "headline": "deBridge",
+            "source": "https://twitter.com/debridgefinance/status/1755607618410950880?s=61&t=zzYQc1VXYxCts31KJ72nVw",
+            "summary": "Zeta markets integrated deBridge widget, opening up virtually instant deposits from 9 chains to high-speed perp trading on Solana."
+        },
+        {
+            "headline": "Infrared - Berachain",
+            "source": "https://medium.com/@infraredfinance/understanding-ibgt-the-future-of-liquid-staking-on-berachain-ed1a803acff1",
+            "summary": "Understanding iBGT: The Future of Liquid Staking on Berachain. Infrared Berachain Governance Token(iBGT) further enhances BGT’s utility by providing a liquid wrapper that simplifies a few complexities of PoL."
+        }
     ]
 }
