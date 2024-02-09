@@ -77,6 +77,21 @@ nav .months a:hover {
 	background-color: #ddd;
 }
 
+.formatter {
+	padding: 1rem;
+	margin: auto 0;
+	border: 1px solid var(--color-accent);
+	width: 30rem;
+	height: 75vh;
+	border-radius: 1.5rem;
+
+	border-collapse: collapse;
+	visibility: visible;
+	box-shadow: var(--box-shadow);
+	background-image: linear-gradient(to top, var(--color-bg) 0%, black 100%);
+	max-width: 90%;
+	overflow: hidden;
+}
 .table-mini {
 	padding: 1rem;
 	margin: auto 0;
@@ -111,7 +126,6 @@ nav .months a:hover {
 	justify-content: space-around;
 	cursor: pointer;
 	border-radius: 0.5rem;
-	z-index: 1;
 }
 .table-mini ul .daily-header .download:hover {
 	background-color: #fb8500;
@@ -166,4 +180,34 @@ strong {
 	align-items: center;
 	height: 100%;
 	font-weight: bolder;
+}
+
+.error {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.error .content {
+	text-align: center;
+}
+
+.heading {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	color: #fb8500;
+}
+
+.error .message {
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+	color: #fff; /* Dark color for contrast */
+}
+
+.error .link {
+	font-size: 1rem;
+	color: #007bff; /* Blue color for link */
+	text-decoration: none;
+	font-weight: bold;
 }

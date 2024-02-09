@@ -3,6 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 import MonthlyView from "./components/MonthlyView";
+import NotFoundPage from "./components/404Error";
+
 
 // Array of month names
 const months = [
@@ -29,10 +31,10 @@ const initializeApp = async () => {
         {
             path: "",
             element: <App />,
-            errorElement: <>Error Page</>,
+            errorElement: <NotFoundPage />,
             children: [
                 {
-                    errorElement: <>Error Page</>,
+                    errorElement: <NotFoundPage />,
                     children: [
                         {
                             index: true,
