@@ -270,5 +270,27 @@
             "source": "https://medium.com/@infraredfinance/understanding-ibgt-the-future-of-liquid-staking-on-berachain-ed1a803acff1",
             "summary": "Understanding iBGT: The Future of Liquid Staking on Berachain. Infrared Berachain Governance Token(iBGT) further enhances BGT’s utility by providing a liquid wrapper that simplifies a few complexities of PoL."
         }
+    ],
+    "09": [
+        {
+            "headline": "Owlto",
+            "source": "https://twitter.com/owlto_finance/status/1755779458081141112?s=61&t=3mp_6lw0AutHmHwD5BDpJA",
+            "summary": "To be listed in Binance web3 wallet."
+        },
+        {
+            "headline": "Meson",
+            "source": "https://twitter.com/mesonfi/status/1755801163725975925?s=61&t=3mp_6lw0AutHmHwD5BDpJA",
+            "summary": "Partnership with joy protocol, a passkey wallet that streamlines your entry into web3."
+        },
+        {
+            "headline": "LiFi",
+            "source": "https://twitter.com/lifiprotocol/status/1755977439656787989?s=61&t=3mp_6lw0AutHmHwD5BDpJA",
+            "summary": "Nest Wallet has integrated lifiprotocol to enable cross chain swaps across 8 chains and L2s. Nest Wallet serves wallet security using on-chain 2FA."
+        },
+        {
+            "headline": "Restaking Players",
+            "source": "https://twitter.com/hfaresearch/status/1755958060575793540?s=61&t=4vs2tUhC2l4oveTpeZ9WGQ",
+            "summary": "KelpDAO, Picasso, SSV, Pendle, RestakeFi, Renzo, etc."
+        }
     ]
 }

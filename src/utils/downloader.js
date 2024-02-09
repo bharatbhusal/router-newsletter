@@ -8,7 +8,7 @@ export const generateTextContent = (newsData, month, day) => {
         const greeting = "Hi Guys."
         const farewale = `Host: https://router-newsletter.vercel.app\n${month} ${day}, 2024.\nThank you.\nGoodnight.`
         const content = newsData.map(each => `${each.headline}\n${each.summary}\n${each.source}\n\n`).join('');
-        return `${greeting}\n\n\n${content}\n\n\n${farewale}`;
+        return `${greeting}\n\n${content}\n\n${farewale}`;
     }
     return '';
 };
