@@ -7,7 +7,7 @@ const MonthlyView = ({ year, month, newsData }) => {
     {
         return (
             <div className="table-mini">
-                <div className="future">
+                <div className="future flex space-around">
                     You are in the future
                 </div>
             </div>
@@ -19,7 +19,7 @@ const MonthlyView = ({ year, month, newsData }) => {
     const DownloadOption = ({ newsDay }) => {
 
         return (
-            <div className="download" onClick={() => textDownloader(generateTextContent(newsData[newsDay], month, newsDay), `${month}-${newsDay}`)}>
+            <div className="download flex space-around" onClick={() => textDownloader(generateTextContent(newsData[newsDay], month, newsDay), `${month}-${newsDay}`)}>
                 <FaDownload />
             </div>
         )
@@ -56,12 +56,12 @@ const MonthlyView = ({ year, month, newsData }) => {
                     return (
                         <div key={day}>
                             <ul>
-                                <div className='daily-header'>
+                                <div className='daily-header flex space-between'>
                                     <h3>{`${month} ${unpaddedDay}, ${year} | ${dayOfWeek}`}</h3>
                                     <DownloadOption newsDay={day} />
                                 </div>
                                 {newsData[day].map((article, index) => (
-                                    <li key={index}>
+                                    <li key={index} className='flex space-around'>
                                         <a href={article.source} target='_blank'>
                                             <strong>{article.headline}</strong>
                                             <p>{article.summary}</p>

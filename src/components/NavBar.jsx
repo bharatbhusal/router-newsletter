@@ -17,7 +17,7 @@ const NavBar = () => {
             <a href="https://www.routerprotocol.com/" target='_blank'>
                 <img src={RouterLogo} alt="router logo" />
             </a>
-            <div className="month" onClick={toggleDropdown}>
+            <div className="month flex space-around" onClick={toggleDropdown}>
                 Month
                 {isDropdownOpen && (
                     <div className="months">

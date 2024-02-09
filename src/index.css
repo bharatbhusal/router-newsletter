@@ -19,12 +19,26 @@ a {
 /* Root level CSS variables for easy theming */
 :root {
 	--color-bg: #434343;
+	--color-primary: #fb8500;
 	--color-white: #ffffff;
-	--color-text: #ffffff;
-	--color-hover: #323e30;
-	--color-accent: #023047;
 	--box-shadow: rgba(0, 0, 0, 0.85) 0px 10px 20px,
 		rgba(0, 0, 0, 0.12) 0px 2px 4px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
 		rgba(0, 0, 0, 0.17) 0px 6px 6px, rgba(0, 0, 0, 0.09) 0px 2px 2px;
 	--color-text: #b0c4b1;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+.space-around {
+	justify-content: space-around;
+}
+.space-between {
+	justify-content: space-between;
+}
+
+.flex-column {
+	flex-direction: column;
 }

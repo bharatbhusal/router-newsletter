@@ -9,10 +9,6 @@ body {
 }
 
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
 	gap: 0.8rem;
 	height: 100vh;
 	background-image: url("./assets/hover.png");
@@ -27,6 +23,7 @@ nav {
 	justify-content: space-around;
 	align-items: center;
 	padding: 0 3rem;
+	z-index: 0;
 }
 
 nav img {
@@ -35,10 +32,7 @@ nav img {
 }
 
 nav > div {
-	display: flex;
 	gap: 10%;
-	justify-content: space-around;
-	align-items: center;
 }
 
 nav .month {
@@ -46,26 +40,24 @@ nav .month {
 	padding: 0.5rem;
 	border-radius: 0.5rem;
 	width: 10rem;
-	background-color: #fb8500;
+	background-color: var(--color-primary);
 }
 
 nav .months {
-	display: flex;
-	flex-direction: column;
 	position: absolute;
 	text-decoration: none;
-	background-color: #f9f9f9;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
+	overflow-y: scroll;
+	background-color: var(--color-white);
+	box-shadow: var(--box-shadow);
 	border-radius: 0.5rem;
-	transform: translate(0rem, 22rem);
-	max-height: 620px;
+	transform: translate(0rem, 18rem);
+	height: 500px;
 	border-radius: 0.5rem;
-	width: 10rem;
 }
 
 nav .months a {
+	margin: 0.5rem;
+	width: 160px;
 	color: black;
 	padding: 13px 16px;
 	text-decoration: none;
@@ -77,21 +69,6 @@ nav .months a:hover {
 	background-color: #ddd;
 }
 
-.formatter {
-	padding: 1rem;
-	margin: auto 0;
-	border: 1px solid var(--color-accent);
-	width: 30rem;
-	height: 75vh;
-	border-radius: 1.5rem;
-
-	border-collapse: collapse;
-	visibility: visible;
-	box-shadow: var(--box-shadow);
-	background-image: linear-gradient(to top, var(--color-bg) 0%, black 100%);
-	max-width: 90%;
-	overflow: hidden;
-}
 .table-mini {
 	padding: 1rem;
 	margin: auto 0;
@@ -99,7 +76,6 @@ nav .months a:hover {
 	width: 30rem;
 	height: 75vh;
 	border-radius: 1.5rem;
-
 	border-collapse: collapse;
 	visibility: visible;
 	box-shadow: var(--box-shadow);
@@ -112,23 +88,15 @@ nav .months a:hover {
 	height: 72vh;
 	overflow-y: scroll;
 }
-.table-mini ul .daily-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
 
 .table-mini ul .daily-header .download {
 	width: 2.5rem;
 	height: 2.5rem;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
 	cursor: pointer;
 	border-radius: 0.5rem;
 }
 .table-mini ul .daily-header .download:hover {
-	background-color: #fb8500;
+	background-color: var(--color-primary);
 }
 
 .table-mini ul li {
@@ -140,9 +108,6 @@ nav .months a:hover {
 	cursor: pointer;
 	height: fit-content;
 	margin: 0.5rem 0;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
 }
 
 .table-mini ul li a {
@@ -163,29 +128,19 @@ h3 {
 	font-size: large;
 }
 strong {
-	color: #fb8500;
+	color: var(--color-primary);
 }
 
 .active {
-	background-color: #fb8500;
-}
-
-.pending {
-	background-color: #43434310;
+	background-color: var(--color-primary);
 }
 
 .future {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
 	height: 100%;
 	font-weight: bolder;
 }
 
 .error {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	height: 100vh;
 }
 
@@ -196,18 +151,18 @@ strong {
 .heading {
 	font-size: 3rem;
 	margin-bottom: 1rem;
-	color: #fb8500;
+	color: var(--color-primary);
 }
 
 .error .message {
 	font-size: 1.2rem;
 	margin-bottom: 2rem;
-	color: #fff; /* Dark color for contrast */
+	color: var(--color-white);
 }
 
 .error .link {
 	font-size: 1rem;
-	color: #007bff; /* Blue color for link */
+	color: #00ff57; /* Blue color for link */
 	text-decoration: none;
 	font-weight: bold;
 }

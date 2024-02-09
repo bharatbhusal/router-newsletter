@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom';
 const App = () => {
 
     return (
-        <div className='container'>
+        <div className='container flex space-around'>
             <Outlet />
             <NavBar />
         </div>
