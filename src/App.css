@@ -1,18 +1,4 @@
-body {
-	font-family: "Poppins", sans-serif;
-	background: var(--color-bg);
-	color: var(--color-white);
-	margin: 0;
-	padding: 0;
-	height: 100vh;
-	background-image: linear-gradient(to right, var(--color-bg) 0%, black 100%);
-}
-
-.container {
-	gap: 0.8rem;
-	height: 100vh;
-	background-image: url("./assets/hover.png");
-}
+/* =============== NavBar Styles Start =============== */
 
 nav {
 	top: 0;
@@ -79,6 +65,9 @@ nav .months a {
 nav .months a:hover {
 	background-color: #ddd;
 }
+/* =============== NavBar Styles End =============== */
+
+/* =============== Table Styles Start =============== */
 
 .table-mini {
 	z-index: 0;
@@ -90,12 +79,14 @@ nav .months a:hover {
 	border-radius: 1.5rem;
 	border-collapse: collapse;
 	visibility: visible;
-	box-shadow: var(--box-shadow);
-	background-image: linear-gradient(to top, var(--color-bg) 0%, black 100%);
 	max-width: 90%;
 	overflow: hidden;
 	transform: translate(0, -1.8rem);
+	backdrop-filter: blur(2px);
+	box-shadow: rgba(34, 14, 4, 0.85) 0px 4px 50px;
+	background-image: linear-gradient(75deg, #85ffbd10 0%, #fffb7d10 100%);
 }
+
 .table-mini .table-mini-inner {
 	border-radius: 0.5rem;
 	height: 72vh;
@@ -115,12 +106,15 @@ nav .months a:hover {
 .table-mini ul li {
 	border-radius: 0.5rem;
 	overflow: hidden;
+	width: 95%;
 	color: #8ecae6;
 	padding: 0.4rem 1rem;
 	background-color: #454946;
+
 	cursor: pointer;
 	height: fit-content;
-	margin: 0.5rem 0;
+	margin: 0.6rem 0.3rem 0.5rem 0.5rem;
+	box-shadow: rgb(0, 0, 0, 0.85) 0px 4px 10px;
 }
 
 .table-mini ul li a {
@@ -134,7 +128,8 @@ nav .months a:hover {
 }
 
 .table-mini ul li:hover {
-	background-image: url("./assets/hover.png");
+	background-color: #07305b;
+	backdrop-filter: blur(2px);
 }
 
 h3 {
@@ -153,6 +148,9 @@ strong {
 	font-weight: bolder;
 }
 
+/* =============== Table Styles End =============== */
+
+/* =============== Error Styles Start =============== */
 .error {
 	height: 100vh;
 }
@@ -175,14 +173,15 @@ strong {
 
 .error .link {
 	font-size: 1rem;
-	color: #00ff57; /* Blue color for link */
+	color: #00ff57;
 	text-decoration: none;
 	font-weight: bold;
 }
+/* =============== Error Styles End =============== */
 
+/* =============== Footer Styles Start =============== */
 .footer {
 	width: 100%;
-	/* max-width: 40rem; */
 	color: var(--color-white);
 	background-color: var(--color-primary);
 	height: 3rem;
@@ -198,3 +197,11 @@ strong {
 	width: 2rem;
 	height: 2rem;
 }
+
+.footer-socials a:hover {
+	color: var(--color-primary);
+	background-color: var(--color-white);
+	border-radius: 1.5rem;
+}
+
+/* =============== Footer Styles End =============== */
