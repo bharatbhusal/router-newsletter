@@ -3,14 +3,18 @@ import "./App.css";
 import NavBar from './components/NavBar';
 import { Outlet } from 'react-router-dom';
 import Footer from './components/Footer';
+import { createTable } from './db/createTable';
 
 const App = () => {
 
     return (
         <div className='container flex flex-column space-between'>
-            <NavBar />
-            <Outlet />
-            <Footer />
+            {/* <NavBar /> */}
+            {/* <Outlet /> */}
+            {/* <Footer /> */}
+            <div className="sql">
+                <button onClick={() => createTable()}>Create Table</button>
+            </div>
         </div>
     );
 };

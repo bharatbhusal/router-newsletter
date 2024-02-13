@@ -292,5 +292,57 @@
             "source": "https://twitter.com/hfaresearch/status/1755958060575793540?s=61&t=4vs2tUhC2l4oveTpeZ9WGQ",
             "summary": "KelpDAO, Picasso, SSV, Pendle, RestakeFi, Renzo, etc."
         }
+    ],
+    "13": [
+        {
+            "headline": "Picasso",
+            "source": "https://twitter.com/picasso_network/status/1757104016616575485?s=61&t=LuOpLbZrAq3PB1w6CV-_Vg",
+            "summary": "Integrating RaydiumProtocol LP tokens into Restaking layer on solana."
+        },
+        {
+            "headline": "Axelar Network",
+            "source": "https://www.youtube.com/watch?v=XEOnLORXMSY",
+            "summary": "Interchain Token Service can create a new interchain token with custom features. It allows to register an existing ERC20 as Interchain Token. And Register or link a multichain set of native tokens."
+        },
+        {
+            "headline": "RGB++",
+            "source": "https://x.com/crypcipher/status/1757252049484546305?s=20",
+            "summary": "Extension of RGB protocol along with single use seals and client side validation techniques. It introduces transaction folding, shared state and ownerless contracts without the need of cross chain transactions."
+        },
+        {
+            "headline": "Biconomy",
+            "source": "https://twitter.com/schin_tomar/status/1757048142749372524?s=61&t=LuOpLbZrAq3PB1w6CV-_Vg",
+            "summary": "Introduces Biconomy SDK V4 with 50% less code for same performance, optimized packages, bundler size reduced by 40%, etc."
+        },
+        {
+            "headline": "Astar Network",
+            "source": "https://twitter.com/mooon_nft/status/1757352827377398142?s=61&t=LuOpLbZrAq3PB1w6CV-_Vg",
+            "summary": "dApp staking v3 is live on astar network."
+        },
+        {
+            "headline": "Symbiosis",
+            "source": "https://medium.com/@symbiosis_fi/introducing-a-fee-discount-system-for-vesis-holders-087e9172d6af",
+            "summary": "Fee discounting system for veSIS Holders."
+        },
+        {
+            "headline": "Avail",
+            "source": "https://twitter.com/availproject/status/1757363496747176395?s=61&t=LuOpLbZrAq3PB1w6CV-_Vg",
+            "summary": "Partnership with Ternoa. Ternoa will be using Avail DA to buld their zkEVM L2."
+        },
+        {
+            "headline": "LiFi",
+            "source": "https://twitter.com/lifiprotocol/status/1757449691262799890?s=61&t=LuOpLbZrAq3PB1w6CV-_Vg",
+            "summary": "wigwam crypto wallet integrates with lifi."
+        },
+        {
+            "headline": "Linea",
+            "source": "https://twitter.com/lineabuild/status/1757458058714792250?s=61&t=LuOpLbZrAq3PB1w6CV-_Vg",
+            "summary": "Ajira Pay Finance is live on Linea. Ajira Pay is a multichain protocol for crytpo payments"
+        },
+        {
+            "headline": "UniLend Finance",
+            "source": "https://twitter.com/unilend_finance/status/1757138751954792902?s=61&t=LuOpLbZrAq3PB1w6CV-_Vg",
+            "summary": "UniLend V2 is live in Ethereum mainnet. UniLend is multichain permissionless lending and borrowing protocol for all ERC20 tokens."
+        }
     ]
 }
