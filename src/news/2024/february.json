@@ -344,5 +344,42 @@
             "source": "https://twitter.com/unilend_finance/status/1757138751954792902?s=61&t=LuOpLbZrAq3PB1w6CV-_Vg",
             "summary": "UniLend V2 is live in Ethereum mainnet. UniLend is multichain permissionless lending and borrowing protocol for all ERC20 tokens."
         }
+    ],
+    "14": [
+        {
+            "headline": "Chainlink",
+            "source": "https://x.com/chainlink/status/1757501704755401159?s=20",
+            "summary": "Tokenized RWA markets are fragmented. CCIP maximizes the liquidity of tokenized RWAs."
+        },
+        {
+            "headline": "XY Finance",
+            "source": "https://twitter.com/xyfinance/status/1757679536530133072?s=61&t=JMVZc9y9kXio7XQeBVR4tQ",
+            "summary": "XY finance integrated coinbase wallet."
+        },
+        {
+            "headline": "Rango",
+            "source": "https://twitter.com/rangoexchange/status/1757766404906930506?s=61&t=JMVZc9y9kXio7XQeBVR4tQ",
+            "summary": "Partnership with exodus wallet. XO swaps integrated into Rango. And Rango's API will be integrated into Exodus."
+        },
+        {
+            "headline": "Wormhole",
+            "source": "https://x.com/OVioHQ/status/1757774739450237435?s=20",
+            "summary": "6 startups utilizing wormhole's cross chain messaging protocol. Intentify is an intent-centric middle layer for dApps. Lucidity is a cross-chain money market aggregator. Seshat simplifies the complex tasks of on-chain data and predictive model engineering for web3 infrastructure. Scholes enables user-priced options minting and trading with optimal liquidity through aggregation. Temporal is an institutional-grade liquidity layer for yield markets. Zoth is an ecosystem that connects liquidity and RWAs across traditional finance & Onchain finance."
+        },
+        {
+            "headline": "Berachain",
+            "source": "https://twitter.com/berachain/status/1757828797871603715?s=61&t=JMVZc9y9kXio7XQeBVR4tQ",
+            "summary": "Berachain partnership with LayerZero to connect Berachain to 50+ other chains, serving as the canonical bridge solution for beras."
+        },
+        {
+            "headline": "Startnet",
+            "source": "https://x.com/KashKysh/status/1757783995167707369?s=20",
+            "summary": "Startnet dropped most ruggish airdrop."
+        },
+        {
+            "headline": "Prisma Finanace",
+            "source": "https://mirror.xyz/prismafinance.eth/rdKiXAVfFLQMt0aeFDJMhGOgEmsfUEkh56bDrW9M2mA",
+            "summary": "Introducing $ULTRA, sound money backed by LRTs. $ULTRA is a stablecoin issued by PrismLRT, a new borrowing protocol developed by Prisma focused on unlocking liquidity for LRTs."
+        }
     ]
 }
