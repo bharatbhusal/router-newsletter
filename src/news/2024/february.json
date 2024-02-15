@@ -381,5 +381,47 @@
             "source": "https://mirror.xyz/prismafinance.eth/rdKiXAVfFLQMt0aeFDJMhGOgEmsfUEkh56bDrW9M2mA",
             "summary": "Introducing $ULTRA, sound money backed by LRTs. $ULTRA is a stablecoin issued by PrismLRT, a new borrowing protocol developed by Prisma focused on unlocking liquidity for LRTs."
         }
+    ],
+    "15": [
+        {
+            "headline": "Conduit",
+            "source": "https://twitter.com/conduitxyz/status/1757812032756224399?s=61&t=-eWt8A9q8qI2AtOTEy20Zg",
+            "summary": "Rollups deployment in mainnet live. Choose your tech stack by selecting a framework, settlement layer, and data availability."
+        },
+        {
+            "headline": "Dymension",
+            "source": "https://twitter.com/modularcloud1/status/1757842704594276542?s=61&t=-eWt8A9q8qI2AtOTEy20Zg",
+            "summary": "Ecosystem explorer for Dymension devnet chains. Support for Mainnet coming soon. Free block explorer for any Dymension rollApps."
+        },
+        {
+            "headline": "Picasso",
+            "source": "https://x.com/Picasso_Network/status/1757846075501637935?s=20",
+            "summary": "Partnership with Rome. Rome’s sequencer will be powered by Picasso’s restaking layer and will have access to cross-chain liquidity through the Solana IBC connection."
+        },
+        {
+            "headline": "Chainflip",
+            "source": "https://twitter.com/chainflip/status/1758080817241182697?s=61&t=-eWt8A9q8qI2AtOTEy20Zg",
+            "summary": "Cross-chain swaps available within farcaster app processed by chainflip."
+        },
+        {
+            "headline": "LiFi",
+            "source": "https://twitter.com/equalizerflash/status/1758078111898366348?s=61&t=-eWt8A9q8qI2AtOTEy20Zg",
+            "summary": "Strategic partnership with Equalizer Finance. A flash loan service. LiFi's Meta Aggregator will be using their tech."
+        },
+        {
+            "headline": "Cake Framework",
+            "source": "https://frontier.tech/the-cake-framework",
+            "summary": "Chain Abstraction framework. Consists of four layers - Applications, Permissions, Solving, and Settlement."
+        },
+        {
+            "headline": "Bungee",
+            "source": "https://twitter.com/bungeeexchange/status/1758151406467649860?s=61&t=IOVHO1_9uTGKznDNq1eX-Q",
+            "summary": "Introducing LST bridging with Rocker Pool."
+        },
+        {
+            "headline": "Celestia",
+            "source": "https://twitter.com/syndicateio/status/1758178320439787892?s=61&t=IOVHO1_9uTGKznDNq1eX-Q",
+            "summary": "Syndicate Frame chain, an OP stack L3 on Base with Celestia underneath increasing throughput and decreasing gas cost for farcaster frame developers."
+        }
     ]
 }
