@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaDownload } from "react-icons/fa6";
-import { generateTextContent, copyToClipboard } from '../utils/downloader';
+import { generateTextContent, copyToClipboard, textDownloader } from '../utils/downloader';
 
 const MonthlyView = ({ year, month, newsData }) => {
     const [showCopiedMessage, setShowCopiedMessage] = useState(false); // State to manage the visibility of the "Copied to clipboard" message
@@ -21,19 +21,19 @@ const MonthlyView = ({ year, month, newsData }) => {
     const CopyToClipboard = ({ newsDay }) => {
 
         const handleCopyToClipboard = () => {
-            copyToClipboard(generateTextContent(newsData[newsDay], month, newsDay), `${month}-${newsDay}`);
+            navigator.clipboard.writeText(generateTextContent(newsData[newsDay], month, newsDay))
+            // copyToClipboard(generateTextContent(newsData[newsDay], month, newsDay));
+            // textDownloader(generateTextContent(newsData[newsDay], month, newsDay), "name")
             setShowCopiedMessage(true); // Set state to show the "Copied to clipboard" message
-            // Hide the message after a certain duration (e.g., 3 seconds)
+            // Hide the message after a certain duration (e.g., 2 seconds)
             setTimeout(() => {
                 setShowCopiedMessage(false);
             }, 2000);
         }
 
         return (
-            <div className="download flex space-around" onClick={handleCopyToClipboard}>
-                {showCopiedMessage && <div className="copied-message">Copied to Clipboard</div>}
+            <div className="download flex space-around" onClick={(handleCopyToClipboard)}>
                 <FaDownload />
-
             </div>
         )
     }
@@ -85,6 +85,7 @@ const MonthlyView = ({ year, month, newsData }) => {
                     );
                 })}
             </div>
+            {showCopiedMessage && <div className="copied-message">Copied to Clipboard</div>}
         </div>
     );
 };
