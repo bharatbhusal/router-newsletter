@@ -423,5 +423,32 @@
             "source": "https://twitter.com/syndicateio/status/1758178320439787892?s=61&t=IOVHO1_9uTGKznDNq1eX-Q",
             "summary": "Syndicate Frame chain, an OP stack L3 on Base with Celestia underneath increasing throughput and decreasing gas cost for farcaster frame developers."
         }
+    ],
+    "16": [
+        {
+            "headline": "LayerZero",
+            "source": "https://twitter.com/layerzero_labs/status/1758208111285060056?s=61&t=eZAI_HGQome8bdXk3a38VA",
+            "summary": "KelpDAO has integrated LayerZero to introduce omnichain capabilities for rsETH."
+        },
+        {
+            "headline": "Linea",
+            "source": "https://twitter.com/lineabuild/status/1758208601544397106?s=61&t=eZAI_HGQome8bdXk3a38VA",
+            "summary": "Integrates with GraphProtocol. A protocol for organizing and accessing blockchain data."
+        },
+        {
+            "headline": "Map",
+            "source": "https://twitter.com/bsquarednetwork/status/1758302929776427261?s=61&t=eZAI_HGQome8bdXk3a38VA",
+            "summary": "Map Protocol partnering with B squared network, merlin chain, BEVM and IERC20 to bring Bitcoin style peer to peer interop between the BTC exosystem and EVM and non EVm ecosystem."
+        },
+        {
+            "headline": "Connext",
+            "source": "https://twitter.com/connext/status/1758476414679155197?s=61&t=eZAI_HGQome8bdXk3a38VA",
+            "summary": "Connext live on Base. Renzo users will soon be able to restake ETH on Base without ever interacting with Ethereum."
+        },
+        {
+            "headline": "Biconomy",
+            "source": "https://twitter.com/biconomy/status/1758508036996387088?s=61&t=eZAI_HGQome8bdXk3a38VA",
+            "summary": "Partnership with NFTperp. One click NFT perp trading on Blast L2 with session keys."
+        }
     ]
 }
