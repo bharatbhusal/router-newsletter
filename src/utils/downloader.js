@@ -37,6 +37,44 @@ export const textDownloader = (textContent, fileName) => {
     }
 };
 
+export const copyToClipboard = (textContent) => {
+    if (textContent)
+    {
+        // Create a textarea element
+        const textarea = document.createElement('textarea');
+
+        // Set the value of the textarea to the text content
+        textarea.value = textContent;
+
+        // Set the style to make it invisible
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = 0;
+
+        // Append the textarea to the DOM
+        document.body.appendChild(textarea);
+
+        // Select the text within the textarea
+        textarea.select();
+
+        try
+        {
+            // Copy the selected text to the clipboard
+            document.execCommand('copy');
+            console.log('Text copied to clipboard');
+        } catch (err)
+        {
+            console.error('Failed to copy text: ', err);
+        }
+
+        // Clean up by removing the textarea from the DOM
+        document.body.removeChild(textarea);
+    } else
+    {
+        alert('No text content available to copy');
+    }
+};
+
+
 export const pdfDownloader = (textContent, fileName) => {
     if (textContent)
     {

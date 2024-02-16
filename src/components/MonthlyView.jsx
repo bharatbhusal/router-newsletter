@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaDownload } from "react-icons/fa6";
-import { generateTextContent, textDownloader } from '../utils/downloader';
+import { generateTextContent, copyToClipboard } from '../utils/downloader';
 
 const MonthlyView = ({ year, month, newsData }) => {
     if (!newsData || Object.keys(newsData).length === 0)
@@ -19,7 +19,7 @@ const MonthlyView = ({ year, month, newsData }) => {
     const DownloadOption = ({ newsDay }) => {
 
         return (
-            <div className="download flex space-around" onClick={() => textDownloader(generateTextContent(newsData[newsDay], month, newsDay), `${month}-${newsDay}`)}>
+            <div className="download flex space-around" onClick={() => copyToClipboard(generateTextContent(newsData[newsDay], month, newsDay), `${month}-${newsDay}`)}>
                 <FaDownload />
             </div>
         )
