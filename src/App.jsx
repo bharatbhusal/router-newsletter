@@ -12,9 +12,6 @@ const App = () => {
             <NavBar />
             <Outlet />
             <Footer />
-            {/* <div className="sql">
-                <button onClick={() => createTable()}>Create Table</button>
-            </div> */}
         </div>
     );
 };

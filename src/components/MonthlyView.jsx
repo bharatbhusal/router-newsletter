@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { FaDownload } from "react-icons/fa6";
-import { generateTextContent, copyToClipboard, textDownloader } from '../utils/downloader';
+import { FaCopy } from "react-icons/fa";
+
+
+import { generateTextContent, copyToClipboard } from '../utils/downloader';
 
 const MonthlyView = ({ year, month, newsData }) => {
     const [showCopiedMessage, setShowCopiedMessage] = useState(false); // State to manage the visibility of the "Copied to clipboard" message
@@ -34,14 +36,14 @@ const MonthlyView = ({ year, month, newsData }) => {
 
         return (
             <div className="download flex space-around" onClick={(handleCopyToClipboard)}>
-                <FaDownload />
+                <FaCopy />
             </div>
         )
     }
 
     return (
-        <div className="table-mini">
-            <div className='table-mini-inner'>
+        <div className="outlet">
+            <div className='news-list'>
                 {sortedDays.map(day => {
                     const unpaddedDay = parseInt(day, 10);
                     const monthNameToNumber = {
@@ -85,8 +87,8 @@ const MonthlyView = ({ year, month, newsData }) => {
                         </div>
                     );
                 })}
+                {showCopiedMessage && <div className="copied-message">Copied to Clipboard</div>}
             </div>
-            {showCopiedMessage && <div className="copied-message">Copied to Clipboard</div>}
         </div>
     );
 };

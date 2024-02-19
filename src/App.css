@@ -67,9 +67,9 @@ nav .months a:hover {
 }
 /* =============== NavBar Styles End =============== */
 
-/* =============== Table Styles Start =============== */
+/* =============== Outlet Styles Start =============== */
 
-.table-mini {
+.outlet {
 	z-index: 0;
 	padding: 1rem;
 	margin: auto 0;
@@ -87,23 +87,23 @@ nav .months a:hover {
 	background-image: linear-gradient(75deg, #85ffbd10 0%, #fffb7d10 100%);
 }
 
-.table-mini .table-mini-inner {
+.outlet .news-list {
 	border-radius: 0.5rem;
 	height: 72vh;
 	overflow-y: scroll;
 }
 
-.table-mini ul .daily-header .download {
+.outlet ul .daily-header .download {
 	width: 2.5rem;
 	height: 2.5rem;
 	cursor: pointer;
 	border-radius: 0.5rem;
 }
-.table-mini ul .daily-header .download:hover {
+.outlet ul .daily-header .download:hover {
 	background-color: var(--color-primary);
 }
 
-.table-mini ul li {
+.outlet ul li {
 	border-radius: 0.5rem;
 	overflow: hidden;
 	width: 95%;
@@ -117,17 +117,17 @@ nav .months a:hover {
 	box-shadow: rgb(0, 0, 0, 0.85) 0px 4px 10px;
 }
 
-.table-mini ul li a {
+.outlet ul li a {
 	width: 100%;
 }
 
-.table-mini ul li p {
+.outlet ul li p {
 	width: 100%;
 	font-size: 12px;
 	font-style: italic;
 }
 
-.table-mini ul li:hover {
+.outlet ul li:hover {
 	background-color: #07305b;
 	backdrop-filter: blur(2px);
 }
@@ -165,7 +165,7 @@ strong {
 	font-weight: bolder;
 }
 
-/* =============== Table Styles End =============== */
+/* =============== Outlet Styles End =============== */
 
 /* =============== Error Styles Start =============== */
 .error {
