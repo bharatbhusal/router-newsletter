@@ -344,5 +344,111 @@
             "source": "https://twitter.com/unilend_finance/status/1757138751954792902?s=61&t=LuOpLbZrAq3PB1w6CV-_Vg",
             "summary": "UniLend V2 is live in Ethereum mainnet. UniLend is multichain permissionless lending and borrowing protocol for all ERC20 tokens."
         }
+    ],
+    "14": [
+        {
+            "headline": "Chainlink",
+            "source": "https://x.com/chainlink/status/1757501704755401159?s=20",
+            "summary": "Tokenized RWA markets are fragmented. CCIP maximizes the liquidity of tokenized RWAs."
+        },
+        {
+            "headline": "XY Finance",
+            "source": "https://twitter.com/xyfinance/status/1757679536530133072?s=61&t=JMVZc9y9kXio7XQeBVR4tQ",
+            "summary": "XY finance integrated coinbase wallet."
+        },
+        {
+            "headline": "Rango",
+            "source": "https://twitter.com/rangoexchange/status/1757766404906930506?s=61&t=JMVZc9y9kXio7XQeBVR4tQ",
+            "summary": "Partnership with exodus wallet. XO swaps integrated into Rango. And Rango's API will be integrated into Exodus."
+        },
+        {
+            "headline": "Wormhole",
+            "source": "https://x.com/OVioHQ/status/1757774739450237435?s=20",
+            "summary": "6 startups utilizing wormhole's cross chain messaging protocol. Intentify is an intent-centric middle layer for dApps. Lucidity is a cross-chain money market aggregator. Seshat simplifies the complex tasks of on-chain data and predictive model engineering for web3 infrastructure. Scholes enables user-priced options minting and trading with optimal liquidity through aggregation. Temporal is an institutional-grade liquidity layer for yield markets. Zoth is an ecosystem that connects liquidity and RWAs across traditional finance & Onchain finance."
+        },
+        {
+            "headline": "Berachain",
+            "source": "https://twitter.com/berachain/status/1757828797871603715?s=61&t=JMVZc9y9kXio7XQeBVR4tQ",
+            "summary": "Berachain partnership with LayerZero to connect Berachain to 50+ other chains, serving as the canonical bridge solution for beras."
+        },
+        {
+            "headline": "Startnet",
+            "source": "https://x.com/KashKysh/status/1757783995167707369?s=20",
+            "summary": "Startnet dropped most ruggish airdrop."
+        },
+        {
+            "headline": "Prisma Finanace",
+            "source": "https://mirror.xyz/prismafinance.eth/rdKiXAVfFLQMt0aeFDJMhGOgEmsfUEkh56bDrW9M2mA",
+            "summary": "Introducing $ULTRA, sound money backed by LRTs. $ULTRA is a stablecoin issued by PrismLRT, a new borrowing protocol developed by Prisma focused on unlocking liquidity for LRTs."
+        }
+    ],
+    "15": [
+        {
+            "headline": "Conduit",
+            "source": "https://twitter.com/conduitxyz/status/1757812032756224399?s=61&t=-eWt8A9q8qI2AtOTEy20Zg",
+            "summary": "Rollups deployment in mainnet live. Choose your tech stack by selecting a framework, settlement layer, and data availability."
+        },
+        {
+            "headline": "Dymension",
+            "source": "https://twitter.com/modularcloud1/status/1757842704594276542?s=61&t=-eWt8A9q8qI2AtOTEy20Zg",
+            "summary": "Ecosystem explorer for Dymension devnet chains. Support for Mainnet coming soon. Free block explorer for any Dymension rollApps."
+        },
+        {
+            "headline": "Picasso",
+            "source": "https://x.com/Picasso_Network/status/1757846075501637935?s=20",
+            "summary": "Partnership with Rome. Rome’s sequencer will be powered by Picasso’s restaking layer and will have access to cross-chain liquidity through the Solana IBC connection."
+        },
+        {
+            "headline": "Chainflip",
+            "source": "https://twitter.com/chainflip/status/1758080817241182697?s=61&t=-eWt8A9q8qI2AtOTEy20Zg",
+            "summary": "Cross-chain swaps available within farcaster app processed by chainflip."
+        },
+        {
+            "headline": "LiFi",
+            "source": "https://twitter.com/equalizerflash/status/1758078111898366348?s=61&t=-eWt8A9q8qI2AtOTEy20Zg",
+            "summary": "Strategic partnership with Equalizer Finance. A flash loan service. LiFi's Meta Aggregator will be using their tech."
+        },
+        {
+            "headline": "Cake Framework",
+            "source": "https://frontier.tech/the-cake-framework",
+            "summary": "Chain Abstraction framework. Consists of four layers - Applications, Permissions, Solving, and Settlement."
+        },
+        {
+            "headline": "Bungee",
+            "source": "https://twitter.com/bungeeexchange/status/1758151406467649860?s=61&t=IOVHO1_9uTGKznDNq1eX-Q",
+            "summary": "Introducing LST bridging with Rocker Pool."
+        },
+        {
+            "headline": "Celestia",
+            "source": "https://twitter.com/syndicateio/status/1758178320439787892?s=61&t=IOVHO1_9uTGKznDNq1eX-Q",
+            "summary": "Syndicate Frame chain, an OP stack L3 on Base with Celestia underneath increasing throughput and decreasing gas cost for farcaster frame developers."
+        }
+    ],
+    "16": [
+        {
+            "headline": "LayerZero",
+            "source": "https://twitter.com/layerzero_labs/status/1758208111285060056?s=61&t=eZAI_HGQome8bdXk3a38VA",
+            "summary": "KelpDAO has integrated LayerZero to introduce omnichain capabilities for rsETH."
+        },
+        {
+            "headline": "Linea",
+            "source": "https://twitter.com/lineabuild/status/1758208601544397106?s=61&t=eZAI_HGQome8bdXk3a38VA",
+            "summary": "Integrates with GraphProtocol. A protocol for organizing and accessing blockchain data."
+        },
+        {
+            "headline": "Map",
+            "source": "https://twitter.com/bsquarednetwork/status/1758302929776427261?s=61&t=eZAI_HGQome8bdXk3a38VA",
+            "summary": "Map Protocol partnering with B squared network, merlin chain, BEVM and IERC20 to bring Bitcoin style peer to peer interop between the BTC exosystem and EVM and non EVm ecosystem."
+        },
+        {
+            "headline": "Connext",
+            "source": "https://twitter.com/connext/status/1758476414679155197?s=61&t=eZAI_HGQome8bdXk3a38VA",
+            "summary": "Connext live on Base. Renzo users will soon be able to restake ETH on Base without ever interacting with Ethereum."
+        },
+        {
+            "headline": "Biconomy",
+            "source": "https://twitter.com/biconomy/status/1758508036996387088?s=61&t=eZAI_HGQome8bdXk3a38VA",
+            "summary": "Partnership with NFTperp. One click NFT perp trading on Blast L2 with session keys."
+        }
     ]
 }

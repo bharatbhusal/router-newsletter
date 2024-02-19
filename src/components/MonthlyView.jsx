@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaDownload } from "react-icons/fa6";
-import { generateTextContent, textDownloader } from '../utils/downloader';
+import { generateTextContent, copyToClipboard, textDownloader } from '../utils/downloader';
 
 const MonthlyView = ({ year, month, newsData }) => {
+    const [showCopiedMessage, setShowCopiedMessage] = useState(false); // State to manage the visibility of the "Copied to clipboard" message
+
     if (!newsData || Object.keys(newsData).length === 0)
     {
         return (
@@ -16,15 +18,26 @@ const MonthlyView = ({ year, month, newsData }) => {
 
     const sortedDays = Object.keys(newsData).sort((a, b) => parseInt(b, 10) - parseInt(a, 10));
 
-    const DownloadOption = ({ newsDay }) => {
+    const CopyToClipboard = ({ newsDay }) => {
+
+        const handleCopyToClipboard = async () => {
+            // navigator.clipboard.writeText(generateTextContent(newsData[newsDay], month, newsDay))
+
+            await copyToClipboard(generateTextContent(newsData[newsDay], month, newsDay));
+            // textDownloader(generateTextContent(newsData[newsDay], month, newsDay), "name")
+            setShowCopiedMessage(true); // Set state to show the "Copied to clipboard" message
+            // Hide the message after a certain duration (e.g., 2 seconds)
+            setTimeout(() => {
+                setShowCopiedMessage(false);
+            }, 2000);
+        }
 
         return (
-            <div className="download flex space-around" onClick={() => textDownloader(generateTextContent(newsData[newsDay], month, newsDay), `${month}-${newsDay}`)}>
+            <div className="download flex space-around" onClick={(handleCopyToClipboard)}>
                 <FaDownload />
             </div>
         )
     }
-
 
     return (
         <div className="table-mini">
@@ -58,7 +71,7 @@ const MonthlyView = ({ year, month, newsData }) => {
                             <ul>
                                 <div className='daily-header flex space-between'>
                                     <h3>{`${month} ${unpaddedDay}, ${year} | ${dayOfWeek}`}</h3>
-                                    <DownloadOption newsDay={day} />
+                                    <CopyToClipboard newsDay={day} />
                                 </div>
                                 {newsData[day].map((article, index) => (
                                     <li key={index} className='flex space-around'>
@@ -73,6 +86,7 @@ const MonthlyView = ({ year, month, newsData }) => {
                     );
                 })}
             </div>
+            {showCopiedMessage && <div className="copied-message">Copied to Clipboard</div>}
         </div>
     );
 };

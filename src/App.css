@@ -143,6 +143,23 @@ strong {
 	background-color: var(--color-primary);
 }
 
+.copied-message {
+	position: fixed;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: var(--color-primary);
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-align: center;
+	opacity: 1; /* Initially visible */
+}
+
+.copied-message.fade-out {
+	opacity: 0; /* Make it disappear */
+}
+
 .future {
 	height: 100%;
 	font-weight: bolder;
