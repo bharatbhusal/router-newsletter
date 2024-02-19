@@ -37,23 +37,18 @@ export const textDownloader = (textContent, fileName) => {
     }
 };
 
-export const copyToClipboard = (textContent) => {
-    if (textContent)
+export async function copyToClipboard(textContent) {
+    try
     {
-        try
-        {
-            // Copy the selected text to the clipboard
-            navigator.clipboard.writeText(textContent)
-            console.log('Text copied to clipboard');
-        } catch (err)
-        {
-            console.error('Failed to copy text: ', err);
-        }
-    } else
+        await navigator.clipboard.writeText(textContent);
+        console.log('Content copied to clipboard');
+        /* Resolved - text copied to clipboard successfully */
+    } catch (err)
     {
-        alert('No text content available to copy');
+        console.error('Failed to copy: ', err);
+        /* Rejected - text failed to copy to the clipboard */
     }
-};
+}
 
 
 export const pdfDownloader = (textContent, fileName) => {

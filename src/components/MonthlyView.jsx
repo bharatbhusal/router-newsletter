@@ -20,9 +20,10 @@ const MonthlyView = ({ year, month, newsData }) => {
 
     const CopyToClipboard = ({ newsDay }) => {
 
-        const handleCopyToClipboard = () => {
-            navigator.clipboard.writeText(generateTextContent(newsData[newsDay], month, newsDay))
-            // copyToClipboard(generateTextContent(newsData[newsDay], month, newsDay));
+        const handleCopyToClipboard = async () => {
+            // navigator.clipboard.writeText(generateTextContent(newsData[newsDay], month, newsDay))
+
+            await copyToClipboard(generateTextContent(newsData[newsDay], month, newsDay));
             // textDownloader(generateTextContent(newsData[newsDay], month, newsDay), "name")
             setShowCopiedMessage(true); // Set state to show the "Copied to clipboard" message
             // Hide the message after a certain duration (e.g., 2 seconds)
