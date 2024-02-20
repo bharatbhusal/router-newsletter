@@ -450,5 +450,52 @@
             "source": "https://twitter.com/biconomy/status/1758508036996387088?s=61&t=eZAI_HGQome8bdXk3a38VA",
             "summary": "Partnership with NFTperp. One click NFT perp trading on Blast L2 with session keys."
         }
+    ],
+    "20": [
+        {
+            "headline": "Near",
+            "source": "https://twitter.com/dapps_crypto/status/1758814997876969674?s=61&t=bZs---QYcq9DIXkIbpbofw",
+            "summary": "Octopus 2.0 Introduces restaking on Near."
+        },
+        {
+            "headline": "Linea",
+            "source": "https://twitter.com/0xmacawclub/status/1758568994381164613?s=61&t=1DE-16UBC3YS48PD_O4q4A",
+            "summary": "Enjoy up to 2-3x lower gas fees when you play on Macaw."
+        },
+        {
+            "headline": "Linea",
+            "source": "https://linea.mirror.xyz/ZhbjbxY_uNYr3cOWi1Fx0Rpo00SZqW2WEnc6pKt8hfY",
+            "summary": "Linea park is live until April 2nd, 2024."
+        },
+        {
+            "headline": "Axelar",
+            "source": "https://twitter.com/axelarnetwork/status/1759638260266205337?s=61&t=1DE-16UBC3YS48PD_O4q4A",
+            "summary": "Native restaking available in Bedrock with the help of Interchain Token."
+        },
+        {
+            "headline": "Fuel",
+            "source": "https://twitter.com/mintairxyz/status/1759570049428316294?s=61&t=1DE-16UBC3YS48PD_O4q4A",
+            "summary": "Mintair Integrates with fuel. Deploying a Fuel node is a click away with mintair."
+        },
+        {
+            "headline": "LiFi",
+            "source": "https://twitter.com/jumperexchange/status/1759900600672678302?s=61&t=1DE-16UBC3YS48PD_O4q4A",
+            "summary": "Solana live on Jumper. Users can bridge USDT and USDC between EVM chains and Solana."
+        },
+        {
+            "headline": "Khalani",
+            "source": "https://blog.khalani.network/intents-solvers-and-everything-aggregators",
+            "summary": "Intents, Solvers, and Everything Aggregators."
+        },
+        {
+            "headline": "Axelar",
+            "source": "https://twitter.com/0xzeeve/status/1759915575533261112?s=61&t=1DE-16UBC3YS48PD_O4q4A",
+            "summary": "Zeeve RaaS integrates with Axelar to bring programmable cross chain interoperability to L2."
+        },
+        {
+            "headline": "Dymension",
+            "source": "https://twitter.com/dymension/status/1759588980201259449?s=61&t=GmSw3WCA844D9YsdbVK1Tw",
+            "summary": "Modular Liquidity Layer. Dymension is now a settlement AND liquidity layer. Shared liquidity on top of shared security. For each swap 0.3% fee is charged. 0.2% is directed as revenue for LPs. 0.1% is swapped to DYM and burned as a protocol fee."
+        }
     ]
 }
