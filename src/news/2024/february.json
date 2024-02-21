@@ -497,5 +497,37 @@
             "source": "https://twitter.com/dymension/status/1759588980201259449?s=61&t=GmSw3WCA844D9YsdbVK1Tw",
             "summary": "Modular Liquidity Layer. Dymension is now a settlement AND liquidity layer. Shared liquidity on top of shared security. For each swap 0.3% fee is charged. 0.2% is directed as revenue for LPs. 0.1% is swapped to DYM and burned as a protocol fee."
         }
+    ],
+    "21": [
+        {
+            "headline": "EigenLayer",
+            "source": "https://twitter.com/eigenlayer/status/1759998265008001490?s=61&t=EelKmSoRvlHRra-4HIPdLA",
+            "summary": "Partnership with Fluentxyz. Developers will be able to launch customized chains with full wasm/evm compatibility."
+        },
+        {
+            "headline": "LayerZero",
+            "source": "https://twitter.com/layerzero_labs/status/1760016573732139272?s=61&t=EelKmSoRvlHRra-4HIPdLA",
+            "summary": "LayerZero live on Xai. Xai is a L3 blockchain on Arbitrum orbit stack built for web3 gaming. L0 will serve as Xai's Data Availability committee."
+        },
+        {
+            "headline": "Owlto",
+            "source": "https://twitter.com/owlto_finance/status/1760183755761913920?s=61&t=EelKmSoRvlHRra-4HIPdLA",
+            "summary": "Micro3io partners with owlto. Micro3io is a NFT platform empowring users, artists and content creators to explore boundless creativity across multi-chain."
+        },
+        {
+            "headline": "Succinct",
+            "source": "https://twitter.com/succinctlabs/status/1760293225850708133?s=61&t=EelKmSoRvlHRra-4HIPdLA",
+            "summary": "Introduction to SP1 Reth. A POC that showcases how any rollup can build a performant, type 1 zkEVM with < 2000 lines of maintainable Rust code using SP1."
+        },
+        {
+            "headline": "Wormhole",
+            "source": "https://twitter.com/wormholecrypto/status/1760304584419921972?s=61&t=EelKmSoRvlHRra-4HIPdLA",
+            "summary": "Wormhole added AMD as hardware accelerator provider to make enterprise grade hardware available to the wormhole ZK ecosystem for trustless interop."
+        },
+        {
+            "headline": "zkSync",
+            "source": "https://zksync.mirror.xyz/d1Kv_GdghzVVwvzzF3jVToThqD74wQiCo0p_H6DaHrY",
+            "summary": "Slush Joins Matter Labs to Play a Critical Role in Advancing the Hyperchain Ecosystem for ZK Stack"
+        }
     ]
 }
