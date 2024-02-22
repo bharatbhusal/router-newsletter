@@ -529,5 +529,37 @@
             "source": "https://zksync.mirror.xyz/d1Kv_GdghzVVwvzzF3jVToThqD74wQiCo0p_H6DaHrY",
             "summary": "Slush Joins Matter Labs to Play a Critical Role in Advancing the Hyperchain Ecosystem for ZK Stack"
         }
+    ],
+    "22": [
+        {
+            "headline": "Flare",
+            "source": "https://twitter.com/flarenetworks/status/1760320960421380317?s=61&t=1J6NnMLZnzZy-T9NFrOUFw",
+            "summary": "Announces partnership with Sindric Solutions to launch XDFi. A decentralized futures protocol created by Wall Street veterans."
+        },
+        {
+            "headline": "Particle",
+            "source": "https://twitter.com/particlentwrk/status/1760322305702711329?s=61&t=1J6NnMLZnzZy-T9NFrOUFw",
+            "summary": "Modular smart wallet as a service is live on berachain. berachain builders can build with full stack Account abstraction"
+        },
+        {
+            "headline": "Neutro Grants",
+            "source": "https://twitter.com/neutrongrants/status/1760369478406386175?s=61&t=1J6NnMLZnzZy-T9NFrOUFw",
+            "summary": "Announcement of Neutron Grants Program's second batch."
+        },
+        {
+            "headline": "Meson 🤝 Ancient8",
+            "source": "https://twitter.com/mesonfi/status/1760668564267421940?s=61&t=1J6NnMLZnzZy-T9NFrOUFw",
+            "summary": "Ancient8 launched its mainnet and integrated in Meson."
+        },
+        {
+            "headline": "Nigeria bans Crypto firms",
+            "source": "https://coingape.com/binance-other-crypto-firms-faces-ban-nigeria-here-why/",
+            "summary": "This move comes just months after the Central Bank of Nigeria lifted its ban on crypto transactions, signaling a tumultuous regulatory landscape for digital assets in the country."
+        },
+        {
+            "headline": "Binance Labs invests in Renzo",
+            "source": "https://www.binance.com/en/blog/ecosystem/binance-labs-invests-in-renzo-to-support-liquid--restaking-on-the-eigenlayer-ecosystem-5456922013853091014",
+            "summary": ""
+        }
     ]
 }
