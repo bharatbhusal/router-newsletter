@@ -561,5 +561,37 @@
             "source": "https://www.binance.com/en/blog/ecosystem/binance-labs-invests-in-renzo-to-support-liquid--restaking-on-the-eigenlayer-ecosystem-5456922013853091014",
             "summary": ""
         }
+    ],
+    "27": [
+        {
+            "headline": "Map",
+            "source": "https://twitter.com/mapprotocol/status/1762195431646449874?s=61&t=frhTUPc7NqSPEYCK2uA9uw",
+            "summary": "Map Protocol partners with TunaChain, modular L2 solution on Bitcoin. It features a native stablecoin and hybrid ZK-OP solution. Fuses Bitcoin's security and Ethereum's versatility."
+        },
+        {
+            "headline": "LayerZero",
+            "source": "https://twitter.com/layerzero_labs/status/1762195105241567547?s=61&t=frhTUPc7NqSPEYCK2uA9uw",
+            "summary": "Decent integrates LayerZero. Decent provides unified liquidity for cross-chain transactions."
+        },
+        {
+            "headline": "ChainFlilp",
+            "source": "https://twitter.com/eldoradomrkt/status/1762197463111455176?s=61&t=frhTUPc7NqSPEYCK2uA9uw",
+            "summary": "El Dorado integrates Chainflip in swaps."
+        },
+        {
+            "headline": "Caldera",
+            "source": "https://twitter.com/trestleprotocol/status/1762219428484391203?s=61&t=frhTUPc7NqSPEYCK2uA9uw",
+            "summary": "Trestle partners with Caldera as RaaS partner."
+        },
+        {
+            "headline": "Map",
+            "source": "https://twitter.com/mapprotocol/status/1762330835343286400?s=61&t=frhTUPc7NqSPEYCK2uA9uw",
+            "summary": "Welcome2web3 partners with Map Protocol."
+        },
+        {
+            "headline": "Merlin",
+            "source": "https://twitter.com/merlinlayer2/status/1762409162905211262?s=61&t=frhTUPc7NqSPEYCK2uA9uw",
+            "summary": "Tron partners with Merlin. Users can stake TRC-20 stable coins in Merlin."
+        }
     ]
 }
