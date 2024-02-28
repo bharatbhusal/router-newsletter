@@ -593,5 +593,42 @@
             "source": "https://twitter.com/merlinlayer2/status/1762409162905211262?s=61&t=frhTUPc7NqSPEYCK2uA9uw",
             "summary": "Tron partners with Merlin. Users can stake TRC-20 stable coins in Merlin."
         }
+    ],
+    "28": [
+        {
+            "headline": "Base",
+            "source": "https://twitter.com/maviagame/status/1762492595404468436?s=61&t=R5uu_0a3nokLH9HWpUQRcQ",
+            "summary": "Mavia scaling ecosystem of mobile game development in Base."
+        },
+        {
+            "headline": "Meson",
+            "source": "https://twitter.com/mesonfi/status/1762760782872285668?s=61&t=R5uu_0a3nokLH9HWpUQRcQ",
+            "summary": "TunaChain partners with Meson. Tunachain is modular L2 solution on Bitcoin, featuring stablecoins and a hybrid Zk-OP solution."
+        },
+        {
+            "headline": "Symbiosis",
+            "source": "https://twitter.com/symbiosis_fi/status/1762792095838789836?s=61&t=R5uu_0a3nokLH9HWpUQRcQ",
+            "summary": "Integrates Bahamut chain. An EVM based public blockchain solution for block validation rewards mechanism."
+        },
+        {
+            "headline": "AltLayer",
+            "source": "https://twitter.com/alt_layer/status/1762800668874526926?s=61&t=R5uu_0a3nokLH9HWpUQRcQ",
+            "summary": "Teams up with GoPlusSecurity to uplift Altlayer's native safety features for RaaS users."
+        },
+        {
+            "headline": "ChainFlip",
+            "source": "https://twitter.com/wearetalisman/status/1762824748877099428?s=61&t=R5uu_0a3nokLH9HWpUQRcQ",
+            "summary": "Talisman integrates Chainflip for cross-chain swaps and Polkadot onboarding."
+        },
+        {
+            "headline": "Unibot",
+            "source": "https://twitter.com/unibotonblast/status/1762584994369978450?s=61&t=j2LUFW3JHBVZxOXpWDkpZw",
+            "summary": "Unibot launches on Blast."
+        },
+        {
+            "headline": "Ethereum",
+            "source": "https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement",
+            "summary": "Dencun mainnet Announcement"
+        }
     ]
 }
