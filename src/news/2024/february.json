@@ -630,5 +630,47 @@
             "source": "https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement",
             "summary": "Dencun mainnet Announcement"
         }
+    ],
+    "29": [
+        {
+            "headline": "Avail",
+            "source": "https://x.com/AvailProject/status/1762124704373190999?s=20",
+            "summary": "Raised $27M in latest seed round."
+        },
+        {
+            "headline": "Axelar",
+            "source": "https://x.com/vooi_io/status/1762785214890430870?s=20",
+            "summary": "Vooi integrates Axelar. Vooi is a L2 stableswaps and perp DEX aggregator."
+        },
+        {
+            "headline": "Base",
+            "source": "https://x.com/BitGo/status/1762851700413755635?s=20",
+            "summary": "WrappedBTC now available in Base."
+        },
+        {
+            "headline": "LayerZero",
+            "source": "https://x.com/LayerZero_Labs/status/1762991348607811612?s=20",
+            "summary": "JapanOpenChain integrates with L0. This will help Japanese and broader global markets for cross-chain payments."
+        },
+        {
+            "headline": "Map",
+            "source": "https://x.com/MapProtocol/status/1763183734583689345?s=20",
+            "summary": "Partners with Friend3AI, an open socialFi platform comprising of social dApp, inscriptions marketplace, AI, BTC eco."
+        },
+        {
+            "headline": "Meson",
+            "source": "https://x.com/mesonfi/status/1763204268452921530?s=20",
+            "summary": "Partners with Goshen Network, the innovative EVM execution layer for BTC."
+        },
+        {
+            "headline": "Chainflip",
+            "source": "https://x.com/Chainflip/status/1763218421897175289?s=20",
+            "summary": "Discord bot for swaps."
+        },
+        {
+            "headline": "Biconomy",
+            "source": "https://x.com/biconomy/status/1763218691225956623?s=20",
+            "summary": "Partners with Acentrik, product by MercedesBenz to pioneer a next-generation data marketplace."
+        }
     ]
 }
