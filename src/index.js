@@ -38,7 +38,7 @@ const initializeApp = async () => {
                     children: [
                         {
                             index: true,
-                            element: <MonthlyView year="2024" month="February" newsData={monthData[1]} />
+                            element: <MonthlyView year="2024" month="March" newsData={monthData[1]} />
                         },
                         ...months.map((month, index) => ({
                             path: month.toLowerCase(),
