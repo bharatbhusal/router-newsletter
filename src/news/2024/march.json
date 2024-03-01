@@ -1,1 +1,19 @@
-{}
+{
+    "01": [
+        {
+            "headline": "Celer",
+            "source": "https://twitter.com/degenecosystem/status/1763149800059359252?s=61&t=viZspeY9EOXqDqlNy4UC4A",
+            "summary": "Degenx collaborates with Celer to Boost Interoperability."
+        },
+        {
+            "headline": "Owlto",
+            "source": "https://twitter.com/owlto_finance/status/1763257823604183266?s=61&t=viZspeY9EOXqDqlNy4UC4A",
+            "summary": "Integrates Blast."
+        },
+        {
+            "headline": "Wormhole",
+            "source": "https://wormhole.com/introducing-wormhole-native-token-transfers-a-new-open-framework-for-making-any-token-natively-multichain",
+            "summary": "Introduces Native Token Transfers (NTT)."
+        }
+    ]
+}
