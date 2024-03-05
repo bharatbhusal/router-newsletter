@@ -15,5 +15,27 @@
             "source": "https://wormhole.com/introducing-wormhole-native-token-transfers-a-new-open-framework-for-making-any-token-natively-multichain",
             "summary": "Introduces Native Token Transfers (NTT)."
         }
+    ],
+    "05": [
+        {
+            "headline": "FormAI",
+            "source": "https://www.formai.us/litepaper",
+            "summary": "A democratic AI/LLM merging Crypto and AI. Decentralized distributed AI training and inference."
+        },
+        {
+            "headline": "LiFi",
+            "source": "https://twitter.com/lifiprotocol/status/1764742245557600507?s=61&t=NVZi-BuDzcc1dbtqx0Kn4w",
+            "summary": "Partners with HerculesDEX."
+        },
+        {
+            "headline": "Connext",
+            "source": "https://twitter.com/connext/status/1764814089698816350?s=61&t=NVZi-BuDzcc1dbtqx0Kn4w",
+            "summary": "Partners with RenzoProtocol. BNB users can restake WETH without ever leaving the ecosystem."
+        },
+        {
+            "headline": "Solana",
+            "source": "https://discuss.ens.domains/t/ep5-3-tempcheck-ens-on-solana/18860",
+            "summary": "ENS on Solana. wallet.s.eth."
+        }
     ]
 }
