@@ -37,5 +37,42 @@
             "source": "https://discuss.ens.domains/t/ep5-3-tempcheck-ens-on-solana/18860",
             "summary": "ENS on Solana. wallet.s.eth."
         }
+    ],
+    "06": [
+        {
+            "headline": "Celestia",
+            "source": "https://twitter.com/fluentxyz/status/1765021151796056490?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+            "summary": "Fluent integrates Celestia underneath. Fluent is a zkWasm L2 for Ethereum."
+        },
+        {
+            "headline": "EigenLayer",
+            "source": "https://twitter.com/dabit3/status/1765034335948636235?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+            "summary": "EigenLayer for Developers. Accelerating dapp development."
+        },
+        {
+            "headline": "Wanchain",
+            "source": "https://twitter.com/wanchain_org/status/1765060161427665097?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+            "summary": "KuPay Finance live on Wanchain."
+        },
+        {
+            "headline": "Biconomy",
+            "source": "https://twitter.com/erc20_news/status/1764743158875762888?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+            "summary": "Partners with Acentrik, a strategic product to pioneer a next-gen data marketplace."
+        },
+        {
+            "headline": "Linea",
+            "source": "https://twitter.com/lineabuild/status/1765130276546728101?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+            "summary": "Partners with OpenZeppelin to expand web3's knowledge of potential vulnerabilities."
+        },
+        {
+            "headline": "Astar",
+            "source": "https://twitter.com/astarnetwork/status/1765174066259095974?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+            "summary": "Astar zkEVM is live. After parachain in Polkadot, Astar expands to the Ethereum ecosystem."
+        },
+        {
+            "headline": "Cronos",
+            "source": "https://twitter.com/zksync/status/1765395117265817894?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+            "summary": "Building a zkSync L2 in partnership with Crypto.com."
+        }
     ]
 }
