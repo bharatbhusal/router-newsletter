@@ -74,5 +74,52 @@
             "source": "https://twitter.com/zksync/status/1765395117265817894?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
             "summary": "Building a zkSync L2 in partnership with Crypto.com."
         }
+    ],
+    "07": [
+        {
+            "headline": "Axelar and Neutron",
+            "source": "https://x.com/Neutron_org/status/1765467702502850616?s=20",
+            "summary": "wstETH to Cosmos. You can bridge wstETH from Ethereum to Osmosis using Neutron wstETH bridge and Osmosis assets page."
+        },
+        {
+            "headline": "LayerZero",
+            "source": "https://x.com/delabsOfficial/status/1760170919937642635?s=20",
+            "summary": "Delabs Games integrates ONFT standard from LayerZero to NFT minting smart contracts."
+        },
+        {
+            "headline": "Celestia",
+            "source": "https://x.com/rollchains/status/1765379394153898218?s=20",
+            "summary": "Rollchains unveiled. Rollchains enables any Cosmos L1 to post its data to Celestia."
+        },
+        {
+            "headline": "Way Network",
+            "source": "https://x.com/WayNetwork_Labs/status/1765637312233488766?s=20",
+            "summary": "Partners with Tubes. Tubes is a Cross-chain inscription exchange built on ERC20."
+        },
+        {
+            "headline": "XY Finance",
+            "source": "https://x.com/xyfinance/status/1765680016132878713?s=20",
+            "summary": "Integrates Blast."
+        },
+        {
+            "headline": "Across",
+            "source": "https://x.com/AcrossProtocol/status/1765763095149056164?s=20",
+            "summary": "Partners with Espresso. Across relayers can fill users' bridge txns in seconds with Espresso's hotshot consensus."
+        },
+        {
+            "headline": "Wormhole",
+            "source": "https://x.com/wormholecrypto/status/1765769505740140967?s=20",
+            "summary": "Carrier leverages Wormhole to lock tokens on the source chain and mint wrapped tokens on the destination chain."
+        },
+        {
+            "headline": "Linea",
+            "source": "https://x.com/LineaBuild/status/1765776820685901848?s=20",
+            "summary": "Partners with AjiraPay. It is a dapp for real-world crypto use cases."
+        },
+        {
+            "headline": "WOOFI",
+            "source": "https://www.theblock.co/post/280759/woofi-offers-bounty-after-8-75-million-exploit-on-arbitrum",
+            "summary": "Offers 10% whitehat bounty offered from the recent 8.75 Million exploit in Arbitrum."
+        }
     ]
 }
