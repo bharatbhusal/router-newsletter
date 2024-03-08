@@ -121,5 +121,22 @@
             "source": "https://www.theblock.co/post/280759/woofi-offers-bounty-after-8-75-million-exploit-on-arbitrum",
             "summary": "Offers 10% whitehat bounty offered from the recent 8.75 Million exploit in Arbitrum."
         }
+    ],
+    "08": [
+        {
+            "headline": "Scroll",
+            "source": "https://twitter.com/scroll_zkp/status/1765801387189772551?s=61&t=QDllg32kYvHHRSR9Pj8Sdg",
+            "summary": "Cosmos IBC on Ethereum L2 powered by Union_build. Union is a zk infra layer for general message passing, asset transfers, NFTs and DeFi."
+        },
+        {
+            "headline": "Axelar",
+            "source": "https://twitter.com/fenixfinance/status/1765794373864759479?s=61&t=QDllg32kYvHHRSR9Pj8Sdg",
+            "summary": "Fenix expands into mythic chain integrating squidrouter."
+        },
+        {
+            "headline": "Binance Labs",
+            "source": "https://www.binance.com/en/blog/ecosystem/binance-labs-concludes-incubation-season-6-invests-in-cellula-derivio-ethena-nfprompt-qna3-shogun-uxuy-8000543823227873581",
+            "summary": "Concludes Incubation Season 6."
+        }
     ]
 }
