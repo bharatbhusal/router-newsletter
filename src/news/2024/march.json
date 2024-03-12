@@ -138,5 +138,32 @@
             "source": "https://www.binance.com/en/blog/ecosystem/binance-labs-concludes-incubation-season-6-invests-in-cellula-derivio-ethena-nfprompt-qna3-shogun-uxuy-8000543823227873581",
             "summary": "Concludes Incubation Season 6."
         }
+    ],
+    "12": [
+        {
+            "headline": "LiFi",
+            "source": "https://li.fi/knowledge-hub/openeden-integrates-li-fi-to-simplify-t-bill-purchases/?utm_source=Twitter&utm_campaign=OpenEden",
+            "summary": "Integrates with OpenEden_Labs, a tokenized RWA investment platform. LiFi will enable users to mint TBILLs and earn US. Treasury yields on-chain."
+        },
+        {
+            "headline": "Celer",
+            "source": "https://twitter.com/celernetwork/status/1767400123435499554?s=61&t=UDrD5acpdFs1hzwBT4tx7A",
+            "summary": "Collaborates with Trustalabs."
+        },
+        {
+            "headline": "Meson",
+            "source": "https://twitter.com/mesonfi/status/1767405510352154946?s=61&t=UDrD5acpdFs1hzwBT4tx7A",
+            "summary": "BitLayer available in Meson testnet."
+        },
+        {
+            "headline": "Owlto",
+            "source": "https://twitter.com/owlto_finance/status/1767431688362356839?s=61&t=UDrD5acpdFs1hzwBT4tx7A",
+            "summary": "Partners with UltiverseDAO, an AI-driven gaming world with VR and NFTs."
+        },
+        {
+            "headline": "Map",
+            "source": "https://twitter.com/mapprotocol/status/1767463777715527872?s=61&t=UDrD5acpdFs1hzwBT4tx7A",
+            "summary": "Partners with Arkreen_network. Arkreen is a web3-powered infra for renewable energy resources and carbon reduction applications."
+        }
     ]
 }
