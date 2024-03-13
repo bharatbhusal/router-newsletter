@@ -165,5 +165,17 @@
             "source": "https://twitter.com/mapprotocol/status/1767463777715527872?s=61&t=UDrD5acpdFs1hzwBT4tx7A",
             "summary": "Partners with Arkreen_network. Arkreen is a web3-powered infra for renewable energy resources and carbon reduction applications."
         }
+    ],
+    "13": [
+        {
+            "headline": "LiFi",
+            "source": "https://twitter.com/jumperexchange/status/1767916772928196608?s=61&t=BLNyIyZDm4v9lUp3RkJj2w",
+            "summary": "Wrapper via Lifi. Any token is wrapped first and bridged with 1:1 ratio."
+        },
+        {
+            "headline": "MetaMask",
+            "source": "https://www.coindesk.com/business/2024/03/11/with-mastercard-metamask-tests-first-blockchain-powered-payment-card/",
+            "summary": "With Mastercard, MetaMask Tests First Blockchain-Powered Payment Card."
+        }
     ]
 }
