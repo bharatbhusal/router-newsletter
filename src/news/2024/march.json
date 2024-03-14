@@ -177,5 +177,37 @@
             "source": "https://www.coindesk.com/business/2024/03/11/with-mastercard-metamask-tests-first-blockchain-powered-payment-card/",
             "summary": "With Mastercard, MetaMask Tests First Blockchain-Powered Payment Card."
         }
+    ],
+    "14": [
+        {
+            "headline": "Wanchain",
+            "source": "https://twitter.com/wanchain_org/status/1767929104345534601?s=61&t=cCveQqremD_6TJHEZ8vvqA",
+            "summary": "Available on Chainspot - a cross-chain solutions aggregator with tools and analytics."
+        },
+        {
+            "headline": "An analysis of Intent-based markets",
+            "source": "https://twitter.com/tarunchitra/status/1765394063182725162",
+            "summary": "More solvers doesn't necessarily mean better outcome."
+        },
+        {
+            "headline": "BriankonwsAI",
+            "source": "https://twitter.com/arjunnchand/status/1768184050160656419?s=61&t=Cl_hUaeGIfnWjjUuI5AQsA",
+            "summary": "AI assistant for performing transations by prompting. AI agents via LiFi."
+        },
+        {
+            "headline": "Map",
+            "source": "https://x.com/MapProtocol/status/1768179635261727147?s=20",
+            "summary": "Officially joins Nvidia Developer program to accelerate AI powered Bitcoin interoperability tech."
+        },
+        {
+            "headline": "Wormhole",
+            "source": "https://twitter.com/wormholecrypto/status/1768276001010942444?s=61&t=Cl_hUaeGIfnWjjUuI5AQsA",
+            "summary": "PancakeSwap integrates wormhole connect to enable token transfers."
+        },
+        {
+            "headline": "BNB chain",
+            "source": "https://www.theblock.co/post/282442/bnb-chain-layer-2-rollups-as-a-service",
+            "summary": "Introduces rollup-as-a-service solution to expand its Layer 2 ecosystem."
+        }
     ]
 }
