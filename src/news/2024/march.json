@@ -210,38 +210,43 @@
 			"summary": "Introduces rollup-as-a-service solution to expand its Layer 2 ecosystem."
 		}
 	],
+	"18": [
+		{
+			"headline": "Rango",
+			"source": "https://twitter.com/polygon_space1/status/1769476810734236105?s=61&t=XBGTFvbqkjxYBIG3mTyd3Q",
+			"summary": "Rango Widget integrates with Bru Finance."
+		},
+		{
+			"headline": "LiFi",
+			"source": "https://twitter.com/lifiprotocol/status/1769694592922767522?s=61&t=XBGTFvbqkjxYBIG3mTyd3Q",
+			"summary": "Partners with uRamp, an on and off-ramping solution for the Gnosis chain ecosystem."
+		},
+		{
+			"headline": "Ojo",
+			"source": "https://twitter.com/ojo_network/status/1769725625223270489?s=61&t=XBGTFvbqkjxYBIG3mTyd3Q",
+			"summary": "Integrates with Axelar to bring price feeds to EVM."
+		}
+	],
 	"19": [
 		{
-			"LiFi": "Jumper Exchange announces the ability to wrap any token via LiFi, bridging them with a 1:1 ratio.",
-			"Link": "https://twitter.com/jumperexchange/status/1767916772928196608?s=61&t=BLNyIyZDm4v9lUp3RkJj2w"
+			"headline": "LayerZero",
+			"source": "https://twitter.com/layerzero_labs/status/1769825053351231555?s=61&t=zj0xjGEk7L07HJvG5EpCUA",
+			"summary": "QORPO world integrates L0 to enable omnichain capabilities for their gaming ecosystem."
 		},
 		{
-			"MetaMask": "MetaMask collaborates with Mastercard to test the first blockchain-powered payment card.",
-			"Link": "https://www.coindesk.com/business/2024/03/11/with-mastercard-metamask-tests-first-blockchain-powered-payment-card/"
+			"headline": "Chainlink",
+			"source": "https://twitter.com/chainlink/status/1770087954830049488?s=61&t=zj0xjGEk7L07HJvG5EpCUA",
+			"summary": "Stake DAO integrates CCIP to enable Cross chain SDT transfers."
 		},
 		{
-			"Wanchain": "Available on Chainspot - a cross-chain solutions aggregator with tools and analytics.",
-			"Link": "https://twitter.com/wanchain_org/status/1767929104345534601?s=61&t=cCveQqremD_6TJHEZ8vvqA"
+			"headline": "Caldera",
+			"source": "https://twitter.com/calderaxyz/status/1770121656184488427?s=61&t=zj0xjGEk7L07HJvG5EpCUA",
+			"summary": "Partners with OmniFDN to bring Ethereum-native interop to all rollups."
 		},
 		{
-			"Analysis": "An analysis of Intent-based markets: More solvers doesn't necessarily mean better outcome.",
-			"Link": "https://twitter.com/tarunchitra/status/1765394063182725162"
-		},
-		{
-			"BriankonwsAI": "AI assistant for performing transactions by prompting. AI agents via LiFi.",
-			"Link": "https://twitter.com/arjunnchand/status/1768184050160656419?s=61&t=Cl_hUaeGIfnWjjUuI5AQsA"
-		},
-		{
-			"Map": "Officially joins Nvidia Developer program to accelerate AI powered Bitcoin interoperability tech.",
-			"Link": "https://x.com/MapProtocol/status/1768179635261727147?s=20"
-		},
-		{
-			"Wormhole": "PancakeSwap integrates Wormhole connect to enable token transfers.",
-			"Link": "https://twitter.com/wormholecrypto/status/1768276001010942444?s=61&t=Cl_hUaeGIfnWjjUuI5AQsA"
-		},
-		{
-			"BNB Chain": "Introduces rollup-as-a-service solution to expand its Layer 2 ecosystem.",
-			"Link": "https://www.theblock.co/post/282442/bnb-chain-layer-2-rollups-as-a-service"
+			"headline": "Light",
+			"source": "https://twitter.com/shunkakinoki/status/1769767434372931978?s=61&t=ijQKMfb_tYVMhC6Gtos7ow",
+			"summary": "New approach to tackle EVM UX fragmentation."
 		}
 	]
 }
