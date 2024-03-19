@@ -1,213 +1,247 @@
 {
-    "01": [
-        {
-            "headline": "Celer",
-            "source": "https://twitter.com/degenecosystem/status/1763149800059359252?s=61&t=viZspeY9EOXqDqlNy4UC4A",
-            "summary": "Degenx collaborates with Celer to Boost Interoperability."
-        },
-        {
-            "headline": "Owlto",
-            "source": "https://twitter.com/owlto_finance/status/1763257823604183266?s=61&t=viZspeY9EOXqDqlNy4UC4A",
-            "summary": "Integrates Blast."
-        },
-        {
-            "headline": "Wormhole",
-            "source": "https://wormhole.com/introducing-wormhole-native-token-transfers-a-new-open-framework-for-making-any-token-natively-multichain",
-            "summary": "Introduces Native Token Transfers (NTT)."
-        }
-    ],
-    "05": [
-        {
-            "headline": "FormAI",
-            "source": "https://www.formai.us/litepaper",
-            "summary": "A democratic AI/LLM merging Crypto and AI. Decentralized distributed AI training and inference."
-        },
-        {
-            "headline": "LiFi",
-            "source": "https://twitter.com/lifiprotocol/status/1764742245557600507?s=61&t=NVZi-BuDzcc1dbtqx0Kn4w",
-            "summary": "Partners with HerculesDEX."
-        },
-        {
-            "headline": "Connext",
-            "source": "https://twitter.com/connext/status/1764814089698816350?s=61&t=NVZi-BuDzcc1dbtqx0Kn4w",
-            "summary": "Partners with RenzoProtocol. BNB users can restake WETH without ever leaving the ecosystem."
-        },
-        {
-            "headline": "Solana",
-            "source": "https://discuss.ens.domains/t/ep5-3-tempcheck-ens-on-solana/18860",
-            "summary": "ENS on Solana. wallet.s.eth."
-        }
-    ],
-    "06": [
-        {
-            "headline": "Celestia",
-            "source": "https://twitter.com/fluentxyz/status/1765021151796056490?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
-            "summary": "Fluent integrates Celestia underneath. Fluent is a zkWasm L2 for Ethereum."
-        },
-        {
-            "headline": "EigenLayer",
-            "source": "https://twitter.com/dabit3/status/1765034335948636235?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
-            "summary": "EigenLayer for Developers. Accelerating dapp development."
-        },
-        {
-            "headline": "Wanchain",
-            "source": "https://twitter.com/wanchain_org/status/1765060161427665097?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
-            "summary": "KuPay Finance live on Wanchain."
-        },
-        {
-            "headline": "Biconomy",
-            "source": "https://twitter.com/erc20_news/status/1764743158875762888?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
-            "summary": "Partners with Acentrik, a strategic product to pioneer a next-gen data marketplace."
-        },
-        {
-            "headline": "Linea",
-            "source": "https://twitter.com/lineabuild/status/1765130276546728101?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
-            "summary": "Partners with OpenZeppelin to expand web3's knowledge of potential vulnerabilities."
-        },
-        {
-            "headline": "Astar",
-            "source": "https://twitter.com/astarnetwork/status/1765174066259095974?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
-            "summary": "Astar zkEVM is live. After parachain in Polkadot, Astar expands to the Ethereum ecosystem."
-        },
-        {
-            "headline": "Cronos",
-            "source": "https://twitter.com/zksync/status/1765395117265817894?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
-            "summary": "Building a zkSync L2 in partnership with Crypto.com."
-        }
-    ],
-    "07": [
-        {
-            "headline": "Axelar and Neutron",
-            "source": "https://x.com/Neutron_org/status/1765467702502850616?s=20",
-            "summary": "wstETH to Cosmos. You can bridge wstETH from Ethereum to Osmosis using Neutron wstETH bridge and Osmosis assets page."
-        },
-        {
-            "headline": "LayerZero",
-            "source": "https://x.com/delabsOfficial/status/1760170919937642635?s=20",
-            "summary": "Delabs Games integrates ONFT standard from LayerZero to NFT minting smart contracts."
-        },
-        {
-            "headline": "Celestia",
-            "source": "https://x.com/rollchains/status/1765379394153898218?s=20",
-            "summary": "Rollchains unveiled. Rollchains enables any Cosmos L1 to post its data to Celestia."
-        },
-        {
-            "headline": "Way Network",
-            "source": "https://x.com/WayNetwork_Labs/status/1765637312233488766?s=20",
-            "summary": "Partners with Tubes. Tubes is a Cross-chain inscription exchange built on ERC20."
-        },
-        {
-            "headline": "XY Finance",
-            "source": "https://x.com/xyfinance/status/1765680016132878713?s=20",
-            "summary": "Integrates Blast."
-        },
-        {
-            "headline": "Across",
-            "source": "https://x.com/AcrossProtocol/status/1765763095149056164?s=20",
-            "summary": "Partners with Espresso. Across relayers can fill users' bridge txns in seconds with Espresso's hotshot consensus."
-        },
-        {
-            "headline": "Wormhole",
-            "source": "https://x.com/wormholecrypto/status/1765769505740140967?s=20",
-            "summary": "Carrier leverages Wormhole to lock tokens on the source chain and mint wrapped tokens on the destination chain."
-        },
-        {
-            "headline": "Linea",
-            "source": "https://x.com/LineaBuild/status/1765776820685901848?s=20",
-            "summary": "Partners with AjiraPay. It is a dapp for real-world crypto use cases."
-        },
-        {
-            "headline": "WOOFI",
-            "source": "https://www.theblock.co/post/280759/woofi-offers-bounty-after-8-75-million-exploit-on-arbitrum",
-            "summary": "Offers 10% whitehat bounty offered from the recent 8.75 Million exploit in Arbitrum."
-        }
-    ],
-    "08": [
-        {
-            "headline": "Scroll",
-            "source": "https://twitter.com/scroll_zkp/status/1765801387189772551?s=61&t=QDllg32kYvHHRSR9Pj8Sdg",
-            "summary": "Cosmos IBC on Ethereum L2 powered by Union_build. Union is a zk infra layer for general message passing, asset transfers, NFTs and DeFi."
-        },
-        {
-            "headline": "Axelar",
-            "source": "https://twitter.com/fenixfinance/status/1765794373864759479?s=61&t=QDllg32kYvHHRSR9Pj8Sdg",
-            "summary": "Fenix expands into mythic chain integrating squidrouter."
-        },
-        {
-            "headline": "Binance Labs",
-            "source": "https://www.binance.com/en/blog/ecosystem/binance-labs-concludes-incubation-season-6-invests-in-cellula-derivio-ethena-nfprompt-qna3-shogun-uxuy-8000543823227873581",
-            "summary": "Concludes Incubation Season 6."
-        }
-    ],
-    "12": [
-        {
-            "headline": "LiFi",
-            "source": "https://li.fi/knowledge-hub/openeden-integrates-li-fi-to-simplify-t-bill-purchases/?utm_source=Twitter&utm_campaign=OpenEden",
-            "summary": "Integrates with OpenEden_Labs, a tokenized RWA investment platform. LiFi will enable users to mint TBILLs and earn US. Treasury yields on-chain."
-        },
-        {
-            "headline": "Celer",
-            "source": "https://twitter.com/celernetwork/status/1767400123435499554?s=61&t=UDrD5acpdFs1hzwBT4tx7A",
-            "summary": "Collaborates with Trustalabs."
-        },
-        {
-            "headline": "Meson",
-            "source": "https://twitter.com/mesonfi/status/1767405510352154946?s=61&t=UDrD5acpdFs1hzwBT4tx7A",
-            "summary": "BitLayer available in Meson testnet."
-        },
-        {
-            "headline": "Owlto",
-            "source": "https://twitter.com/owlto_finance/status/1767431688362356839?s=61&t=UDrD5acpdFs1hzwBT4tx7A",
-            "summary": "Partners with UltiverseDAO, an AI-driven gaming world with VR and NFTs."
-        },
-        {
-            "headline": "Map",
-            "source": "https://twitter.com/mapprotocol/status/1767463777715527872?s=61&t=UDrD5acpdFs1hzwBT4tx7A",
-            "summary": "Partners with Arkreen_network. Arkreen is a web3-powered infra for renewable energy resources and carbon reduction applications."
-        }
-    ],
-    "13": [
-        {
-            "headline": "LiFi",
-            "source": "https://twitter.com/jumperexchange/status/1767916772928196608?s=61&t=BLNyIyZDm4v9lUp3RkJj2w",
-            "summary": "Wrapper via Lifi. Exchang native assets for wrapped versions & vice versa, 1:1 across any chain on Jumper."
-        },
-        {
-            "headline": "MetaMask",
-            "source": "https://www.coindesk.com/business/2024/03/11/with-mastercard-metamask-tests-first-blockchain-powered-payment-card/",
-            "summary": "With Mastercard, MetaMask Tests First Blockchain-Powered Payment Card."
-        }
-    ],
-    "14": [
-        {
-            "headline": "Wanchain",
-            "source": "https://twitter.com/wanchain_org/status/1767929104345534601?s=61&t=cCveQqremD_6TJHEZ8vvqA",
-            "summary": "Available on Chainspot - a cross-chain solutions aggregator with tools and analytics."
-        },
-        {
-            "headline": "An analysis of Intent-based markets",
-            "source": "https://twitter.com/tarunchitra/status/1765394063182725162",
-            "summary": "More solvers doesn't necessarily mean better outcome."
-        },
-        {
-            "headline": "BriankonwsAI",
-            "source": "https://twitter.com/arjunnchand/status/1768184050160656419?s=61&t=Cl_hUaeGIfnWjjUuI5AQsA",
-            "summary": "AI assistant for performing transations by prompting. AI agents via LiFi."
-        },
-        {
-            "headline": "Map",
-            "source": "https://x.com/MapProtocol/status/1768179635261727147?s=20",
-            "summary": "Officially joins Nvidia Developer program to accelerate AI powered Bitcoin interoperability tech."
-        },
-        {
-            "headline": "Wormhole",
-            "source": "https://twitter.com/wormholecrypto/status/1768276001010942444?s=61&t=Cl_hUaeGIfnWjjUuI5AQsA",
-            "summary": "PancakeSwap integrates wormhole connect to enable token transfers."
-        },
-        {
-            "headline": "BNB chain",
-            "source": "https://www.theblock.co/post/282442/bnb-chain-layer-2-rollups-as-a-service",
-            "summary": "Introduces rollup-as-a-service solution to expand its Layer 2 ecosystem."
-        }
-    ]
+	"01": [
+		{
+			"headline": "Celer",
+			"source": "https://twitter.com/degenecosystem/status/1763149800059359252?s=61&t=viZspeY9EOXqDqlNy4UC4A",
+			"summary": "Degenx collaborates with Celer to Boost Interoperability."
+		},
+		{
+			"headline": "Owlto",
+			"source": "https://twitter.com/owlto_finance/status/1763257823604183266?s=61&t=viZspeY9EOXqDqlNy4UC4A",
+			"summary": "Integrates Blast."
+		},
+		{
+			"headline": "Wormhole",
+			"source": "https://wormhole.com/introducing-wormhole-native-token-transfers-a-new-open-framework-for-making-any-token-natively-multichain",
+			"summary": "Introduces Native Token Transfers (NTT)."
+		}
+	],
+	"05": [
+		{
+			"headline": "FormAI",
+			"source": "https://www.formai.us/litepaper",
+			"summary": "A democratic AI/LLM merging Crypto and AI. Decentralized distributed AI training and inference."
+		},
+		{
+			"headline": "LiFi",
+			"source": "https://twitter.com/lifiprotocol/status/1764742245557600507?s=61&t=NVZi-BuDzcc1dbtqx0Kn4w",
+			"summary": "Partners with HerculesDEX."
+		},
+		{
+			"headline": "Connext",
+			"source": "https://twitter.com/connext/status/1764814089698816350?s=61&t=NVZi-BuDzcc1dbtqx0Kn4w",
+			"summary": "Partners with RenzoProtocol. BNB users can restake WETH without ever leaving the ecosystem."
+		},
+		{
+			"headline": "Solana",
+			"source": "https://discuss.ens.domains/t/ep5-3-tempcheck-ens-on-solana/18860",
+			"summary": "ENS on Solana. wallet.s.eth."
+		}
+	],
+	"06": [
+		{
+			"headline": "Celestia",
+			"source": "https://twitter.com/fluentxyz/status/1765021151796056490?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+			"summary": "Fluent integrates Celestia underneath. Fluent is a zkWasm L2 for Ethereum."
+		},
+		{
+			"headline": "EigenLayer",
+			"source": "https://twitter.com/dabit3/status/1765034335948636235?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+			"summary": "EigenLayer for Developers. Accelerating dapp development."
+		},
+		{
+			"headline": "Wanchain",
+			"source": "https://twitter.com/wanchain_org/status/1765060161427665097?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+			"summary": "KuPay Finance live on Wanchain."
+		},
+		{
+			"headline": "Biconomy",
+			"source": "https://twitter.com/erc20_news/status/1764743158875762888?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+			"summary": "Partners with Acentrik, a strategic product to pioneer a next-gen data marketplace."
+		},
+		{
+			"headline": "Linea",
+			"source": "https://twitter.com/lineabuild/status/1765130276546728101?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+			"summary": "Partners with OpenZeppelin to expand web3's knowledge of potential vulnerabilities."
+		},
+		{
+			"headline": "Astar",
+			"source": "https://twitter.com/astarnetwork/status/1765174066259095974?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+			"summary": "Astar zkEVM is live. After parachain in Polkadot, Astar expands to the Ethereum ecosystem."
+		},
+		{
+			"headline": "Cronos",
+			"source": "https://twitter.com/zksync/status/1765395117265817894?s=61&t=C_isOYZWkM1lvdtaqu8eqg",
+			"summary": "Building a zkSync L2 in partnership with Crypto.com."
+		}
+	],
+	"07": [
+		{
+			"headline": "Axelar and Neutron",
+			"source": "https://x.com/Neutron_org/status/1765467702502850616?s=20",
+			"summary": "wstETH to Cosmos. You can bridge wstETH from Ethereum to Osmosis using Neutron wstETH bridge and Osmosis assets page."
+		},
+		{
+			"headline": "LayerZero",
+			"source": "https://x.com/delabsOfficial/status/1760170919937642635?s=20",
+			"summary": "Delabs Games integrates ONFT standard from LayerZero to NFT minting smart contracts."
+		},
+		{
+			"headline": "Celestia",
+			"source": "https://x.com/rollchains/status/1765379394153898218?s=20",
+			"summary": "Rollchains unveiled. Rollchains enables any Cosmos L1 to post its data to Celestia."
+		},
+		{
+			"headline": "Way Network",
+			"source": "https://x.com/WayNetwork_Labs/status/1765637312233488766?s=20",
+			"summary": "Partners with Tubes. Tubes is a Cross-chain inscription exchange built on ERC20."
+		},
+		{
+			"headline": "XY Finance",
+			"source": "https://x.com/xyfinance/status/1765680016132878713?s=20",
+			"summary": "Integrates Blast."
+		},
+		{
+			"headline": "Across",
+			"source": "https://x.com/AcrossProtocol/status/1765763095149056164?s=20",
+			"summary": "Partners with Espresso. Across relayers can fill users' bridge txns in seconds with Espresso's hotshot consensus."
+		},
+		{
+			"headline": "Wormhole",
+			"source": "https://x.com/wormholecrypto/status/1765769505740140967?s=20",
+			"summary": "Carrier leverages Wormhole to lock tokens on the source chain and mint wrapped tokens on the destination chain."
+		},
+		{
+			"headline": "Linea",
+			"source": "https://x.com/LineaBuild/status/1765776820685901848?s=20",
+			"summary": "Partners with AjiraPay. It is a dapp for real-world crypto use cases."
+		},
+		{
+			"headline": "WOOFI",
+			"source": "https://www.theblock.co/post/280759/woofi-offers-bounty-after-8-75-million-exploit-on-arbitrum",
+			"summary": "Offers 10% whitehat bounty offered from the recent 8.75 Million exploit in Arbitrum."
+		}
+	],
+	"08": [
+		{
+			"headline": "Scroll",
+			"source": "https://twitter.com/scroll_zkp/status/1765801387189772551?s=61&t=QDllg32kYvHHRSR9Pj8Sdg",
+			"summary": "Cosmos IBC on Ethereum L2 powered by Union_build. Union is a zk infra layer for general message passing, asset transfers, NFTs and DeFi."
+		},
+		{
+			"headline": "Axelar",
+			"source": "https://twitter.com/fenixfinance/status/1765794373864759479?s=61&t=QDllg32kYvHHRSR9Pj8Sdg",
+			"summary": "Fenix expands into mythic chain integrating squidrouter."
+		},
+		{
+			"headline": "Binance Labs",
+			"source": "https://www.binance.com/en/blog/ecosystem/binance-labs-concludes-incubation-season-6-invests-in-cellula-derivio-ethena-nfprompt-qna3-shogun-uxuy-8000543823227873581",
+			"summary": "Concludes Incubation Season 6."
+		}
+	],
+	"12": [
+		{
+			"headline": "LiFi",
+			"source": "https://li.fi/knowledge-hub/openeden-integrates-li-fi-to-simplify-t-bill-purchases/?utm_source=Twitter&utm_campaign=OpenEden",
+			"summary": "Integrates with OpenEden_Labs, a tokenized RWA investment platform. LiFi will enable users to mint TBILLs and earn US. Treasury yields on-chain."
+		},
+		{
+			"headline": "Celer",
+			"source": "https://twitter.com/celernetwork/status/1767400123435499554?s=61&t=UDrD5acpdFs1hzwBT4tx7A",
+			"summary": "Collaborates with Trustalabs."
+		},
+		{
+			"headline": "Meson",
+			"source": "https://twitter.com/mesonfi/status/1767405510352154946?s=61&t=UDrD5acpdFs1hzwBT4tx7A",
+			"summary": "BitLayer available in Meson testnet."
+		},
+		{
+			"headline": "Owlto",
+			"source": "https://twitter.com/owlto_finance/status/1767431688362356839?s=61&t=UDrD5acpdFs1hzwBT4tx7A",
+			"summary": "Partners with UltiverseDAO, an AI-driven gaming world with VR and NFTs."
+		},
+		{
+			"headline": "Map",
+			"source": "https://twitter.com/mapprotocol/status/1767463777715527872?s=61&t=UDrD5acpdFs1hzwBT4tx7A",
+			"summary": "Partners with Arkreen_network. Arkreen is a web3-powered infra for renewable energy resources and carbon reduction applications."
+		}
+	],
+	"13": [
+		{
+			"headline": "LiFi",
+			"source": "https://twitter.com/jumperexchange/status/1767916772928196608?s=61&t=BLNyIyZDm4v9lUp3RkJj2w",
+			"summary": "Wrapper via Lifi. Exchang native assets for wrapped versions & vice versa, 1:1 across any chain on Jumper."
+		},
+		{
+			"headline": "MetaMask",
+			"source": "https://www.coindesk.com/business/2024/03/11/with-mastercard-metamask-tests-first-blockchain-powered-payment-card/",
+			"summary": "With Mastercard, MetaMask Tests First Blockchain-Powered Payment Card."
+		}
+	],
+	"14": [
+		{
+			"headline": "Wanchain",
+			"source": "https://twitter.com/wanchain_org/status/1767929104345534601?s=61&t=cCveQqremD_6TJHEZ8vvqA",
+			"summary": "Available on Chainspot - a cross-chain solutions aggregator with tools and analytics."
+		},
+		{
+			"headline": "An analysis of Intent-based markets",
+			"source": "https://twitter.com/tarunchitra/status/1765394063182725162",
+			"summary": "More solvers doesn't necessarily mean better outcome."
+		},
+		{
+			"headline": "BriankonwsAI",
+			"source": "https://twitter.com/arjunnchand/status/1768184050160656419?s=61&t=Cl_hUaeGIfnWjjUuI5AQsA",
+			"summary": "AI assistant for performing transations by prompting. AI agents via LiFi."
+		},
+		{
+			"headline": "Map",
+			"source": "https://x.com/MapProtocol/status/1768179635261727147?s=20",
+			"summary": "Officially joins Nvidia Developer program to accelerate AI powered Bitcoin interoperability tech."
+		},
+		{
+			"headline": "Wormhole",
+			"source": "https://twitter.com/wormholecrypto/status/1768276001010942444?s=61&t=Cl_hUaeGIfnWjjUuI5AQsA",
+			"summary": "PancakeSwap integrates wormhole connect to enable token transfers."
+		},
+		{
+			"headline": "BNB chain",
+			"source": "https://www.theblock.co/post/282442/bnb-chain-layer-2-rollups-as-a-service",
+			"summary": "Introduces rollup-as-a-service solution to expand its Layer 2 ecosystem."
+		}
+	],
+	"19": [
+		{
+			"LiFi": "Jumper Exchange announces the ability to wrap any token via LiFi, bridging them with a 1:1 ratio.",
+			"Link": "https://twitter.com/jumperexchange/status/1767916772928196608?s=61&t=BLNyIyZDm4v9lUp3RkJj2w"
+		},
+		{
+			"MetaMask": "MetaMask collaborates with Mastercard to test the first blockchain-powered payment card.",
+			"Link": "https://www.coindesk.com/business/2024/03/11/with-mastercard-metamask-tests-first-blockchain-powered-payment-card/"
+		},
+		{
+			"Wanchain": "Available on Chainspot - a cross-chain solutions aggregator with tools and analytics.",
+			"Link": "https://twitter.com/wanchain_org/status/1767929104345534601?s=61&t=cCveQqremD_6TJHEZ8vvqA"
+		},
+		{
+			"Analysis": "An analysis of Intent-based markets: More solvers doesn't necessarily mean better outcome.",
+			"Link": "https://twitter.com/tarunchitra/status/1765394063182725162"
+		},
+		{
+			"BriankonwsAI": "AI assistant for performing transactions by prompting. AI agents via LiFi.",
+			"Link": "https://twitter.com/arjunnchand/status/1768184050160656419?s=61&t=Cl_hUaeGIfnWjjUuI5AQsA"
+		},
+		{
+			"Map": "Officially joins Nvidia Developer program to accelerate AI powered Bitcoin interoperability tech.",
+			"Link": "https://x.com/MapProtocol/status/1768179635261727147?s=20"
+		},
+		{
+			"Wormhole": "PancakeSwap integrates Wormhole connect to enable token transfers.",
+			"Link": "https://twitter.com/wormholecrypto/status/1768276001010942444?s=61&t=Cl_hUaeGIfnWjjUuI5AQsA"
+		},
+		{
+			"BNB Chain": "Introduces rollup-as-a-service solution to expand its Layer 2 ecosystem.",
+			"Link": "https://www.theblock.co/post/282442/bnb-chain-layer-2-rollups-as-a-service"
+		}
+	]
 }
