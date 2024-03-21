@@ -248,5 +248,27 @@
 			"source": "https://twitter.com/shunkakinoki/status/1769767434372931978?s=61&t=ijQKMfb_tYVMhC6Gtos7ow",
 			"summary": "New approach to tackle EVM UX fragmentation."
 		}
+	],
+	"20": [
+		{
+			"headline": "Caldera",
+			"source": "https://twitter.com/hookprotocol/status/1770511377787969573?s=61&t=cHxSdWP_JdoRoSy7CGyK6w",
+			"summary": "Partners with Hook Protocol."
+		},
+		{
+			"headline": "Hyperlane",
+			"source": "https://twitter.com/plumenetwork/status/1770525594255831161?s=61&t=cHxSdWP_JdoRoSy7CGyK6w",
+			"summary": "Plume will support bridging ETH and ERC20 tokens on day 1 of mainnet using Hyperlane's cross-chain messaging tech."
+		},
+		{
+			"headline": "Map",
+			"source": "https://twitter.com/mapprotocol/status/1770693074601287813?s=61&t=cHxSdWP_JdoRoSy7CGyK6w",
+			"summary": "Partners with Consensus Core, the cloud partner of NVIDIA."
+		},
+		{
+			"headline": "Rubic",
+			"source": "https://twitter.com/coinspaid_media/status/1770426755393704183?s=61&t=cHxSdWP_JdoRoSy7CGyK6w",
+			"summary": "Introduces a Metamask extension - Best rate finder. It allows users to choose the best transaction conditions by aggregating real-time."
+		}
 	]
 }
