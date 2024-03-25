@@ -270,5 +270,42 @@
 			"source": "https://twitter.com/coinspaid_media/status/1770426755393704183?s=61&t=cHxSdWP_JdoRoSy7CGyK6w",
 			"summary": "Introduces a Metamask extension - Best rate finder. It allows users to choose the best transaction conditions by aggregating real-time."
 		}
+	],
+	"25": [
+		{
+			"headline": "Arbitrum",
+			"source": "https://x.com/castle__cap/status/1771837114675806430?s=20",
+			"summary": "Castle Capital, Advisors for LTIPP."
+		},
+		{
+			"headline": "Polyhedra",
+			"source": "https://x.com/PolyhedraZK/status/1772149013237694694?s=20",
+			"summary": "Partners with BitLayer Labs - Bitcoin equivalent layer2 based on BitVM."
+		},
+		{
+			"headline": "Rango",
+			"source": "https://x.com/RangoExchange/status/1772205938105077768?s=20",
+			"summary": "Users can select preferred routes, DEXes, and bridges."
+		},
+		{
+			"headline": "Scroll",
+			"source": "https://x.com/Scroll_ZKP/status/1772245827677000095?s=20",
+			"summary": "Next mainnet upgrade focusing on Dencun compatibility, DA compression, SHA-256 opcode support, fee management with Ethereum's EIP-1559, etc."
+		},
+		{
+			"headline": "Particle",
+			"source": "https://x.com/xraders_xyz/status/1772148687999017349?s=20",
+			"summary": "Partners with XRADERs. XRAFERs users can facilitate various on-chain transactions effectively and seamlessly."
+		},
+		{
+			"headline": "deBridge",
+			"source": "https://x.com/deBridgeFinance/status/1772262320120746373?s=20",
+			"summary": "Partners with Caldera."
+		},
+		{
+			"headline": "LiFi",
+			"source": "https://x.com/lifiprotocol/status/1772265936373924102?s=20",
+			"summary": "Integrates with Redacted Cartel."
+		}
 	]
 }
