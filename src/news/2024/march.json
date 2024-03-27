@@ -307,5 +307,37 @@
 			"source": "https://x.com/lifiprotocol/status/1772265936373924102?s=20",
 			"summary": "Integrates with Redacted Cartel."
 		}
+	],
+	"27": [
+		{
+			"headline": "Tucana",
+			"source": "https://x.com/TucanaProtocol/status/1772653221993189642?s=20",
+			"summary": "An intent-centric liquidity layer, DEX, and perp chain."
+		},
+		{
+			"headline": "Axelar",
+			"source": "https://x.com/Chain4Energy/status/1772567764793753762?s=20",
+			"summary": "C4E integrates with Axelar."
+		},
+		{
+			"headline": "Socket",
+			"source": "https://x.com/IntractCampaign/status/1772864111392477615?s=20",
+			"summary": "Intract partners with Socket."
+		},
+		{
+			"headline": "Polyhedra",
+			"source": "https://x.com/PolyhedraZK/status/1772960605629972772?s=20",
+			"summary": "Partners with Renzo."
+		},
+		{
+			"headline": "Polygon Chain Upgrade",
+			"source": "https://polygon.technology/blog/polygon-pos-is-cooking-the-napoli-upgrade-means-better-ux-the-mumbai-testnet-takes-a-bow?utm_source=twitter&utm_medium=social&utm_content=pos-is-cooking",
+			"summary": "Napoli upgrade introduces support for RIP-7212, improvements to parallelization, and new op-codes related to Ethereum’s Cancun upgrade."
+		},
+		{
+			"headline": "Caldera",
+			"source": "https://x.com/Calderaxyz/status/1773019048776990974?s=20",
+			"summary": "Partners with PythNetwork."
+		}
 	]
 }
