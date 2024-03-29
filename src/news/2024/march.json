@@ -339,5 +339,32 @@
 			"source": "https://x.com/Calderaxyz/status/1773019048776990974?s=20",
 			"summary": "Partners with PythNetwork."
 		}
+	],
+	"29": [
+		{
+			"headline": "Ritual",
+			"source": "https://x.com/ritualnet/status/1773399388896866670?s=20",
+			"summary": "Partners with Celestia."
+		},
+		{
+			"headline": "Xada",
+			"source": "https://x.com/XadeFinance/status/1773380494782251375?s=20",
+			"summary": "Trading app housing 100k+ markets including stocks, crypto, forex, and more. Powered by LiFi."
+		},
+		{
+			"headline": "LayerZero",
+			"source": "https://x.com/LayerZero_Labs/status/1773432882142548392?s=20",
+			"summary": "Integrates L0 scanner with Clustersxyz enabling human-readable tracking of omnichain transactions."
+		},
+		{
+			"headline": "Owlto",
+			"source": "https://x.com/Owlto_Finance/status/1773648157630443896?s=20",
+			"summary": "Partners with Magicswap."
+		},
+		{
+			"headline": "Symbiosis",
+			"source": "https://x.com/symbiosis_fi/status/1773656599510356215?s=20",
+			"summary": "Partners with De.Fi."
+		}
 	]
 }
