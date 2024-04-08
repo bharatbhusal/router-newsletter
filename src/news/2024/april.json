@@ -1,1 +1,19 @@
-{}
+{
+	"08": [
+		{
+			"headline": "Interop Protocols",
+			"source": "https://x.com/arjunnchand/status/1777206890256048223",
+			"summary": "Modularizing the stack: The most interesting development with these designs is the separation between the transport and verification layers."
+		},
+		{
+			"headline": "Chainge",
+			"source": "https://x.com/FinanceChainge/status/1777256619534872691",
+			"summary": "DAO proposal passed with 95% approval rate. Securing a $13M USD capital injection. Adding into circulation 50 million XCHNG from the investment allocation. Guaranteeing $1 million USD in Q2 profit."
+		},
+		{
+			"headline": "Wormhole",
+			"source": "https://x.com/wormhole/status/1777366080165740905",
+			"summary": "Building MultiGov by teaming up with tallyxyz and scopelift. MultiGov is a multichain governance system that will soon be available to DAOs on Solana, Ethereum, and EVMs L2s."
+		}
+	]
+}
