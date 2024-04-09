@@ -15,5 +15,22 @@
 			"source": "https://x.com/wormhole/status/1777366080165740905",
 			"summary": "Building MultiGov by teaming up with tallyxyz and scopelift. MultiGov is a multichain governance system that will soon be available to DAOs on Solana, Ethereum, and EVMs L2s."
 		}
+	],
+	"09": [
+		{
+			"headline": "Picasso",
+			"source": "https://x.com/Picasso_Network/status/1777523112545812579",
+			"summary": "Partners with redactedCartel to bring Pirex ETH into Cosmos."
+		},
+		{
+			"headline": "Polyhedra",
+			"source": "https://x.com/PolyhedraZK/status/1777565318308847806",
+			"summary": "Partners with bounce_bit enabling interop between bounceBit and other networks including Bitcoin and Ethereum."
+		},
+		{
+			"headline": "Flare",
+			"source": "https://x.com/FlareNetworks/status/1777698603999347081",
+			"summary": "RainProtocol - intents like DEX coming to Flare. Open-source desktop app lets you write, deploy, and manage perp token trading strategies written in Rainlang on any EVM network."
+		}
 	]
 }
