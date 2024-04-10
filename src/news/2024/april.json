@@ -32,5 +32,22 @@
 			"source": "https://x.com/FlareNetworks/status/1777698603999347081",
 			"summary": "RainProtocol - intents like DEX coming to Flare. Open-source desktop app lets you write, deploy, and manage perp token trading strategies written in Rainlang on any EVM network."
 		}
+	],
+	"10": [
+		{
+			"headline": "Ekrahm",
+			"source": "https://x.com/celestia_devs/status/1777690426343833763",
+			"summary": "Brand positioner and marketing."
+		},
+		{
+			"headline": "Jolt",
+			"source": "https://x.com/SuccinctJT/status/1777729264663626168",
+			"summary": "New approach to zkVM design. 6X better than RISC Zero and 2X than SP1."
+		},
+		{
+			"headline": "Caldera",
+			"source": "https://x.com/Calderaxyz/status/1777755675046928749",
+			"summary": "Partners with EigenDA."
+		}
 	]
 }
