@@ -29,7 +29,7 @@ exports.getNewsOfMonth = async (req, res) => {
 		news.forEach((item) => {
 			const itemYear = new Date(item.date).getFullYear();
 			const itemMonth = new Date(item.date).getMonth() + 1;
-			const itemDay = new Date(item.date).getDate() - 1;
+			const itemDay = new Date(item.date).getDate();
 			if (
 				itemYear === parseInt(year) &&
 				itemMonth === parseInt(month)
