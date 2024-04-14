@@ -1,96 +1,111 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { FaCopy } from "react-icons/fa";
+import { getOneMonthNews } from "../api";
+import { months, getCurrentMonth } from "../utils/months";
 
+import {
+	generateTextContent,
+	copyToClipboard,
+} from "../utils/downloader";
 
-import { generateTextContent, copyToClipboard } from '../utils/downloader';
+const MonthlyView = ({ month }) => {
+	month = month || getCurrentMonth();
+	const [newsMonthData, setNewsMonthData] = useState();
 
-const MonthlyView = ({ year, month, newsData }) => {
-    const [showCopiedMessage, setShowCopiedMessage] = useState(false); // State to manage the visibility of the "Copied to clipboard" message
+	useEffect(() => {
+		async function fetchData() {
+			const result = await getOneMonthNews(2024, month);
+			console.log(result);
+			setNewsMonthData(result);
+		}
+		fetchData();
+	}, [month]);
 
-    if (!newsData || Object.keys(newsData).length === 0)
-    {
-        return (
-            <div className="table-mini">
-                <div className="future flex space-around">
-                    You are in the future
-                </div>
-            </div>
-        );
-    }
+	const [showCopiedMessage, setShowCopiedMessage] =
+		useState(false); // State to manage the visibility of the "Copied to clipboard" message
 
-    const sortedDays = Object.keys(newsData).sort((a, b) => parseInt(b, 10) - parseInt(a, 10));
+	if (
+		!newsMonthData ||
+		Object.keys(newsMonthData).length === 0
+	) {
+		return (
+			<div className="table-mini">
+				<div className="future flex space-around">
+					You are in the future
+				</div>
+			</div>
+		);
+	}
 
-    const CopyToClipboard = ({ newsDay }) => {
+	const CopyToClipboard = ({ newsDay }) => {
+		const handleCopyToClipboard = async () => {
+			// navigator.clipboard.writeText(generateTextContent(newsDayData[newsDay], month, newsDay))
 
-        const handleCopyToClipboard = async () => {
-            // navigator.clipboard.writeText(generateTextContent(newsData[newsDay], month, newsDay))
+			await copyToClipboard(
+				generateTextContent(
+					newsMonthData[newsDay],
+					months[month],
+					newsDay
+				)
+			);
+			// textDownloader(generateTextContent(newsDayData[newsDay], month, newsDay), "name")
+			setShowCopiedMessage(true); // Set state to show the "Copied to clipboard" message
+			// Hide the message after a certain duration (e.g., 2 seconds)
+			setTimeout(() => {
+				setShowCopiedMessage(false);
+			}, 2000);
+		};
 
-            await copyToClipboard(generateTextContent(newsData[newsDay], month, newsDay));
-            // textDownloader(generateTextContent(newsData[newsDay], month, newsDay), "name")
-            setShowCopiedMessage(true); // Set state to show the "Copied to clipboard" message
-            // Hide the message after a certain duration (e.g., 2 seconds)
-            setTimeout(() => {
-                setShowCopiedMessage(false);
-            }, 2000);
-        }
+		return (
+			<div
+				className="download flex space-around"
+				onClick={handleCopyToClipboard}
+			>
+				<FaCopy />
+			</div>
+		);
+	};
 
-        return (
-            <div className="download flex space-around" onClick={(handleCopyToClipboard)}>
-                <FaCopy />
-            </div>
-        )
-    }
+	return (
+		<div className="outlet">
+			<div className="news-list">
+				{newsMonthData &&
+					Object.entries(newsMonthData)
+						.reverse()
+						.map(([day, articles]) => {
+							const date = new Date(2024, month - 1, day);
+							const dayOfWeek = date.toLocaleString("en-US", {
+								weekday: "long",
+							});
 
-    return (
-        <div className="outlet">
-            <div className='news-list'>
-                {sortedDays.map(day => {
-                    const unpaddedDay = parseInt(day, 10);
-                    const monthNameToNumber = {
-                        January: 0,
-                        February: 1,
-                        March: 2,
-                        April: 3,
-                        May: 4,
-                        June: 5,
-                        July: 6,
-                        August: 7,
-                        September: 8,
-                        October: 9,
-                        November: 10,
-                        December: 11,
-                    };
+							return (
+								<div key={day}>
+									<ul>
+										<div className="daily-header flex space-between">
+											<h3>{`${months[month]} ${day}, 2024 | ${dayOfWeek}`}</h3>
+											<CopyToClipboard newsDay={day} />
+										</div>
+										{articles.map((article, index) => (
+											<li key={index} className="flex space-around">
+												<a href={article.source} target="_blank">
+													<strong>{article.headline}</strong>
+													<p>{article.summary}</p>
+												</a>
+											</li>
+										))}
+									</ul>
+								</div>
+							);
+						})}
 
-                    // Assuming month is the name of the month (e.g., "January")
-                    const monthNumber = monthNameToNumber[month];
-
-                    const date = new Date(year, monthNumber, unpaddedDay); // Use the converted month number
-
-                    const dayOfWeek = date.toLocaleString('en-US', { weekday: 'long' });
-
-                    return (
-                        <div key={day}>
-                            <ul>
-                                <div className='daily-header flex space-between'>
-                                    <h3>{`${month} ${unpaddedDay}, ${year} | ${dayOfWeek}`}</h3>
-                                    <CopyToClipboard newsDay={day} />
-                                </div>
-                                {newsData[day].map((article, index) => (
-                                    <li key={index} className='flex space-around'>
-                                        <a href={article.source} target='_blank'>
-                                            <strong>{article.headline}</strong>
-                                            <p>{article.summary}</p>
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    );
-                })}
-                {showCopiedMessage && <div className="copied-message">Copied to Clipboard</div>}
-            </div>
-        </div>
-    );
+				{showCopiedMessage && (
+					<div className="copied-message">
+						Copied to Clipboard
+					</div>
+				)}
+			</div>
+		</div>
+	);
 };
 
 export default MonthlyView;
