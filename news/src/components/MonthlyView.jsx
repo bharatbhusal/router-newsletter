@@ -73,7 +73,7 @@ const MonthlyView = ({ month }) => {
 					Object.entries(newsMonthData)
 						.reverse()
 						.map(([day, articles]) => {
-							const date = new Date(2024, month - 1, day);
+							const date = new Date(2024, month, day);
 							const dayOfWeek = date.toLocaleString("en-US", {
 								weekday: "long",
 							});
