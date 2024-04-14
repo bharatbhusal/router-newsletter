@@ -7,11 +7,15 @@ router.post("/", newsController.createNews);
 
 // Get news
 router.get("/:year/:month", newsController.getNewsOfMonth);
+// Get news
+router.get("/:year/:month/:day", newsController.getNews);
+
+// Get news of whole month
 
 // Update news
-router.put("/", newsController.updateNews);
+router.put("/:id", newsController.updateNews);
 
 // Delete news
-router.delete("/", newsController.deleteNews);
+router.delete("/:id", newsController.deleteNews);
 
 module.exports = router;

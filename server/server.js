@@ -2,11 +2,19 @@ const express = require("express");
 const corsMiddleware = require("./middlewares/cors");
 const newsRoutes = require("./routes/newsRoutes");
 const { connectDB } = require("./config/db");
-require("dotenv").config();
+const bodyParser = require("body-parser");
+
+require("dotenv").config({
+	path: `.env.${process.env.NODE_ENV}`,
+});
+
+// parse application/json
 
 const app = express();
 
+app.use(bodyParser.json());
 app.use(corsMiddleware);
+
 app.use(express.json());
 app.use("/", newsRoutes);
 
