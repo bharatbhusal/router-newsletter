@@ -7,7 +7,7 @@ export const generateTextContent = (
 ) => {
 	if (newsData) {
 		const greeting = "Hi Guys.";
-		const farewell = `Host: https://router-newsletter.vercel.app\n${month} ${parseInt(
+		const farewell = `Host: https://router-newsletter.onrender.com\n${month} ${parseInt(
 			day
 		)}, 2024.\nThank you.\nGoodnight.`;
 		const content = newsData
