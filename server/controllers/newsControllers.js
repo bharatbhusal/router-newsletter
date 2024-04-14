@@ -19,22 +19,28 @@ exports.createNews = async (req, res) => {
 		res.status(500).json({ error: "Internal server error" });
 	}
 };
+
 // Read
-exports.getNews = async (req, res) => {
+exports.getNewsOfMonth = async (req, res) => {
 	try {
-		const { year, month, day } = req.params;
+		const { year, month } = req.params;
 		const news = await News.find();
-		const filteredNews = news.filter((item) => {
+		const newsByDay = {};
+		news.forEach((item) => {
 			const itemYear = new Date(item.date).getFullYear();
 			const itemMonth = new Date(item.date).getMonth() + 1;
-			const itemDay = new Date(item.date).getDate();
-			return (
+			const itemDay = new Date(item.date).getDate() - 1;
+			if (
 				itemYear === parseInt(year) &&
-				itemMonth === parseInt(month) &&
-				itemDay === parseInt(day)
-			);
+				itemMonth === parseInt(month)
+			) {
+				if (!newsByDay[itemDay]) {
+					newsByDay[itemDay] = [];
+				}
+				newsByDay[itemDay].push(item);
+			}
 		});
-		res.status(200).json(filteredNews);
+		res.status(200).json(newsByDay);
 	} catch (error) {
 		res.status(500).json({ error: "Internal server error" });
 	}

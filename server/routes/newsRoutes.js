@@ -6,7 +6,7 @@ const router = express.Router();
 router.post("/", newsController.createNews);
 
 // Get news
-router.get("/:year/:month/:day", newsController.getNews);
+router.get("/:year/:month", newsController.getNewsOfMonth);
 
 // Update news
 router.put("/", newsController.updateNews);
