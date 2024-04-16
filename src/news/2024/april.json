@@ -49,5 +49,34 @@
 			"source": "https://x.com/Calderaxyz/status/1777755675046928749",
 			"summary": "Partners with EigenDA."
 		}
+	],
+	"15": [
+		{
+			"headline": "Across and Uniswap",
+			"source": "https://x.com/AcrossProtocol/status/1778434193288249636",
+			"summary": "Propose cross-chain intent standard. With the standard for cross-chain intents, users on Across, UniswapX, or other intents-based systems can sign a cross-chain order that follows one standard."
+		},
+		{
+			"headline": "Picasso",
+			"source": "https://unchainedcrypto.com/picasso-network-extends-ibc-protocol-to-bridge-solana-and-cosmos/",
+			"summary": "Picasso Network Extends IBC Protocol to Bridge Solana and Cosmos."
+		},
+		{
+			"headline": "Polyhedra",
+			"source": "https://x.com/PolyhedraZK/status/1779888698219450387",
+			"summary": "Partners with KelpDAO."
+		},
+		{
+			"headline": "Axelar",
+			"source": "https://x.com/axelarnetwork/status/1779902595827654971",
+			"summary": "Gamified Web3 marketplace powered by ESE interchaintokens."
+		}
+	],
+	"16": [
+		{
+			"headline": "Axelar",
+			"source": "https://x.com/pen_pad/status/1780233739689218236",
+			"summary": "Partners with PenPad."
+		}
 	]
 }
