@@ -57,7 +57,7 @@ const initializeApp = async () => {
 							element: (
 								<MonthlyView
 									year="2024"
-									month="March"
+									month="April"
 									newsData={monthData[3]}
 								/>
 							),
