@@ -78,5 +78,27 @@
 			"source": "https://x.com/pen_pad/status/1780233739689218236",
 			"summary": "Partners with PenPad."
 		}
+	],
+	"17": [
+		{
+			"headline": "Astria",
+			"source": "https://x.com/AstriaOrg/status/1780310001501995058",
+			"summary": "Building Sequencing layer for permissionless rollups."
+		},
+		{
+			"headline": "Chainlink",
+			"source": "https://x.com/chainlink/status/1780342149311250545",
+			"summary": "Issuing tokenized assets isn't enough."
+		},
+		{
+			"headline": "Scroll",
+			"source": "https://x.com/daddysether/status/1780224781415256300",
+			"summary": "Upgrade to Bernoulli has added optimizations like EIP-4844 support, SHA-256 precompile."
+		},
+		{
+			"headline": "Polyhedra",
+			"source": "https://x.com/PolyhedraZK/status/1780507485239177485",
+			"summary": "Partners with Google Cloud to bring ZK proofs to developers."
+		}
 	]
 }
