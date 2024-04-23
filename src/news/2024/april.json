@@ -100,5 +100,52 @@
 			"source": "https://x.com/PolyhedraZK/status/1780507485239177485",
 			"summary": "Partners with Google Cloud to bring ZK proofs to developers."
 		}
+	],
+	"23": [
+		{
+			"headline": "Mina",
+			"source": "https://x.com/MinaProtocol/status/1782318467040919795",
+			"summary": "Berkeley upgrade in June 4. Off-chain computation, cost-effective proof verification, and private inputs directly into the hands of developers."
+		},
+		{
+			"headline": "Orbiter",
+			"source": "https://x.com/FoxWallet/status/1782659453923590245",
+			"summary": "Partners with FoxWallet."
+		},
+		{
+			"headline": "Map",
+			"source": "https://x.com/MapProtocol/status/1782675033640624563",
+			"summary": "Partners with Orient Asset Management Limited. Integration and innovation of traditional financial institutions."
+		},
+		{
+			"headline": "Biconomy",
+			"source": "https://x.com/biconomy/status/1782688555094929416",
+			"summary": "Integrated by Eesee_io - a gamified liquidity solution and marketplace for digital assets, tokens and RWAs on blast."
+		},
+		{
+			"headline": "Particle",
+			"source": "https://x.com/ParticleNtwrk/status/1782743330998091848",
+			"summary": "BOB is integrating Particle Network's Account abstraction protocol, BTC connect for a smooth BOB mainnet UX."
+		},
+		{
+			"headline": "Safe",
+			"source": "https://x.com/safe/status/1782741448603079038",
+			"summary": "Introduces Safe{Pass}. New activity program that transforms your safe interactions into points."
+		},
+		{
+			"headline": "Symbiosis",
+			"source": "https://x.com/symbiosis_fi/status/1782747991821996287",
+			"summary": "Received 50K $ARB from LTIPP."
+		},
+		{
+			"headline": "Chainlink",
+			"source": "https://x.com/chainlink/status/1782771628633416043",
+			"summary": "Arkham has upgraded its blockchain intelligence exchange using Chainlink Functions to bring intel verification onchain in a trust-minimized manner."
+		},
+		{
+			"headline": "Axelar",
+			"source": "https://x.com/Blastup_io/status/1782762283770237192",
+			"summary": "Blastup integrates with Axelar."
+		}
 	]
 }
