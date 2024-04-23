@@ -6,7 +6,7 @@ import {
 import App from "./App";
 import "./index.css";
 import MonthlyView from "./components/MonthlyView";
-import NotFoundPage from "./components/404Error";
+import NotFoundPage from "./components/NotFoundPage";
 import { months } from "./utils/months";
 
 const initializeApp = async () => {

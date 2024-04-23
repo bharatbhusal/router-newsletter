@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { FaCopy } from "react-icons/fa";
 import { getOneMonthNews } from "../api";
 import { months, getCurrentMonth } from "../utils/months";
-
+import NotFoundPage from "./NotFoundPage";
+import Loading from "./Loading";
+import FuturePage from "./FuturePage";
 import {
 	generateTextContent,
 	copyToClipboard,
@@ -24,17 +26,13 @@ const MonthlyView = ({ month }) => {
 	const [showCopiedMessage, setShowCopiedMessage] =
 		useState(false); // State to manage the visibility of the "Copied to clipboard" message
 
-	if (
-		!newsMonthData ||
-		Object.keys(newsMonthData).length === 0
-	) {
-		return (
-			<div className="table-mini">
-				<div className="future flex space-around">
-					You are in the future
-				</div>
-			</div>
-		);
+	try {
+		if (Object.keys(newsMonthData).length === 0) {
+			return <FuturePage />;
+		}
+	} catch (error) {
+		return <Loading />;
+		// Handle the error here
 	}
 
 	const CopyToClipboard = ({ newsDay }) => {
@@ -69,34 +67,33 @@ const MonthlyView = ({ month }) => {
 	return (
 		<div className="outlet">
 			<div className="news-list">
-				{newsMonthData &&
-					Object.entries(newsMonthData)
-						.reverse()
-						.map(([day, articles]) => {
-							const date = new Date(2024, month, day);
-							const dayOfWeek = date.toLocaleString("en-US", {
-								weekday: "long",
-							});
+				{Object.entries(newsMonthData)
+					.reverse()
+					.map(([day, articles]) => {
+						const date = new Date(2024, month, day);
+						const dayOfWeek = date.toLocaleString("en-US", {
+							weekday: "long",
+						});
 
-							return (
-								<div key={day}>
-									<ul>
-										<div className="daily-header flex space-between">
-											<h3>{`${months[month]} ${day}, 2024 | ${dayOfWeek}`}</h3>
-											<CopyToClipboard newsDay={day} />
-										</div>
-										{articles.map((article, index) => (
-											<li key={index} className="flex space-around">
-												<a href={article.source} target="_blank">
-													<strong>{article.headline}</strong>
-													<p>{article.summary}</p>
-												</a>
-											</li>
-										))}
-									</ul>
-								</div>
-							);
-						})}
+						return (
+							<div key={day}>
+								<ul>
+									<div className="daily-header flex space-between">
+										<h3>{`${months[month]} ${day}, 2024 | ${dayOfWeek}`}</h3>
+										<CopyToClipboard newsDay={day} />
+									</div>
+									{articles.map((article, index) => (
+										<li key={index} className="flex space-around">
+											<a href={article.source} target="_blank">
+												<strong>{article.headline}</strong>
+												<p>{article.summary}</p>
+											</a>
+										</li>
+									))}
+								</ul>
+							</div>
+						);
+					})}
 
 				{showCopiedMessage && (
 					<div className="copied-message">
