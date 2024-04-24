@@ -147,5 +147,32 @@
 			"source": "https://x.com/Blastup_io/status/1782762283770237192",
 			"summary": "Blastup integrates with Axelar."
 		}
+	],
+	"24": [
+		{
+			"headline": "Geometry",
+			"source": "https://x.com/__geometrydev__/status/1782766679539556768",
+			"summary": "Collaboration with Mina Foundation and CelestiaOrg."
+		},
+		{
+			"headline": "Picasso",
+			"source": "https://x.com/Picasso_Network/status/1782841208017969408",
+			"summary": "Leveraging SuccinctLabs ZK infra."
+		},
+		{
+			"headline": "HopProtocol",
+			"source": "https://x.com/HopProtocol/status/1782843283070488864",
+			"summary": "Received 500K ARB from LTIPP."
+		},
+		{
+			"headline": "Neutron Grants",
+			"source": "https://x.com/NeutronGrants/status/1782848276439658546",
+			"summary": "Third batch of grants program."
+		},
+		{
+			"headline": "AltLayer",
+			"source": "https://x.com/shumochu/status/1783173674528395345",
+			"summary": "Shumo partners with AltLayer to bring proof aggregation based settlement to the next 10k zkRollups onchain."
+		}
 	]
 }
