@@ -1,25 +1,26 @@
 const express = require("express");
-const corsMiddleware = require("./middlewares/cors");
+const cors = require("cors");
 const newsRoutes = require("./routes/newsRoutes");
 const { connectDB } = require("./config/db");
 const bodyParser = require("body-parser");
-
 require("dotenv").config({
 	path: `.env.${process.env.NODE_ENV}`,
 });
 
-// parse application/json
-
 const app = express();
 
+// Use body-parser to parse JSON bodies
 app.use(bodyParser.json());
-app.use(corsMiddleware);
 
-app.use(express.json());
+app.use(cors());
+
+// Define your routes
 app.use("/", newsRoutes);
 
+// Connect to the database
 connectDB();
 
+// Define the port to listen on
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
 	console.log(`Server is running on port ${port}`);

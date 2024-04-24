@@ -3,11 +3,11 @@ import React, {
 	useEffect,
 	useState,
 } from "react";
-import EditTodo from "./EditTodo";
+import EditNews from "./EditNews";
 import env from "../utils/validateEnv";
+import NewsDetail from "./NewsDetail";
 
-const ListTodo = ({ day }) => {
-	day++;
+const ListNews = ({ day }) => {
 	const [newsData, setNewsData] = useState();
 
 	//delete news function
@@ -25,25 +25,30 @@ const ListTodo = ({ day }) => {
 	const getNews = async () => {
 		try {
 			const response = await fetch(
-				`${env.REACT_APP_SERVER_URL}/2024/1/${day}`
+				`${env.REACT_APP_SERVER_URL}/2024/4/${day}`
 			);
 			const jsonData = await response.json();
 			setNewsData(jsonData);
-			console.log(jsonData);
 		} catch (error) {
 			console.log(error.message);
 		}
 	};
 	useEffect(() => {
+		// setTimeout(() => {
 		getNews();
+		// }, 3000);
 	}, []);
 
 	return (
 		<Fragment>
 			<h1 className="mt-5">List News</h1>
+			<h7 style={{ fontStyle: "italic" }}>
+				Tap on the summary for detail
+			</h7>
 			<table className="table mt-5 text-center">
 				<thead>
 					<tr>
+						<th>Headline</th>
 						<th>Summary</th>
 						<th>Edit</th>
 						<th>Delete</th>
@@ -54,9 +59,20 @@ const ListTodo = ({ day }) => {
 					{newsData &&
 						newsData.map((news) => (
 							<tr key={news._id}>
-								<td>{news.summary}</td>
+								<td>{news.headline}</td>
 								<td>
-									<EditTodo
+									<NewsDetail
+										news={{
+											id: news._id,
+											headline: news.headline,
+											source: news.source,
+											summary: news.summary,
+											date: news.updatedAt,
+										}}
+									/>
+								</td>
+								<td>
+									<EditNews
 										news={{
 											id: news._id,
 											headline: news.headline,
@@ -81,4 +97,4 @@ const ListTodo = ({ day }) => {
 	);
 };
 
-export default ListTodo;
+export default ListNews;

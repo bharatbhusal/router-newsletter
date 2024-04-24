@@ -1,24 +1,21 @@
 import React, { Fragment, useState } from "react";
 import env from "../utils/validateEnv";
+
 const EditNews = ({ news }) => {
 	const [newNews, setNewNews] = useState(news);
 
-	//edit description functoin
 	const changeNews = async (e) => {
 		e.preventDefault();
 		try {
-			const body = { newNews };
-			console.log(body);
 			const res = await fetch(
-				`${env.REACT_APP_SERVER_URL}/${news.id}`,
+				`${env.REACT_APP_SERVER_URL}/${newNews.id}`,
 				{
 					method: "PUT",
 					headers: { "Content-Type": "application/json" },
-					body,
+					body: JSON.stringify(newNews),
 				}
 			);
-			console.log(res);
-			// window.location = "/";
+			window.location = "/";
 		} catch (error) {
 			console.log(error.message);
 		}
@@ -30,7 +27,7 @@ const EditNews = ({ news }) => {
 				type="button"
 				className="btn btn-warning"
 				data-toggle="modal"
-				data-target={`#id${news._id}`}
+				data-target={`#idEdit${newNews.id}`}
 			>
 				Edit
 			</button>
@@ -38,8 +35,8 @@ const EditNews = ({ news }) => {
 			{/* <!-- The Modal --> */}
 			<div
 				className="modal"
-				id={`id${news._id}`}
-				// onClick={() => setNewNews(newNews)}
+				id={`idEdit${newNews.id}`}
+				onClick={() => setNewNews(newNews)}
 			>
 				<div className="modal-dialog">
 					<div className="modal-content">
@@ -50,7 +47,7 @@ const EditNews = ({ news }) => {
 								type="button"
 								className="close"
 								data-dismiss="modal"
-								// onClick={() => setDescription(news.description)}
+								onClick={() => setNewNews(newNews)}
 							>
 								&times;
 							</button>
@@ -61,8 +58,9 @@ const EditNews = ({ news }) => {
 							<form onSubmit={(e) => changeNews(e)}>
 								<input
 									type="text"
-									className="form-control"
+									className="form-control edit_news"
 									value={newNews.headline}
+									required
 									onChange={(e) =>
 										setNewNews((prev) => ({
 											...prev,
@@ -70,9 +68,9 @@ const EditNews = ({ news }) => {
 										}))
 									}
 								/>
-								<input
+								<textarea
 									type="text"
-									className="form-control"
+									className="form-control edit_news"
 									value={newNews.summary}
 									onChange={(e) =>
 										setNewNews((prev) => ({
@@ -83,8 +81,9 @@ const EditNews = ({ news }) => {
 								/>
 								<input
 									type="text"
-									className="form-control"
+									className="form-control edit_news"
 									value={newNews.source}
+									required
 									onChange={(e) =>
 										setNewNews((prev) => ({
 											...prev,
@@ -110,7 +109,7 @@ const EditNews = ({ news }) => {
 								type="button"
 								className="btn btn-danger"
 								data-dismiss="modal"
-								// onClick={() => setDescription(news.description)}
+								onClick={() => setNewNews(newNews)}
 							>
 								Close
 							</button>

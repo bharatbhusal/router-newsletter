@@ -7,6 +7,7 @@ router.post("/", newsController.createNews);
 
 // Get news
 router.get("/:year/:month", newsController.getNewsOfMonth);
+router.get("/:id", newsController.getNewsById);
 // Get news
 router.get("/:year/:month/:day", newsController.getNews);
 

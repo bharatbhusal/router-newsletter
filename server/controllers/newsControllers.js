@@ -6,6 +6,8 @@ exports.createNews = async (req, res) => {
 		const existingNews = await News.findOne({
 			source: req.body.source,
 		});
+		console.log(req.body);
+		console.log(existingNews);
 		if (existingNews) {
 			res.status(400).json({
 				error: "News with this source already exists",
@@ -41,6 +43,22 @@ exports.getNews = async (req, res) => {
 	}
 };
 
+// Read by ID
+exports.getNewsById = async (req, res) => {
+	try {
+		const { id } = req.params;
+		const newsItem = await News.findById(id);
+		if (!newsItem) {
+			return res
+				.status(404)
+				.json({ error: "News item not found" });
+		}
+		res.status(200).json(newsItem);
+	} catch (error) {
+		res.status(500).json({ error: "Internal server error" });
+	}
+};
+
 // Read
 
 exports.getNewsOfMonth = async (req, res) => {
@@ -71,9 +89,8 @@ exports.getNewsOfMonth = async (req, res) => {
 // Update
 exports.updateNews = async (req, res) => {
 	try {
-		const { headline, source, summary } = req.body;
 		console.log(req.body);
-		console.log(req.params.id);
+		const { headline, source, summary } = req.body;
 		const updatedNews = await News.findOneAndUpdate(
 			{
 				_id: req.params.id,
