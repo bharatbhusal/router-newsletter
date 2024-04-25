@@ -174,5 +174,52 @@
 			"source": "https://x.com/shumochu/status/1783173674528395345",
 			"summary": "Shumo partners with AltLayer to bring proof aggregation based settlement to the next 10k zkRollups onchain."
 		}
+	],
+	"25": [
+		{
+			"headline": "AltLayer",
+			"source": "https://x.com/alt_layer/status/1783169893887828047",
+			"summary": "Integration with Nebra - A proof aggregation tech which can reduce overall verification fees up to 1/10th!"
+		},
+		{
+			"headline": "Axelar",
+			"source": "https://x.com/axelarnetwork/status/1783222682047426826",
+			"summary": "Remix tool for multichain functionality."
+		},
+		{
+			"headline": "Caldera",
+			"source": "https://x.com/Calderaxyz/status/1783232511889518974",
+			"summary": "Partners with TreasureDAO as their official RaaS provider."
+		},
+		{
+			"headline": "Base",
+			"source": "https://x.com/StreamDefi/status/1783164029965566035",
+			"summary": "Stream goes live on Base."
+		},
+		{
+			"headline": "NIM",
+			"source": "https://x.com/nim_network/status/1783147007529320796",
+			"summary": "Unveils first building block of the Nim AI Framework which provides economic ownership and verified access to AI models."
+		},
+		{
+			"headline": "Owlto",
+			"source": "https://x.com/Owlto_Finance/status/1783456844389986534",
+			"summary": "Collaborates with QuickSwapDEX, the leading DEX and AMM on all Polygon chains."
+		},
+		{
+			"headline": "ZetaChain",
+			"source": "https://blog.zetachain.com/zetachain-commits-5-of-total-zeta-supply-to-developer-and-dapp-ecosystem-growth-program-including-e92fdc35c295",
+			"summary": "Commits 5% of total ZETA supply to developer and dApps ecosystem growth program including 1% for Bitcoin projects."
+		},
+		{
+			"headline": "Wormhole",
+			"source": "https://x.com/wormhole/status/1783519961157414965",
+			"summary": "W token is now natively multichain using Wormhole Native Token Transfers (NTT) framework. Native W is now available in SPL format on Solana and ERC20 format on Ethereum, Arbitrum, Optimism and base."
+		},
+		{
+			"headline": "Google Cloud",
+			"source": "https://x.com/googlecloud/status/1783178023979639028",
+			"summary": "Announces Web3 Portal. Experiment on testnet. Discover blockchain datasets & developer tools from Google Cloud and our partners. Learn how the Web3 Startup Program can help you build faster."
+		}
 	]
 }
