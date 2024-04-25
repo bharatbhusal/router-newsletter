@@ -6,8 +6,6 @@ exports.createNews = async (req, res) => {
 		const existingNews = await News.findOne({
 			source: req.body.source,
 		});
-		console.log(req.body);
-		console.log(existingNews);
 		if (existingNews) {
 			res.status(400).json({
 				error: "News with this source already exists",
@@ -22,21 +20,20 @@ exports.createNews = async (req, res) => {
 	}
 };
 
-// Read;
 exports.getNews = async (req, res) => {
 	try {
 		const { year, month, day } = req.params;
+		console.log(year, month, day);
 		const news = await News.find();
 		const filteredNews = news.filter((item) => {
-			const itemYear = new Date(item.date).getFullYear();
-			const itemMonth = new Date(item.date).getMonth() + 1;
-			const itemDay = new Date(item.date).getDate();
 			return (
-				itemYear === parseInt(year) &&
-				itemMonth === parseInt(month) &&
-				itemDay === parseInt(day)
+				item.date.year === parseInt(year) &&
+				item.date.month === parseInt(month) &&
+				item.date.day === parseInt(day)
 			);
 		});
+
+		console.log(filteredNews);
 		res.status(200).json(filteredNews);
 	} catch (error) {
 		res.status(500).json({ error: "Internal server error" });
@@ -64,23 +61,17 @@ exports.getNewsById = async (req, res) => {
 exports.getNewsOfMonth = async (req, res) => {
 	try {
 		const { year, month } = req.params;
+		console.log(year, month);
 		const news = await News.find();
-		const newsByDay = {};
-		news.forEach((item) => {
-			const itemYear = new Date(item.date).getFullYear();
-			const itemMonth = new Date(item.date).getMonth() + 1;
-			const itemDay = new Date(item.date).getDate();
-			if (
-				itemYear === parseInt(year) &&
-				itemMonth === parseInt(month)
-			) {
-				if (!newsByDay[itemDay]) {
-					newsByDay[itemDay] = [];
-				}
-				newsByDay[itemDay].push(item);
-			}
+		const filteredNews = news.filter((item) => {
+			return (
+				item.date.year === parseInt(year) &&
+				item.date.month === parseInt(month)
+			);
 		});
-		res.status(200).json(newsByDay);
+
+		console.log(filteredNews);
+		res.status(200).json(filteredNews);
 	} catch (error) {
 		res.status(500).json({ error: "Internal server error" });
 	}

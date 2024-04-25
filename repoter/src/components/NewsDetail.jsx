@@ -1,7 +1,5 @@
-import React, { Fragment, useState } from "react";
-import env from "../utils/validateEnv";
+import React, { Fragment } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { host } from "envalid";
 
 const NewsDetail = ({ news }) => {
 	const sourceUrl = new URL(news.source);
@@ -18,6 +16,7 @@ const NewsDetail = ({ news }) => {
 					minHeight: "2rem",
 					display: "inline-block",
 					cursor: "pointer",
+					wordWrap: "break-word",
 				}}
 				data-toggle="modal"
 				data-target={`#idDetail${news.id}`}
@@ -45,10 +44,19 @@ const NewsDetail = ({ news }) => {
 
 						<div className="modal-body news_detail">
 							<div className="headline">{news.headline}</div>
-							<div className="summary">{news.summary}</div>
+							<div
+								className="summary"
+								style={{ wordWrap: "break-word" }}
+							>
+								{news.summary}
+							</div>
 							<div className="source">
 								{hostname}
-								<a href={news.source} target="_blank">
+								<a
+									href={news.source}
+									target="_blank"
+									rel="noreferrer"
+								>
 									&nbsp;
 									<FaExternalLinkAlt />
 								</a>

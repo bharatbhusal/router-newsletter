@@ -7,7 +7,7 @@ const EditNews = ({ news }) => {
 	const changeNews = async (e) => {
 		e.preventDefault();
 		try {
-			const res = await fetch(
+			await fetch(
 				`${env.REACT_APP_SERVER_URL}/${newNews.id}`,
 				{
 					method: "PUT",
@@ -69,6 +69,7 @@ const EditNews = ({ news }) => {
 									}
 								/>
 								<textarea
+									style={{ height: "10rem" }}
 									type="text"
 									className="form-control edit_news"
 									value={newNews.summary}

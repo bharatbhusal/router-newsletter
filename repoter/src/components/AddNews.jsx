@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import env from "../utils/validateEnv";
 
-const InputNews = () => {
+const AddNews = () => {
 	const [newNews, setNewNews] = useState({
 		headline: "",
 		summary: "",
@@ -16,6 +16,7 @@ const InputNews = () => {
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(newNews),
 			});
+			console.log(res);
 			window.location = "/";
 		} catch (error) {
 			console.log(error.message);
@@ -41,6 +42,7 @@ const InputNews = () => {
 					autoFocus
 				/>
 				<textarea
+					style={{ height: "10rem" }}
 					className="form-control input_news"
 					type="text"
 					name="summary"
@@ -66,4 +68,4 @@ const InputNews = () => {
 	);
 };
 
-export default InputNews;
+export default AddNews;

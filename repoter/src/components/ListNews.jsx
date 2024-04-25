@@ -6,8 +6,11 @@ import React, {
 import EditNews from "./EditNews";
 import env from "../utils/validateEnv";
 import NewsDetail from "./NewsDetail";
+import Calendar from "./Calendar";
+import { useDateContext } from "../context/dateContext";
 
-const ListNews = ({ day }) => {
+const ListNews = () => {
+	const { date } = useDateContext();
 	const [newsData, setNewsData] = useState();
 
 	//delete news function
@@ -25,9 +28,12 @@ const ListNews = ({ day }) => {
 	const getNews = async () => {
 		try {
 			const response = await fetch(
-				`${env.REACT_APP_SERVER_URL}/2024/4/${day}`
+				`${env.REACT_APP_SERVER_URL}/${date.year()}/${
+					date.month() + 1
+				}/${date.date()}`
 			);
 			const jsonData = await response.json();
+			console.log(jsonData);
 			setNewsData(jsonData);
 		} catch (error) {
 			console.log(error.message);
@@ -37,14 +43,16 @@ const ListNews = ({ day }) => {
 		// setTimeout(() => {
 		getNews();
 		// }, 3000);
-	}, []);
+		console.log("news updated");
+	}, [date]);
 
 	return (
 		<Fragment>
 			<h1 className="mt-5">List News</h1>
-			<h7 style={{ fontStyle: "italic" }}>
+			<h6 style={{ fontStyle: "italic" }}>
 				Tap on the summary for detail
-			</h7>
+			</h6>
+			<Calendar />
 			<table className="table mt-5 text-center">
 				<thead>
 					<tr>
@@ -67,7 +75,7 @@ const ListNews = ({ day }) => {
 											headline: news.headline,
 											source: news.source,
 											summary: news.summary,
-											date: news.updatedAt,
+											date: news.date,
 										}}
 									/>
 								</td>

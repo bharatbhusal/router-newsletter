@@ -9,7 +9,20 @@ const newsSchema = new mongoose.Schema(
 			type: String,
 			default: "https://t.me/Petermartin0",
 		},
-		date: { type: Date, default: Date.now },
+		date: {
+			year: {
+				type: Number,
+				default: new Date().getFullYear(),
+			},
+			month: {
+				type: Number,
+				default: new Date().getMonth() + 1,
+			},
+			day: {
+				type: Number,
+				default: new Date().getDate(),
+			},
+		},
 	},
 	{ timestamps: true }
 );
