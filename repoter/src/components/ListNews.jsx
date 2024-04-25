@@ -12,7 +12,7 @@ import { useDateContext } from "../context/dateContext";
 const ListNews = () => {
 	const { date } = useDateContext();
 	const [newsData, setNewsData] = useState();
-
+	console.log(date);
 	//delete news function
 	const deleteNews = async (id) => {
 		try {

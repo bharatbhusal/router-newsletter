@@ -14,6 +14,7 @@ export default function Calendar() {
 		setValue(newValue);
 		setDate(newValue);
 	};
+
 	return (
 		<LocalizationProvider dateAdapter={AdapterDayjs}>
 			<DemoContainer components={["DatePicker", "DatePicker"]}>

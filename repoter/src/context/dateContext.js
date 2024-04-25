@@ -14,7 +14,6 @@ export const DateProvider = ({ children }) => {
 	const dateShort = `${today.getFullYear()}-${
 		today.getMonth() + 1
 	}-${today.getDate()}`;
-
 	const [date, setDate] = useState(dayjs(dateShort));
 	return (
 		<DateContext.Provider
