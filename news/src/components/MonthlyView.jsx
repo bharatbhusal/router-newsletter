@@ -57,33 +57,34 @@ const MonthlyView = ({ month }) => {
 	return (
 		<div className="outlet">
 			<div className="news-list">
-				{Object.entries(newsMonthData)
-					.reverse()
-					.map(([day, news]) => {
-						const date = new Date(news[0].date);
-						const dayOfWeek = date.toLocaleString("en-US", {
-							weekday: "long",
-						});
+				{newsMonthData &&
+					Object.entries(newsMonthData)
+						.reverse()
+						.map(([day, news]) => {
+							const date = new Date(news[0].date);
+							const dayOfWeek = date.toLocaleString("en-US", {
+								weekday: "long",
+							});
 
-						return (
-							<div key={day}>
-								<ul>
-									<div className="daily-header flex space-between">
-										<h3>{`${months[month]} ${day}, 2024 | ${dayOfWeek}`}</h3>
-										<CopyToClipboard newsDay={day} />
-									</div>
-									{news.map((each, index) => (
-										<li key={index} className="flex space-around">
-											<a href={each.source} target="_blank">
-												<strong>{each.headline}</strong>
-												<p>{each.summary}</p>
-											</a>
-										</li>
-									))}
-								</ul>
-							</div>
-						);
-					})}
+							return (
+								<div key={day}>
+									<ul>
+										<div className="daily-header flex space-between">
+											<h3>{`${months[month]} ${day}, 2024 | ${dayOfWeek}`}</h3>
+											<CopyToClipboard newsDay={day} />
+										</div>
+										{news.map((each, index) => (
+											<li key={index} className="flex space-around">
+												<a href={each.source} target="_blank">
+													<strong>{each.headline}</strong>
+													<p>{each.summary}</p>
+												</a>
+											</li>
+										))}
+									</ul>
+								</div>
+							);
+						})}
 
 				{showCopiedMessage && (
 					<div className="copied-message">
