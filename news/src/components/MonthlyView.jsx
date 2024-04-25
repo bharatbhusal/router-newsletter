@@ -12,12 +12,11 @@ import {
 
 const MonthlyView = ({ month }) => {
 	month = month || getCurrentMonth();
-	const [newsMonthData, setNewsMonthData] = useState();
+	const [newsMonthData, setNewsMonthData] = useState([]);
 
 	useEffect(() => {
 		async function fetchData() {
 			const result = await getOneMonthNews(2024, month);
-			console.log(result);
 			setNewsMonthData(result);
 		}
 		fetchData();
@@ -25,15 +24,6 @@ const MonthlyView = ({ month }) => {
 
 	const [showCopiedMessage, setShowCopiedMessage] =
 		useState(false); // State to manage the visibility of the "Copied to clipboard" message
-
-	try {
-		if (Object.keys(newsMonthData).length === 0) {
-			return <FuturePage />;
-		}
-	} catch (error) {
-		return <Loading />;
-		// Handle the error here
-	}
 
 	const CopyToClipboard = ({ newsDay }) => {
 		const handleCopyToClipboard = async () => {
@@ -69,8 +59,8 @@ const MonthlyView = ({ month }) => {
 			<div className="news-list">
 				{Object.entries(newsMonthData)
 					.reverse()
-					.map(([day, articles]) => {
-						const date = new Date(2024, month, day);
+					.map(([day, news]) => {
+						const date = new Date(news[0].date);
 						const dayOfWeek = date.toLocaleString("en-US", {
 							weekday: "long",
 						});
@@ -82,11 +72,11 @@ const MonthlyView = ({ month }) => {
 										<h3>{`${months[month]} ${day}, 2024 | ${dayOfWeek}`}</h3>
 										<CopyToClipboard newsDay={day} />
 									</div>
-									{articles.map((article, index) => (
+									{news.map((each, index) => (
 										<li key={index} className="flex space-around">
-											<a href={article.source} target="_blank">
-												<strong>{article.headline}</strong>
-												<p>{article.summary}</p>
+											<a href={each.source} target="_blank">
+												<strong>{each.headline}</strong>
+												<p>{each.summary}</p>
 											</a>
 										</li>
 									))}
