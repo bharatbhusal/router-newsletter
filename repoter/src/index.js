@@ -36,7 +36,11 @@ const router = createBrowserRouter([
 				path: "/",
 				element: (
 					<>
-						<AddNews />
+						{localStorage.getItem("user-jwt-token") ? (
+							<AddNews />
+						) : (
+							<></>
+						)}
 						<ListNews />
 					</>
 				),

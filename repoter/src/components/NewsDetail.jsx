@@ -10,8 +10,6 @@ const NewsDetail = ({ news }) => {
 		<Fragment>
 			<span
 				style={{
-					minWidth: "10rem",
-					minHeight: "2rem",
 					display: "inline-block",
 					cursor: "pointer",
 					wordWrap: "break-word",
@@ -30,7 +28,16 @@ const NewsDetail = ({ news }) => {
 					<div className="modal-content">
 						{/* <!-- Modal Header --> */}
 						<div className="modal-header">
-							<h4 className="modal-title">News Detail</h4>
+							<h4
+								className="modal-title"
+								style={{
+									color: "#bb2765",
+									fontWeight: "bold",
+									fontSize: "2rem",
+								}}
+							>
+								News Detail
+							</h4>
 							<button
 								type="button"
 								className="close"
@@ -48,17 +55,17 @@ const NewsDetail = ({ news }) => {
 							>
 								{news.summary}
 							</div>
-							<div className="source">
-								{hostname}
-								<a
-									href={news.source}
-									target="_blank"
-									rel="noreferrer"
+							<span style={{ fontWeight: "bold" }}>
+								Source: &nbsp;
+							</span>
+							<a href={news.source} target="_blank">
+								<div
+									className="source"
+									style={{ display: "inline" }}
 								>
-									&nbsp;
-									<FaExternalLinkAlt />
-								</a>
-							</div>
+									{hostname}
+								</div>
+							</a>
 						</div>
 						{/* <!-- Modal footer -->} */}
 						<div className="modal-footer news_details_footer">

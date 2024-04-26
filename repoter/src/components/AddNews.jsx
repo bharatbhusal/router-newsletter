@@ -68,7 +68,7 @@ const AddNews = () => {
 						setNewNews({ ...newNews, source: e.target.value })
 					}
 				/>
-				<button className="btn btn-success">Add</button>
+				<button className="btn btn-add">Add</button>
 			</form>
 		</Fragment>
 	);

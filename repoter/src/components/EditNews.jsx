@@ -47,7 +47,16 @@ const EditNews = ({ news }) => {
 					<div className="modal-content">
 						{/* <!-- Modal Header --> */}
 						<div className="modal-header">
-							<h4 className="modal-title">Edit News</h4>
+							<h4
+								className="modal-title"
+								style={{
+									color: "#bb2765",
+									fontWeight: "bold",
+									fontSize: "2rem",
+								}}
+							>
+								Edit News
+							</h4>
 							<button
 								type="button"
 								className="close"

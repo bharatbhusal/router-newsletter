@@ -19,6 +19,7 @@ import { signup, login } from "../apis/authAPIs";
 
 function LogIn() {
 	const navigate = useNavigate();
+
 	const handleSubmit = async (event) => {
 		try {
 			event.preventDefault();
@@ -33,8 +34,10 @@ function LogIn() {
 				"user",
 				JSON.stringify(detail.user)
 			);
-
-			navigate("/"); // Redirect to the home page
+			if (localStorage.getItem("user-jwt-token")) {
+				navigate("/"); // Redirect to the home page
+				window.location.reload();
+			}
 		} catch (error) {
 			console.error(error.message);
 			// Handle the error here
