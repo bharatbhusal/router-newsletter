@@ -9,27 +9,28 @@ const getOneMonthNews = async (year, month) => {
 		const response = await fetch(
 			`${env.REACT_APP_SERVER_URL}/${year}/${month}`
 		);
+		console.log(data);
 		const data = await response.json();
 		return data;
 	}
 
-	// Check if the news exists in localForage
-	const cachedData = await localForage.getItem(
-		`${year}-${month}`
-	);
-	if (cachedData) {
-		return cachedData;
-	}
+	// // Check if the news exists in localForage
+	// const cachedData = await localForage.getItem(
+	// 	`${year}-${month}`
+	// );
+	// if (cachedData) {
+	// 	return cachedData;
+	// }
 
-	// Retrieve the data from the endpoint
-	const response = await fetch(
-		`${env.REACT_APP_SERVER_URL}/${year}/${month}`
-	);
-	const data = await response.json();
+	// // Retrieve the data from the endpoint
+	// const response = await fetch(
+	// 	`${env.REACT_APP_SERVER_URL}/${year}/${month}`
+	// );
+	// const data = await response.json();
 
-	// Store the data in localForage for future use
-	await localForage.setItem(`${year}-${month}`, data);
+	// // Store the data in localForage for future use
+	// await localForage.setItem(`${year}-${month}`, data);
 
-	return data;
+	// return data;
 };
 export { getOneMonthNews };

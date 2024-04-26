@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const newsRoutes = require("./routes/newsRoutes");
+const userRoutes = require("./routes/userRoutes");
+const authRoutes = require("./routes/authRoutes");
 const { connectDB } = require("./config/db");
 const bodyParser = require("body-parser");
 require("dotenv").config({
@@ -15,7 +17,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Define your routes
-app.use("/", newsRoutes);
+app.use("/news", newsRoutes);
+app.use("/users", userRoutes);
+app.use("/auth", authRoutes);
 
 // Connect to the database
 connectDB();

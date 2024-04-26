@@ -1,9 +1,16 @@
 const express = require("express");
 const newsController = require("../controllers/newsControllers");
+const {
+	authenticateToken,
+} = require("../middlewares/auth");
 const router = express.Router();
 
 // Create news
-router.post("/", newsController.createNews);
+router.post(
+	"/",
+	authenticateToken,
+	newsController.createNews
+);
 
 // Get news
 router.get("/:year/:month", newsController.getNewsOfMonth);
@@ -14,9 +21,17 @@ router.get("/:year/:month/:day", newsController.getNews);
 // Get news of whole month
 
 // Update news
-router.put("/:id", newsController.updateNews);
+router.put(
+	"/:id",
+	authenticateToken,
+	newsController.updateNews
+);
 
 // Delete news
-router.delete("/:id", newsController.deleteNews);
+router.delete(
+	"/:id",
+	authenticateToken,
+	newsController.deleteNews
+);
 
 module.exports = router;

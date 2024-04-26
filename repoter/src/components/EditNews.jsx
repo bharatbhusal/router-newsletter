@@ -1,21 +1,26 @@
 import React, { Fragment, useState } from "react";
+import { updateNewsById } from "../apis/newsAPIs";
+import { useNewsContext } from "../context/newsContext";
+import { useDateContext } from "../context/dateContext";
+import { getNewsByDate } from "../apis/newsAPIs";
 import env from "../utils/validateEnv";
 
 const EditNews = ({ news }) => {
 	const [newNews, setNewNews] = useState(news);
+	const { setNewsOfGivenDate } = useNewsContext();
+	const { date } = useDateContext();
 
 	const changeNews = async (e) => {
 		e.preventDefault();
 		try {
-			await fetch(
-				`${env.REACT_APP_SERVER_URL}/${newNews.id}`,
-				{
-					method: "PUT",
-					headers: { "Content-Type": "application/json" },
-					body: JSON.stringify(newNews),
-				}
+			await updateNewsById(newNews.id, newNews);
+			setNewsOfGivenDate(
+				await getNewsByDate(
+					date.year(),
+					date.month() + 1,
+					date.date()
+				)
 			);
-			window.location = "/";
 		} catch (error) {
 			console.log(error.message);
 		}

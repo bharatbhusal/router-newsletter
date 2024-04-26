@@ -4,46 +4,45 @@ import React, {
 	useState,
 } from "react";
 import EditNews from "./EditNews";
-import env from "../utils/validateEnv";
+import {
+	getNewsByDate,
+	deleteNewsById,
+} from "../apis/newsAPIs";
 import NewsDetail from "./NewsDetail";
 import Calendar from "./Calendar";
 import { useDateContext } from "../context/dateContext";
+import { useNewsContext } from "../context/newsContext";
 
 const ListNews = () => {
 	const { date } = useDateContext();
-	const [newsData, setNewsData] = useState();
-	console.log(date);
-	//delete news function
+	const { newsOfGivenDate, setNewsOfGivenDate } =
+		useNewsContext();
+
 	const deleteNews = async (id) => {
 		try {
-			await fetch(`${env.REACT_APP_SERVER_URL}/${id}`, {
-				method: "DELETE",
-			});
-			setNewsData(newsData.filter((news) => news._id !== id));
+			await deleteNewsById(id);
+			setNewsOfGivenDate(
+				newsOfGivenDate.filter((news) => news._id !== id)
+			);
 		} catch (error) {
 			console.log(error.message);
 		}
 	};
 
-	const getNews = async () => {
-		try {
-			const response = await fetch(
-				`${env.REACT_APP_SERVER_URL}/${date.year()}/${
-					date.month() + 1
-				}/${date.date()}`
-			);
-			const jsonData = await response.json();
-			console.log(jsonData);
-			setNewsData(jsonData);
-		} catch (error) {
-			console.log(error.message);
-		}
-	};
 	useEffect(() => {
-		// setTimeout(() => {
+		const getNews = async () => {
+			try {
+				const jsonData = await getNewsByDate(
+					date.year(),
+					date.month() + 1,
+					date.date()
+				);
+				setNewsOfGivenDate(jsonData);
+			} catch (error) {
+				console.log(error.message);
+			}
+		};
 		getNews();
-		// }, 3000);
-		console.log("news updated");
 	}, [date]);
 
 	return (
@@ -64,8 +63,8 @@ const ListNews = () => {
 				</thead>
 
 				<tbody>
-					{newsData &&
-						newsData.map((news) => (
+					{newsOfGivenDate &&
+						newsOfGivenDate.map((news) => (
 							<tr key={news._id}>
 								<td>{news.headline}</td>
 								<td>

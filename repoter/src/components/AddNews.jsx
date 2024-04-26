@@ -1,5 +1,8 @@
 import React, { Fragment, useState } from "react";
-import env from "../utils/validateEnv";
+import { addNews } from "../apis/newsAPIs";
+import { useNewsContext } from "../context/newsContext";
+import { getNewsByDate } from "../apis/newsAPIs";
+import { useDateContext } from "../context/dateContext";
 
 const AddNews = () => {
 	const [newNews, setNewNews] = useState({
@@ -7,17 +10,20 @@ const AddNews = () => {
 		summary: "",
 		source: "",
 	});
+	const { setNewsOfGivenDate } = useNewsContext();
+	const { date } = useDateContext();
 
 	const onSubmitForm = async (e) => {
 		e.preventDefault();
 		try {
-			const res = await fetch(`${env.REACT_APP_SERVER_URL}`, {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(newNews),
-			});
-			console.log(res);
-			window.location = "/";
+			await addNews(newNews);
+			setNewsOfGivenDate(
+				await getNewsByDate(
+					date.year(),
+					date.month() + 1,
+					date.date()
+				)
+			);
 		} catch (error) {
 			console.log(error.message);
 		}

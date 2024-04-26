@@ -1,13 +1,11 @@
 import React, { Fragment } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { useDateContext } from "../context/dateContext";
 
 const NewsDetail = ({ news }) => {
 	const sourceUrl = new URL(news.source);
 	const hostname = sourceUrl.hostname;
-
-	const date = new Date(news.date);
-	const localTime = date.toLocaleString();
-
+	const { date } = useDateContext();
 	return (
 		<Fragment>
 			<span
@@ -64,7 +62,8 @@ const NewsDetail = ({ news }) => {
 						</div>
 						{/* <!-- Modal footer -->} */}
 						<div className="modal-footer news_details_footer">
-							{localTime}
+							{date.format("MMMM")} {date.date()}, {date.year()} |{" "}
+							{date.format("dddd")}
 						</div>
 					</div>
 				</div>

@@ -13,6 +13,7 @@ exports.createNews = async (req, res) => {
 		} else {
 			const news = new News(req.body);
 			await news.save();
+			console.log("Saved news =====> ", news);
 			res.status(201).json(news);
 		}
 	} catch (error) {
@@ -23,7 +24,6 @@ exports.createNews = async (req, res) => {
 exports.getNews = async (req, res) => {
 	try {
 		const { year, month, day } = req.params;
-		console.log(year, month, day);
 		const news = await News.find();
 		const filteredNews = news.filter((item) => {
 			return (
@@ -32,8 +32,7 @@ exports.getNews = async (req, res) => {
 				item.date.day === parseInt(day)
 			);
 		});
-
-		console.log(filteredNews);
+		console.log("Returned news =====> ", filteredNews);
 		res.status(200).json(filteredNews);
 	} catch (error) {
 		res.status(500).json({ error: "Internal server error" });
@@ -50,6 +49,7 @@ exports.getNewsById = async (req, res) => {
 				.status(404)
 				.json({ error: "News item not found" });
 		}
+		console.log("Returned news =====> ", newsItem);
 		res.status(200).json(newsItem);
 	} catch (error) {
 		res.status(500).json({ error: "Internal server error" });
@@ -70,7 +70,7 @@ exports.getNewsOfMonth = async (req, res) => {
 			);
 		});
 
-		console.log(filteredNews);
+		console.log("Returned news =====> ", filteredNews);
 		res.status(200).json(filteredNews);
 	} catch (error) {
 		res.status(500).json({ error: "Internal server error" });
@@ -93,7 +93,7 @@ exports.updateNews = async (req, res) => {
 			},
 			{ new: true }
 		);
-		console.log(updatedNews);
+		console.log("Updated news =====> ", updatedNews);
 		if (!updatedNews) {
 			return res.status(404).json({ error: "News not found" });
 		}
@@ -114,6 +114,8 @@ exports.deleteNews = async (req, res) => {
 		if (!deletedNews) {
 			return res.status(404).json({ error: "News not found" });
 		}
+
+		console.log("Deleted news id =====> ", req.params.id);
 		res.status(200).json({
 			message: "News deleted successfully",
 			deletedNews,
