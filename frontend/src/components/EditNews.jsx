@@ -107,6 +107,7 @@ const EditNews = ({ news }) => {
 									}
 								/>
 								<TextField
+									type="url"
 									margin="normal"
 									required
 									fullWidth
