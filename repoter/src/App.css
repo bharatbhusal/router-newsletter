@@ -52,15 +52,6 @@ form.input_news {
 	color: #bb2765;
 }
 
-.input_news {
-	/* width: 90%; */
-	margin: 1rem;
-}
-.edit_news {
-	width: 90%;
-	margin: 1rem;
-}
-
 .news_details_footer {
 	color: #bb2765;
 	display: flex;

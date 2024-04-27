@@ -89,7 +89,6 @@ const updateNewsById = async (updatedNews) => {
 		const reporter = JSON.parse(
 			localStorage.getItem("user")
 		).email;
-		console.log(id, reporter, updatedNews);
 		const response = await fetch(
 			`${env.REACT_APP_SERVER_URL}/news/${id}`,
 			{
@@ -104,7 +103,6 @@ const updateNewsById = async (updatedNews) => {
 			}
 		);
 		const data = await response.json();
-		console.log(data);
 		if (response.ok) {
 			console.log(data);
 			toast.success(data.message);

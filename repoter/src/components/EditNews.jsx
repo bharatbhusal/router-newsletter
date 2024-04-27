@@ -3,6 +3,8 @@ import { updateNewsById } from "../apis/newsAPIs";
 import { useNewsContext } from "../context/newsContext";
 import { useDateContext } from "../context/dateContext";
 import { getNewsByDate } from "../apis/newsAPIs";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 const EditNews = ({ news }) => {
 	const [newNews, setNewNews] = useState(news);
@@ -12,21 +14,20 @@ const EditNews = ({ news }) => {
 	const changeNews = async (e) => {
 		e.preventDefault();
 		try {
-			// if (
-			// 	news.headline !== newNews.headline ||
-			// 	news.summary !== newNews.summary ||
-			// 	news.source !== newNews.source
-			// ) {
-			console.log(newNews);
-			await updateNewsById(newNews);
-			setNewsOfGivenDate(
-				await getNewsByDate(
-					date.year(),
-					date.month() + 1,
-					date.date()
-				)
-			);
-			// }
+			if (
+				news.headline !== newNews.headline ||
+				news.summary !== newNews.summary ||
+				news.source !== newNews.source
+			) {
+				await updateNewsById(newNews);
+				setNewsOfGivenDate(
+					await getNewsByDate(
+						date.year(),
+						date.month() + 1,
+						date.date()
+					)
+				);
+			}
 		} catch (error) {
 			console.error(error.message);
 		}
@@ -34,14 +35,16 @@ const EditNews = ({ news }) => {
 
 	return (
 		<Fragment>
-			<button
+			<Button
 				type="button"
-				className="btn btn-warning"
+				variant="contained"
+				color="warning"
 				data-toggle="modal"
 				data-target={`#idEdit${newNews.id}`}
+				// sx={{ mt: 3, mb: 2 }}
 			>
 				Edit
-			</button>
+			</Button>
 
 			{/* <!-- The Modal --> */}
 			<div
@@ -76,11 +79,14 @@ const EditNews = ({ news }) => {
 						{/* <!-- Modal body --> */}
 						<div className="modal-body">
 							<form onSubmit={(e) => changeNews(e)}>
-								<input
-									type="text"
-									className="form-control edit_news"
-									value={newNews.headline}
+								<TextField
+									margin="normal"
 									required
+									fullWidth
+									id="headline"
+									label="Headline"
+									name="Headline"
+									value={newNews.headline}
 									onChange={(e) =>
 										setNewNews((prev) => ({
 											...prev,
@@ -88,6 +94,7 @@ const EditNews = ({ news }) => {
 										}))
 									}
 								/>
+
 								<textarea
 									style={{ height: "10rem" }}
 									type="text"
@@ -100,11 +107,14 @@ const EditNews = ({ news }) => {
 										}))
 									}
 								/>
-								<input
-									type="url"
-									className="form-control edit_news"
-									value={newNews.source}
+								<TextField
+									margin="normal"
 									required
+									fullWidth
+									id="source"
+									label="Source"
+									name="Source"
+									value={newNews.source}
 									onChange={(e) =>
 										setNewNews((prev) => ({
 											...prev,
@@ -118,23 +128,25 @@ const EditNews = ({ news }) => {
 						{/* <!-- Modal footer --> */}
 						<div className="modal-footer">
 							<div className="yes-no">
-								<button
+								<Button
 									type="button"
-									className="btn btn-warning"
+									variant="contained"
+									color="warning"
 									data-dismiss="modal"
 									onClick={(e) => changeNews(e)}
 								>
 									Edit
-								</button>
+								</Button>
 
-								<button
+								<Button
 									type="button"
-									className="btn btn-danger"
+									variant="contained"
+									color="error"
 									data-dismiss="modal"
 									onClick={() => setNewNews(newNews)}
 								>
 									Close
-								</button>
+								</Button>
 							</div>
 						</div>
 					</div>

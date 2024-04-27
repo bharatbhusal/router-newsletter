@@ -1,10 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import EditNews from "./EditNews";
 import DeleteNews from "./DeleteNews";
-import {
-	getNewsByDate,
-	deleteNewsById,
-} from "../apis/newsAPIs";
+import { getNewsByDate } from "../apis/newsAPIs";
 import NewsDetail from "./NewsDetail";
 import Calendar from "./Calendar";
 import { useDateContext } from "../context/dateContext";
@@ -15,6 +12,7 @@ import {
 	generateTextContent,
 	copyToClipboard,
 } from "../utils/downloader";
+import Button from "@mui/material/Button";
 
 const ListNews = () => {
 	const { date } = useDateContext();
@@ -74,19 +72,23 @@ const ListNews = () => {
 					</h6>
 				</div>
 				{localStorage.getItem("user-jwt-token") ? (
-					<button
-						className="btn btn-danger"
+					<Button
 						onClick={handleLogout}
+						type="submit"
+						variant="contained"
+						color="error"
 					>
-						Log out!!
-					</button>
+						Log Out
+					</Button>
 				) : (
-					<button
-						className="btn btn-success"
+					<Button
 						onClick={handleLogIn}
+						type="submit"
+						variant="contained"
+						color="primary"
 					>
-						Add news?
-					</button>
+						Log In
+					</Button>
 				)}
 			</div>
 			<div className="tools">

@@ -3,6 +3,9 @@ import { addNews } from "../apis/newsAPIs";
 import { useNewsContext } from "../context/newsContext";
 import { getNewsByDate } from "../apis/newsAPIs";
 import { useDateContext } from "../context/dateContext";
+import TextField from "@mui/material/TextField";
+
+import Button from "@mui/material/Button";
 
 const AddNews = () => {
 	const user = JSON.parse(localStorage.getItem("user"));
@@ -47,18 +50,20 @@ const AddNews = () => {
 					className="d-flex mt-5 input_news"
 					onSubmit={onSubmitForm}
 				>
-					<input
-						className="form-control input_news"
-						type="text"
-						name="headline"
-						placeholder="Headline"
+					<TextField
+						margin="normal"
 						required
+						fullWidth
+						id="headline"
+						label="Headline"
+						name="headline"
+						autoFocus
 						value={newNews.headline}
 						onChange={(e) =>
 							setNewNews({ ...newNews, headline: e.target.value })
 						}
-						autoFocus
 					/>
+
 					<textarea
 						style={{ height: "10rem" }}
 						className="form-control input_news"
@@ -70,18 +75,27 @@ const AddNews = () => {
 							setNewNews({ ...newNews, summary: e.target.value })
 						}
 					/>
-					<input
-						className="form-control input_news"
-						type="url"
-						name="source"
-						placeholder="Source"
+
+					<TextField
+						margin="normal"
 						required
+						fullWidth
+						id="source"
+						label="Source"
+						name="Source"
 						value={newNews.source}
 						onChange={(e) =>
 							setNewNews({ ...newNews, source: e.target.value })
 						}
 					/>
-					<button className="btn btn-add">Add</button>
+					<Button
+						type="submit"
+						color="success"
+						variant="contained"
+						sx={{ mt: 3, mb: 2, padding: "10px 3rem" }}
+					>
+						Add
+					</Button>
 				</form>
 			)}
 		</Fragment>

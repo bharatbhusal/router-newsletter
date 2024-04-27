@@ -3,6 +3,7 @@ import { updateNewsById } from "../apis/newsAPIs";
 import { useNewsContext } from "../context/newsContext";
 import { useDateContext } from "../context/dateContext";
 // import { getNewsByDate } from "../apis/newsAPIs";
+import Button from "@mui/material/Button";
 
 import {
 	getNewsByDate,
@@ -31,15 +32,15 @@ const DeleteNews = ({ news }) => {
 
 	return (
 		<Fragment>
-			<button
-				className="btn btn-danger"
+			<Button
+				variant="contained"
+				color="error"
 				type="button"
 				data-toggle="modal"
 				data-target={`#idDelete${newNews.id}`}
 			>
 				Delete
-			</button>
-
+			</Button>
 			{/* <!-- The Modal --> */}
 			<div
 				className="modal"
@@ -107,23 +108,25 @@ const DeleteNews = ({ news }) => {
 								Are you sure to delete the news?
 							</h5>
 							<div className="yes-no">
-								<button
+								<Button
 									type="button"
-									className="btn btn-danger"
+									variant="contained"
+									color="error"
 									data-dismiss="modal"
 									onClick={() => deleteNews(news.id)}
 								>
 									Yes
-								</button>
+								</Button>
 
-								<button
+								<Button
 									type="button"
-									className="btn btn-primary"
+									variant="contained"
+									color="success"
 									data-dismiss="modal"
 									onClick={() => setNewNews(newNews)}
 								>
 									No
-								</button>
+								</Button>
 							</div>
 						</div>
 					</div>
