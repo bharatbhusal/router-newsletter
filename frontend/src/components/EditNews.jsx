@@ -41,7 +41,6 @@ const EditNews = ({ news }) => {
 				color="warning"
 				data-toggle="modal"
 				data-target={`#idEdit${newNews.id}`}
-				// sx={{ mt: 3, mb: 2 }}
 			>
 				Edit
 			</Button>

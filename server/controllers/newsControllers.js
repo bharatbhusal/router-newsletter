@@ -103,18 +103,30 @@ exports.updateNews = async (req, res) => {
 				.status(404)
 				.json({ message: "News not found" });
 		}
+		const duplicateItem = await News.findOne({
+			source,
+			_id: { $ne: req.params.id },
+		});
+		if (duplicateItem) {
+			return res.status(400).json({
+				message: "News already exists",
+				duplicateItem,
+			});
+		}
+		// const newsItems = await News.find({ source });
+		// console.log("News items =====> ", newsItems);
+		// if (newsItems.length > 1) {
+		// 	return res.status(400).json({
+		// 		message: "News already exists",
+		// 		newsItems,
+		// 	});
+		// }
 		if (newsItem.reporter !== reporter) {
 			return res.status(403).json({
 				message: "Can't Edit or Delete other's news.",
 			});
 		}
-		const newsItems = await News.find({ source });
-		if (newsItems.length > 1) {
-			return res.status(400).json({
-				message: "News already exists",
-				newsItems,
-			});
-		}
+
 		const updatedNews = await News.findOneAndUpdate(
 			{
 				_id: req.params.id,
