@@ -91,6 +91,7 @@ exports.createNews = async (req, res) => {
 		});
 	}
 };
+
 // Update
 exports.updateNews = async (req, res) => {
 	try {
@@ -105,6 +106,13 @@ exports.updateNews = async (req, res) => {
 		if (newsItem.reporter !== reporter) {
 			return res.status(403).json({
 				message: "Can't Edit or Delete other's news.",
+			});
+		}
+		const newsItems = await News.find({ source });
+		if (newsItems.length > 1) {
+			return res.status(400).json({
+				message: "News already exists",
+				newsItems,
 			});
 		}
 		const updatedNews = await News.findOneAndUpdate(
