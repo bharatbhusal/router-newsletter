@@ -8,7 +8,7 @@ const generateTextContent = (
 ) => {
 	if (newsData) {
 		const greeting = "Hi Guys.";
-		const farewell = `Host: https://router-newsletter.onrender.com\n${day} | ${month} ${date}, 2024.\nThank you.\nGoodnight.`;
+		const farewell = `Host: https://router-protocol-newsletter.vercel.app\n${day} | ${month} ${date}, 2024.\nThank you.\nGoodnight.`;
 		const content = newsData
 			.map(
 				(each) =>
