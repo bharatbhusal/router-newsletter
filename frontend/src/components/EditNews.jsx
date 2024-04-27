@@ -133,6 +133,7 @@ const EditNews = ({ news }) => {
 									variant="contained"
 									color="warning"
 									data-dismiss="modal"
+									onClick={changeNews}
 								>
 									Edit
 								</Button>
