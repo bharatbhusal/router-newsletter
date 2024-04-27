@@ -7,7 +7,7 @@ const newsSchema = new mongoose.Schema(
 		summary: String,
 		reporter: {
 			type: String,
-			default: "https://t.me/Petermartin0",
+			default: "bharatbhusal78@gmail.com",
 		},
 		date: {
 			year: {
