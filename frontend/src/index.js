@@ -1,4 +1,5 @@
-// Importing necessary libraries and components
+// index.js
+
 import React from "react";
 import { createRoot } from "react-dom/client";
 import {
@@ -16,19 +17,14 @@ import { NewsProvider } from "./context/newsContext";
 import AddNews from "./components/AddNews";
 import ListNews from "./components/ListNews";
 import PageNotFound from "./components/PageNotFound";
-
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Import the CSS for styling
-
+import "react-toastify/dist/ReactToastify.css";
+import { register } from "./serviceWorker"; // Import the register function
 import "./index.css";
 
-// Getting the DOM element with the id "root"
 const divContainer = document.getElementById("root");
-
-// Creating a root for the React application using createRoot and associating it with the divContainer
 const root = createRoot(divContainer);
 
-// Creating a router with routes for different pages
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -40,7 +36,7 @@ const router = createBrowserRouter([
 				element: (
 					<>
 						<AddNews />
-						<ListNews />,
+						<ListNews />
 					</>
 				),
 			},
@@ -51,7 +47,6 @@ const router = createBrowserRouter([
 	},
 ]);
 
-// Rendering the main App component within the root
 root.render(
 	<NewsProvider>
 		<DateProvider>
@@ -60,3 +55,6 @@ root.render(
 		</DateProvider>
 	</NewsProvider>
 );
+
+// Register the service worker
+register();

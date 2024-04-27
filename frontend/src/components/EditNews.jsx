@@ -77,7 +77,7 @@ const EditNews = ({ news }) => {
 
 						{/* <!-- Modal body --> */}
 						<div className="modal-body">
-							<form onSubmit={(e) => changeNews(e)}>
+							<form onSubmit={changeNews}>
 								<TextField
 									margin="normal"
 									required
@@ -133,7 +133,6 @@ const EditNews = ({ news }) => {
 									variant="contained"
 									color="warning"
 									data-dismiss="modal"
-									onClick={(e) => changeNews(e)}
 								>
 									Edit
 								</Button>

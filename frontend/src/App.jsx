@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import { Outlet } from "react-router-dom";
-import AddNews from "./components/AddNews";
 import "./App.css";
 
 const App = () => {
@@ -13,7 +12,6 @@ const App = () => {
 				>
 					Router Protocol Daily Newsletter
 				</h1>
-
 				<Outlet />
 			</div>
 		</Fragment>
