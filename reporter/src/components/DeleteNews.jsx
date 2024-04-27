@@ -20,11 +20,13 @@ const DeleteNews = ({ news }) => {
 
 	const deleteNews = async (id) => {
 		try {
-			await deleteNewsById(id);
+			const res = await deleteNewsById(id);
 
-			setNewsOfGivenDate(
-				newsOfGivenDate.filter((news) => news._id !== id)
-			);
+			if (res) {
+				setNewsOfGivenDate(
+					newsOfGivenDate.filter((news) => news._id !== id)
+				);
+			}
 		} catch (error) {
 			console.error(error.message);
 		}
