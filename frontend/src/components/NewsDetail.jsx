@@ -2,8 +2,27 @@ import React, { Fragment } from "react";
 import { useDateContext } from "../context/dateContext";
 
 const NewsDetail = ({ news }) => {
-	const sourceUrl = new URL(news.source);
-	const hostname = sourceUrl.hostname;
+	var hostname = "";
+	try {
+		if (news && news.source) {
+			const sourceUrl = new URL(news.source);
+			hostname = sourceUrl.hostname;
+		} else {
+			throw new Error(
+				"News or news source is undefined or null"
+			);
+		}
+	} catch (error) {
+		console.error(
+			"Error occurred while parsing source URL:",
+			error
+		);
+		hostname =
+			"https://router-protocol-newsletter.vercel.app/";
+		news.source =
+			"https://router-protocol-newsletter.vercel.app/";
+	}
+
 	const { date } = useDateContext();
 	return (
 		<Fragment>

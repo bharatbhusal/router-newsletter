@@ -77,6 +77,7 @@ const AddNews = () => {
 					/>
 
 					<TextField
+						// type="url"
 						margin="normal"
 						required
 						fullWidth
