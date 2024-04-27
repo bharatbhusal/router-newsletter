@@ -10,7 +10,7 @@ const signup = async (req, res) => {
 		const existingUser = await User.findOne({ email });
 		if (existingUser) {
 			return res.status(400).json({
-				message: "User with this email already exists",
+				message: "User already exists",
 			});
 		}
 
@@ -25,11 +25,21 @@ const signup = async (req, res) => {
 			password: hashedPassword,
 		});
 		await newUser.save();
-		res
-			.status(201)
-			.json({ message: "User created successfully" });
+		res.status(201).json({
+			message: "User signed up successfully",
+			user: {
+				id: newUser._id,
+				firstName: newUser.firstName,
+				lastName: newUser.lastName,
+				email: newUser.email,
+				isReporter: newUser.isReporter,
+			},
+		});
 	} catch (error) {
-		res.status(500).json({ message: error.message });
+		res.status(500).json({
+			error: "Internal server error",
+			message: error.message,
+		});
 	}
 };
 
@@ -41,7 +51,7 @@ const login = async (req, res) => {
 		if (!user) {
 			return res
 				.status(401)
-				.json({ message: "Invalid credentials" });
+				.json({ message: "User doesn't exist" });
 		}
 
 		const isMatch = await bcrypt.compare(
@@ -51,11 +61,12 @@ const login = async (req, res) => {
 		if (!isMatch) {
 			return res
 				.status(401)
-				.json({ message: "Invalid credentials" });
+				.json({ message: "Incorrect password" });
 		}
 
 		const token = generateToken(user._id, user.email); // Generate token using user ID
 		res.status(200).json({
+			message: "User logged in successfully",
 			user: {
 				id: user._id,
 				email: user.email,
@@ -65,7 +76,10 @@ const login = async (req, res) => {
 			token,
 		});
 	} catch (error) {
-		res.status(500).json({ message: error.message });
+		res.status(500).json({
+			error: "Internal server error",
+			message: error.message,
+		});
 	}
 };
 

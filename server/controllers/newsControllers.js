@@ -1,26 +1,5 @@
 const News = require("../models/newsModel");
 
-// Create
-exports.createNews = async (req, res) => {
-	try {
-		const existingNews = await News.findOne({
-			source: req.body.source,
-		});
-		if (existingNews) {
-			res.status(400).json({
-				error: "News with this source already exists",
-			});
-		} else {
-			const news = new News(req.body);
-			await news.save();
-			console.log("Saved news =====> ", news);
-			res.status(201).json(news);
-		}
-	} catch (error) {
-		res.status(500).json({ error: "Internal server error" });
-	}
-};
-
 exports.getNews = async (req, res) => {
 	try {
 		const { year, month, day } = req.params;
@@ -35,7 +14,10 @@ exports.getNews = async (req, res) => {
 		console.log("Returned news =====> ", filteredNews);
 		res.status(200).json(filteredNews);
 	} catch (error) {
-		res.status(500).json({ error: "Internal server error" });
+		res.status(500).json({
+			error: "Internal server error",
+			message: error.message,
+		});
 	}
 };
 
@@ -47,12 +29,15 @@ exports.getNewsById = async (req, res) => {
 		if (!newsItem) {
 			return res
 				.status(404)
-				.json({ error: "News item not found" });
+				.json({ message: "News not found" });
 		}
 		console.log("Returned news =====> ", newsItem);
 		res.status(200).json(newsItem);
 	} catch (error) {
-		res.status(500).json({ error: "Internal server error" });
+		res.status(500).json({
+			error: "Internal server error",
+			message: error.message,
+		});
 	}
 };
 
@@ -73,7 +58,37 @@ exports.getNewsOfMonth = async (req, res) => {
 		console.log("Returned news =====> ", filteredNews);
 		res.status(200).json(filteredNews);
 	} catch (error) {
-		res.status(500).json({ error: "Internal server error" });
+		res.status(500).json({
+			error: "Internal server error",
+			message: error.message,
+		});
+	}
+};
+
+// Create
+exports.createNews = async (req, res) => {
+	try {
+		const existingNews = await News.findOne({
+			source: req.body.source,
+		});
+		if (existingNews) {
+			res.status(400).json({
+				message: "News already exists",
+				existingNews,
+			});
+		} else {
+			const news = new News(req.body);
+			await news.save();
+			console.log("Saved news =====> ", news);
+			res
+				.status(201)
+				.json({ message: "News created successfully", news });
+		}
+	} catch (error) {
+		res.status(500).json({
+			error: "Internal server error",
+			message: error.message,
+		});
 	}
 };
 
@@ -95,9 +110,12 @@ exports.updateNews = async (req, res) => {
 		);
 		console.log("Updated news =====> ", updatedNews);
 		if (!updatedNews) {
-			return res.status(404).json({ error: "News not found" });
+			res.status(404).json({ message: "News not found" });
 		}
-		res.status(200).json(updatedNews);
+		res.status(200).json({
+			message: "News updated successfully",
+			updatedNews,
+		});
 	} catch (error) {
 		res.status(500).json({
 			error: "Internal server error",

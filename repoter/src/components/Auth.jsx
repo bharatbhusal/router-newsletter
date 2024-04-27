@@ -17,6 +17,8 @@ import {
 } from "@mui/material/styles";
 import { signup, login } from "../apis/authAPIs";
 
+import { toast } from "react-toastify";
+
 function LogIn() {
 	const navigate = useNavigate();
 
@@ -28,18 +30,27 @@ function LogIn() {
 				email: data.get("email"),
 				password: data.get("password"),
 			};
+			if (!user.email) {
+				toast.error("Email is required");
+				return;
+			} else if (!user.password) {
+				toast.error("Password is required");
+				return;
+			}
 			const detail = await login(user);
-			localStorage.setItem("user-jwt-token", detail.token);
-			localStorage.setItem(
-				"user",
-				JSON.stringify(detail.user)
-			);
-			if (localStorage.getItem("user-jwt-token")) {
-				navigate("/"); // Redirect to the home page
-				window.location.reload();
+			if (detail) {
+				localStorage.setItem("user-jwt-token", detail.token);
+				localStorage.setItem(
+					"user",
+					JSON.stringify(detail.user)
+				);
+				if (localStorage.getItem("user-jwt-token")) {
+					navigate("/"); // Redirect to the home page
+				}
 			}
 		} catch (error) {
 			console.error(error.message);
+			toast.error(error.message);
 			// Handle the error here
 		}
 	};
@@ -88,12 +99,7 @@ function LogIn() {
 							id="password"
 							autoComplete="current-password"
 						/>
-						<FormControlLabel
-							control={
-								<Checkbox value="remember" color="primary" />
-							}
-							label="Remember me"
-						/>
+
 						<Button
 							type="submit"
 							fullWidth
@@ -131,7 +137,6 @@ function LogIn() {
 		</ThemeProvider>
 	);
 }
-
 function SignUp() {
 	const navigate = useNavigate();
 	const handleSubmit = async (event) => {
@@ -144,11 +149,22 @@ function SignUp() {
 				email: data.get("email"),
 				password: data.get("password"),
 			};
-			const res = await signup(user);
+
+			if (!user.email) {
+				console.error("Email is required");
+				toast.error("Email is required");
+				return;
+			} else if (!user.password) {
+				console.error("Password is required");
+				toast.error("Password is required");
+				return;
+			}
+
+			await signup(user);
 			navigate("/login"); // Redirect to the home page
 		} catch (error) {
 			console.error(error.message);
-			// Handle the error here
+			toast.error(error.message); // Show error toast
 		}
 	};
 
@@ -179,9 +195,7 @@ function SignUp() {
 						<Grid container spacing={2}>
 							<Grid item xs={12} sm={6}>
 								<TextField
-									autoComplete="fname"
 									name="firstName"
-									required
 									fullWidth
 									id="firstName"
 									label="First Name"
@@ -190,12 +204,10 @@ function SignUp() {
 							</Grid>
 							<Grid item xs={12} sm={6}>
 								<TextField
-									required
 									fullWidth
 									id="lastName"
 									label="Last Name"
 									name="lastName"
-									autoComplete="lname"
 								/>
 							</Grid>
 							<Grid item xs={12}>
@@ -205,7 +217,6 @@ function SignUp() {
 									id="email"
 									label="Email Address"
 									name="email"
-									autoComplete="email"
 								/>
 							</Grid>
 							<Grid item xs={12}>
@@ -216,7 +227,6 @@ function SignUp() {
 									label="Password"
 									type="password"
 									id="password"
-									autoComplete="new-password"
 								/>
 							</Grid>
 						</Grid>
@@ -254,9 +264,9 @@ function ForgotPassword() {
 		try {
 			event.preventDefault();
 			const data = new FormData(event.currentTarget);
-			const user = {
+			console.log({
 				email: data.get("email"),
-			};
+			});
 			// Add your password reset logic here
 			navigate("/login"); // Redirect to the home page
 		} catch (error) {

@@ -33,9 +33,17 @@ const authenticateToken = async (req, res, next) => {
 	try {
 		const user = await User.findOne({ _id: userId, email });
 		if (!user) {
-			return res.status(401).json({ message: "Unauthorized" });
+			return res
+				.status(401)
+				.json({ message: "Invalid token" });
+		} else if (!user.isReporter) {
+			return res.status(403).json({
+				message:
+					"Non-reporter can't Add, Edit or Delete news. Contact Admin for promotion to Reporter.",
+			});
 		}
 		req.user = user; // Attach user object to request for further processing
+
 		next();
 	} catch (error) {
 		res

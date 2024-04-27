@@ -34,11 +34,12 @@ const ListNews = () => {
 	const deleteNews = async (id) => {
 		try {
 			await deleteNewsById(id);
+
 			setNewsOfGivenDate(
 				newsOfGivenDate.filter((news) => news._id !== id)
 			);
 		} catch (error) {
-			console.log(error.message);
+			console.error(error.message);
 		}
 	};
 	const handleCopyToClipboard = async () => {
@@ -151,6 +152,7 @@ const ListNews = () => {
 											headline: news.headline,
 											source: news.source,
 											summary: news.summary,
+											reporter: news.reporter,
 											date: news.date,
 										}}
 									/>

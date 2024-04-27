@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import { useDateContext } from "../context/dateContext";
 
 const NewsDetail = ({ news }) => {
@@ -58,7 +57,11 @@ const NewsDetail = ({ news }) => {
 							<span style={{ fontWeight: "bold" }}>
 								Source: &nbsp;
 							</span>
-							<a href={news.source} target="_blank">
+							<a
+								href={news.source}
+								target="_blank"
+								rel="noreferrer"
+							>
 								<div
 									className="source"
 									style={{ display: "inline" }}
@@ -69,8 +72,11 @@ const NewsDetail = ({ news }) => {
 						</div>
 						{/* <!-- Modal footer -->} */}
 						<div className="modal-footer news_details_footer">
-							{date.format("MMMM")} {date.date()}, {date.year()} |{" "}
-							{date.format("dddd")}
+							<div className="reporter">{news.reporter}</div>
+							<div className="date">
+								{date.format("MMMM")} {date.date()}, {date.year()} |{" "}
+								{date.format("dddd")}
+							</div>
 						</div>
 					</div>
 				</div>

@@ -17,6 +17,9 @@ import AddNews from "./components/AddNews";
 import ListNews from "./components/ListNews";
 import PageNotFound from "./components/PageNotFound";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import the CSS for styling
+
 import "./index.css";
 
 // Getting the DOM element with the id "root"
@@ -36,12 +39,8 @@ const router = createBrowserRouter([
 				path: "/",
 				element: (
 					<>
-						{localStorage.getItem("user-jwt-token") ? (
-							<AddNews />
-						) : (
-							<></>
-						)}
-						<ListNews />
+						<AddNews />
+						<ListNews />,
 					</>
 				),
 			},
@@ -56,6 +55,7 @@ const router = createBrowserRouter([
 root.render(
 	<NewsProvider>
 		<DateProvider>
+			<ToastContainer />
 			<RouterProvider router={router} />
 		</DateProvider>
 	</NewsProvider>

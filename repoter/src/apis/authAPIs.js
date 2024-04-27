@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import env from "../utils/validateEnv";
 // Function for user signup
 const signup = async (userData) => {
@@ -14,12 +15,15 @@ const signup = async (userData) => {
 		);
 		const data = await response.json();
 		if (response.ok) {
+			console.log(data);
+			toast.success(data.message);
 			return data;
 		} else {
 			throw new Error(data.message || "Failed to signup");
 		}
 	} catch (error) {
-		throw new Error(error.message || "Failed to signup");
+		console.log(error.message);
+		toast.error(error.message || "Failed to signup");
 	}
 };
 
@@ -38,12 +42,15 @@ const login = async (credentials) => {
 		);
 		const data = await response.json();
 		if (response.ok) {
-			return data; // Return the token received from the backend
+			console.log(data);
+			toast.success(data.message);
+			return data;
 		} else {
 			throw new Error(data.message || "Failed to login");
 		}
 	} catch (error) {
-		throw new Error(error.message || "Failed to login");
+		console.error(error.message);
+		toast.error(error.message);
 	}
 };
 

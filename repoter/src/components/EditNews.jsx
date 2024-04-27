@@ -3,7 +3,6 @@ import { updateNewsById } from "../apis/newsAPIs";
 import { useNewsContext } from "../context/newsContext";
 import { useDateContext } from "../context/dateContext";
 import { getNewsByDate } from "../apis/newsAPIs";
-import env from "../utils/validateEnv";
 
 const EditNews = ({ news }) => {
 	const [newNews, setNewNews] = useState(news);
@@ -13,16 +12,22 @@ const EditNews = ({ news }) => {
 	const changeNews = async (e) => {
 		e.preventDefault();
 		try {
-			await updateNewsById(newNews.id, newNews);
-			setNewsOfGivenDate(
-				await getNewsByDate(
-					date.year(),
-					date.month() + 1,
-					date.date()
-				)
-			);
+			if (
+				news.headline !== newNews.headline ||
+				news.summary !== newNews.summary ||
+				news.source !== newNews.source
+			) {
+				await updateNewsById(newNews.id, newNews);
+				setNewsOfGivenDate(
+					await getNewsByDate(
+						date.year(),
+						date.month() + 1,
+						date.date()
+					)
+				);
+			}
 		} catch (error) {
-			console.log(error.message);
+			console.error(error.message);
 		}
 	};
 
@@ -95,7 +100,7 @@ const EditNews = ({ news }) => {
 									}
 								/>
 								<input
-									type="text"
+									type="url"
 									className="form-control edit_news"
 									value={newNews.source}
 									required
