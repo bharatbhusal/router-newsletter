@@ -18,11 +18,10 @@ const AddNews = () => {
 	const onSubmitForm = async (e) => {
 		e.preventDefault();
 		try {
-			setNewNews({
+			await addNews({
 				...newNews,
 				reporter: user.email,
 			});
-			await addNews(newNews);
 			setNewsOfGivenDate(
 				await getNewsByDate(
 					date.year(),
@@ -30,6 +29,12 @@ const AddNews = () => {
 					date.date()
 				)
 			);
+			setNewNews({
+				headline: "",
+				summary: "",
+				source: "",
+				reporter: "",
+			});
 		} catch (error) {
 			console.error(error.message);
 		}

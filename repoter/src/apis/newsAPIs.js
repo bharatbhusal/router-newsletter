@@ -54,6 +54,7 @@ const addNews = async (newsData) => {
 // Function to delete a news item by ID
 const deleteNewsById = async (id) => {
 	try {
+		const user = JSON.parse(localStorage.getItem("user"));
 		const response = await fetch(
 			`${env.REACT_APP_SERVER_URL}/news/${id}`,
 			{
@@ -64,6 +65,7 @@ const deleteNewsById = async (id) => {
 					)}`,
 					"Content-Type": "application/json",
 				},
+				body: JSON.stringify({ reporter: user.email }),
 			}
 		);
 		const data = await response.json();
@@ -81,8 +83,13 @@ const deleteNewsById = async (id) => {
 };
 
 // Function to update news data by ID
-const updateNewsById = async (id, updatedNews) => {
+const updateNewsById = async (updatedNews) => {
 	try {
+		const id = updatedNews.id;
+		const reporter = JSON.parse(
+			localStorage.getItem("user")
+		).email;
+		console.log(id, reporter, updatedNews);
 		const response = await fetch(
 			`${env.REACT_APP_SERVER_URL}/news/${id}`,
 			{
@@ -93,10 +100,11 @@ const updateNewsById = async (id, updatedNews) => {
 					)}`,
 					"Content-Type": "application/json",
 				},
-				body: JSON.stringify(updatedNews),
+				body: JSON.stringify({ ...updatedNews, reporter }),
 			}
 		);
 		const data = await response.json();
+		console.log(data);
 		if (response.ok) {
 			console.log(data);
 			toast.success(data.message);

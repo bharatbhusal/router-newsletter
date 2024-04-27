@@ -12,20 +12,21 @@ const EditNews = ({ news }) => {
 	const changeNews = async (e) => {
 		e.preventDefault();
 		try {
-			if (
-				news.headline !== newNews.headline ||
-				news.summary !== newNews.summary ||
-				news.source !== newNews.source
-			) {
-				await updateNewsById(newNews.id, newNews);
-				setNewsOfGivenDate(
-					await getNewsByDate(
-						date.year(),
-						date.month() + 1,
-						date.date()
-					)
-				);
-			}
+			// if (
+			// 	news.headline !== newNews.headline ||
+			// 	news.summary !== newNews.summary ||
+			// 	news.source !== newNews.source
+			// ) {
+			console.log(newNews);
+			await updateNewsById(newNews);
+			setNewsOfGivenDate(
+				await getNewsByDate(
+					date.year(),
+					date.month() + 1,
+					date.date()
+				)
+			);
+			// }
 		} catch (error) {
 			console.error(error.message);
 		}
@@ -116,23 +117,25 @@ const EditNews = ({ news }) => {
 
 						{/* <!-- Modal footer --> */}
 						<div className="modal-footer">
-							<button
-								type="button"
-								className="btn btn-warning"
-								data-dismiss="modal"
-								onClick={(e) => changeNews(e)}
-							>
-								Edit
-							</button>
+							<div className="yes-no">
+								<button
+									type="button"
+									className="btn btn-warning"
+									data-dismiss="modal"
+									onClick={(e) => changeNews(e)}
+								>
+									Edit
+								</button>
 
-							<button
-								type="button"
-								className="btn btn-danger"
-								data-dismiss="modal"
-								onClick={() => setNewNews(newNews)}
-							>
-								Close
-							</button>
+								<button
+									type="button"
+									className="btn btn-danger"
+									data-dismiss="modal"
+									onClick={() => setNewNews(newNews)}
+								>
+									Close
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>

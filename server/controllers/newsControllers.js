@@ -91,12 +91,22 @@ exports.createNews = async (req, res) => {
 		});
 	}
 };
-
 // Update
 exports.updateNews = async (req, res) => {
 	try {
 		console.log(req.body);
-		const { headline, source, summary } = req.body;
+		const { headline, source, summary, reporter } = req.body;
+		const newsItem = await News.findById(req.params.id);
+		if (!newsItem) {
+			return res
+				.status(404)
+				.json({ message: "News not found" });
+		}
+		if (newsItem.reporter !== reporter) {
+			return res.status(403).json({
+				message: "Can't Edit or Delete other's news.",
+			});
+		}
 		const updatedNews = await News.findOneAndUpdate(
 			{
 				_id: req.params.id,
@@ -109,9 +119,6 @@ exports.updateNews = async (req, res) => {
 			{ new: true }
 		);
 		console.log("Updated news =====> ", updatedNews);
-		if (!updatedNews) {
-			res.status(404).json({ message: "News not found" });
-		}
 		res.status(200).json({
 			message: "News updated successfully",
 			updatedNews,
@@ -123,16 +130,21 @@ exports.updateNews = async (req, res) => {
 		});
 	}
 };
-
 exports.deleteNews = async (req, res) => {
 	try {
+		const { reporter } = req.body;
+		const newsItem = await News.findById(req.params.id);
+		if (!newsItem) {
+			return res.status(404).json({ error: "News not found" });
+		}
+		if (newsItem.reporter !== reporter) {
+			return res.status(403).json({
+				message: "Can't Delete or Edit other's news.",
+			});
+		}
 		const deletedNews = await News.findOneAndDelete({
 			_id: req.params.id,
 		});
-		if (!deletedNews) {
-			return res.status(404).json({ error: "News not found" });
-		}
-
 		console.log("Deleted news id =====> ", req.params.id);
 		res.status(200).json({
 			message: "News deleted successfully",

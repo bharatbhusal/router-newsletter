@@ -95,6 +95,15 @@ form.input_news {
 	background-color: #bb2765;
 }
 
+.modal-footer {
+	display: flex;
+	justify-content: space-between;
+}
+.modal-footer .yes-no {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
 @media (prefers-reduced-motion: no-preference) {
 	.App-logo {
 		animation: App-logo-spin infinite 20s linear;

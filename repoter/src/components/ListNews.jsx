@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import EditNews from "./EditNews";
+import DeleteNews from "./DeleteNews";
 import {
 	getNewsByDate,
 	deleteNewsById,
@@ -31,17 +32,6 @@ const ListNews = () => {
 		navigate("/login");
 	};
 
-	const deleteNews = async (id) => {
-		try {
-			await deleteNewsById(id);
-
-			setNewsOfGivenDate(
-				newsOfGivenDate.filter((news) => news._id !== id)
-			);
-		} catch (error) {
-			console.error(error.message);
-		}
-	};
 	const handleCopyToClipboard = async () => {
 		await copyToClipboard(
 			generateTextContent(
@@ -170,12 +160,14 @@ const ListNews = () => {
 											/>
 										</td>
 										<td>
-											<button
-												className="btn btn-danger"
-												onClick={() => deleteNews(news._id)}
-											>
-												Delete
-											</button>
+											<DeleteNews
+												news={{
+													id: news._id,
+													headline: news.headline,
+													source: news.source,
+													summary: news.summary,
+												}}
+											/>
 										</td>
 									</>
 								) : (
