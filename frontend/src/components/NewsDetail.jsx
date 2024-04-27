@@ -2,8 +2,19 @@ import React, { Fragment } from "react";
 import { useDateContext } from "../context/dateContext";
 
 const NewsDetail = ({ news }) => {
-	const sourceUrl = new URL(news.source);
-	const hostname = sourceUrl.hostname;
+	var hostname = "";
+	try {
+		const sourceUrl = new URL(news.source);
+		hostname = sourceUrl.hostname;
+		// Rest of the code
+	} catch (error) {
+		console.error(
+			"Error occurred while parsing source URL:",
+			error
+		);
+		// Handle the error or display an error message
+		hostname = "Invalid URL";
+	}
 	const { date } = useDateContext();
 	return (
 		<Fragment>
