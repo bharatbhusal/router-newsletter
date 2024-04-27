@@ -1,14 +1,9 @@
 import React, { Fragment, useState } from "react";
-import { updateNewsById } from "../apis/newsAPIs";
 import { useNewsContext } from "../context/newsContext";
 import { useDateContext } from "../context/dateContext";
-// import { getNewsByDate } from "../apis/newsAPIs";
 import Button from "@mui/material/Button";
 
-import {
-	getNewsByDate,
-	deleteNewsById,
-} from "../apis/newsAPIs";
+import { deleteNewsById } from "../apis/newsAPIs";
 
 const DeleteNews = ({ news }) => {
 	var hostname = "";
@@ -24,12 +19,8 @@ const DeleteNews = ({ news }) => {
 	} catch (error) {
 		console.error(
 			"Error occurred while parsing source URL:",
-			error
+			error.message
 		);
-		hostname =
-			"https://router-protocol-newsletter.vercel.app/";
-		news.source =
-			"https://router-protocol-newsletter.vercel.app/";
 	}
 	const [newNews, setNewNews] = useState(news);
 	const { newsOfGivenDate, setNewsOfGivenDate } =
@@ -100,21 +91,25 @@ const DeleteNews = ({ news }) => {
 							>
 								{news.summary}
 							</div>
-							<span style={{ fontWeight: "bold" }}>
-								Source: &nbsp;
-							</span>
-							<a
-								href={news.source}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<div
-									className="source"
-									style={{ display: "inline" }}
-								>
-									{hostname}
-								</div>
-							</a>
+							{hostname && (
+								<>
+									<span style={{ fontWeight: "bold" }}>
+										Source: &nbsp;
+									</span>
+									<a
+										href={news.source}
+										target="_blank"
+										rel="noreferrer"
+									>
+										<div
+											className="source"
+											style={{ display: "inline" }}
+										>
+											{hostname}
+										</div>
+									</a>
+								</>
+							)}
 						</div>
 
 						{/* <!-- Modal footer --> */}

@@ -15,12 +15,8 @@ const NewsDetail = ({ news }) => {
 	} catch (error) {
 		console.error(
 			"Error occurred while parsing source URL:",
-			error
+			error.message
 		);
-		hostname =
-			"https://router-protocol-newsletter.vercel.app/";
-		news.source =
-			"https://router-protocol-newsletter.vercel.app/";
 	}
 
 	const { date } = useDateContext();
@@ -73,21 +69,25 @@ const NewsDetail = ({ news }) => {
 							>
 								{news.summary}
 							</div>
-							<span style={{ fontWeight: "bold" }}>
-								Source: &nbsp;
-							</span>
-							<a
-								href={news.source}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<div
-									className="source"
-									style={{ display: "inline" }}
-								>
-									{hostname}
-								</div>
-							</a>
+							{hostname && (
+								<>
+									<span style={{ fontWeight: "bold" }}>
+										Source: &nbsp;
+									</span>
+									<a
+										href={news.source}
+										target="_blank"
+										rel="noreferrer"
+									>
+										<div
+											className="source"
+											style={{ display: "inline" }}
+										>
+											{hostname}
+										</div>
+									</a>
+								</>
+							)}
 						</div>
 						{/* <!-- Modal footer -->} */}
 						<div className="modal-footer news_details_footer">
