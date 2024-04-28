@@ -1,8 +1,6 @@
 import React, { Fragment, useEffect } from "react";
-import EditNews from "./EditNews";
-import DeleteNews from "./DeleteNews";
 import { getNewsByDate } from "../apis/newsAPIs";
-import NewsDetail from "./NewsDetail";
+import NewsItem from "./NewsItem";
 import Calendar from "./Calendar";
 import { useDateContext } from "../context/dateContext";
 import { useNewsContext } from "../context/newsContext";
@@ -20,12 +18,16 @@ const ListNews = () => {
 	const { newsOfGivenDate, setNewsOfGivenDate } =
 		useNewsContext();
 
+	const isLoggedIn = localStorage.getItem("user-jwt-token")
+		? true
+		: false;
+
 	const handleLogout = () => {
 		localStorage.removeItem("user-jwt-token");
 		localStorage.removeItem("user");
-
 		window.location.reload();
 	};
+
 	const handleLogIn = () => {
 		navigate("/login");
 	};
@@ -71,7 +73,7 @@ const ListNews = () => {
 						Tap on the headline or summary for detail
 					</h6>
 				</div>
-				{localStorage.getItem("user-jwt-token") ? (
+				{isLoggedIn ? (
 					<Button
 						onClick={handleLogout}
 						type="submit"
@@ -100,90 +102,26 @@ const ListNews = () => {
 					<ContentCopyIcon />
 				</div>
 			</div>
-			<table
-				className="table mt-5 text-center"
-				style={{ maxWidth: "842px" }}
-			>
-				<thead>
-					<tr>
-						<th>Headline</th>
-						<th>Summary</th>
-						{localStorage.getItem("user-jwt-token") ? (
-							<>
-								<th>Edit</th>
-								<th>Delete</th>
-							</>
-						) : (
-							<></>
-						)}
-					</tr>
-				</thead>
+			<div className="list-news-table">
+				<div className="title">
+					<h5 style={{ width: "100%" }}>Headline</h5>
+					<h5 style={{ width: "100%" }}>Summary</h5>
+				</div>
 
-				<tbody>
-					{newsOfGivenDate.length !== 0 ? (
-						newsOfGivenDate.map((news) => (
-							<tr key={news._id}>
-								<td>
-									<span
-										style={{
-											minHeight: "50px",
-											display: "inline-block",
-											cursor: "pointer",
-											wordWrap: "break-word",
-										}}
-										data-toggle="modal"
-										data-target={`#idDetail${news._id}`}
-									>
-										{news.headline}
-									</span>
-								</td>
-								<td>
-									<NewsDetail
-										news={{
-											id: news._id,
-											headline: news.headline,
-											source: news.source,
-											summary: news.summary,
-											reporter: news.reporter,
-											date: news.date,
-										}}
-									/>
-								</td>
-								{localStorage.getItem("user-jwt-token") ? (
-									<>
-										<td>
-											<EditNews
-												news={{
-													id: news._id,
-													headline: news.headline,
-													source: news.source,
-													summary: news.summary,
-												}}
-											/>
-										</td>
-										<td>
-											<DeleteNews
-												news={{
-													id: news._id,
-													headline: news.headline,
-													source: news.source,
-													summary: news.summary,
-												}}
-											/>
-										</td>
-									</>
-								) : (
-									<></>
-								)}
-							</tr>
-						))
-					) : (
-						<tr>
-							<td colSpan="4">No news available</td>
-						</tr>
-					)}
-				</tbody>
-			</table>
+				{newsOfGivenDate.length !== 0 ? (
+					newsOfGivenDate.map((news) => (
+						<NewsItem
+							key={news._id}
+							news={news}
+							isLoggedIn={isLoggedIn}
+						/>
+					))
+				) : (
+					<div className="rows no-news">
+						<h6>No news available</h6>
+					</div>
+				)}
+			</div>
 		</Fragment>
 	);
 };

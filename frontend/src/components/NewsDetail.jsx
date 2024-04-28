@@ -22,21 +22,6 @@ const NewsDetail = ({ news }) => {
 	const { date } = useDateContext();
 	return (
 		<Fragment>
-			<span
-				style={{
-					display: "inline-block",
-					cursor: "pointer",
-					wordWrap: "break-word",
-				}}
-				data-toggle="modal"
-				data-target={`#idDetail${news.id}`}
-			>
-				{news.summary.length >= 80
-					? `${news.summary.slice(0, 100)}......`
-					: news.summary}
-			</span>
-
-			{/* <!-- The Modal --> */}
 			<div className="modal" id={`idDetail${news.id}`}>
 				<div className="modal-dialog">
 					<div className="modal-content">

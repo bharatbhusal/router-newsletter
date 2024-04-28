@@ -42,16 +42,7 @@ const DeleteNews = ({ news }) => {
 	};
 
 	return (
-		<Fragment>
-			<Button
-				variant="contained"
-				color="error"
-				type="button"
-				data-toggle="modal"
-				data-target={`#idDelete${newNews.id}`}
-			>
-				Delete
-			</Button>
+		<div className="delete-news">
 			{/* <!-- The Modal --> */}
 			<div
 				className="modal"
@@ -147,7 +138,7 @@ const DeleteNews = ({ news }) => {
 					</div>
 				</div>
 			</div>
-		</Fragment>
+		</div>
 	);
 };
 

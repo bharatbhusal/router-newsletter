@@ -5,7 +5,7 @@ import "./App.css";
 const App = () => {
 	return (
 		<Fragment>
-			<div className="container" style={{ maxWidth: "842px" }}>
+			<div className="container" style={{ maxWidth: "700px" }}>
 				<h1
 					className="text-center mt-5"
 					style={{ color: "#bb2765", maxWidth: "842px" }}

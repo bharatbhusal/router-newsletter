@@ -1,4 +1,3 @@
-/* Resetting default styles for all elements */
 * {
 	margin: 0;
 	padding: 0;
@@ -7,17 +6,6 @@
 	box-sizing: border-box;
 	list-style: none;
 	text-decoration: none;
-	/* color: black; */
-	/* display: inline-block; */
-}
-
-.App {
-	text-align: center;
-}
-
-.App-logo {
-	height: 40vmin;
-	pointer-events: none;
 }
 
 form.input_news {
@@ -32,6 +20,7 @@ form.input_news {
 	justify-content: space-between;
 	align-items: center;
 	gap: 1rem;
+	flex-wrap: wrap-reverse;
 }
 .news_detail {
 	text-align: justify;
@@ -95,32 +84,70 @@ form.input_news {
 	justify-content: space-between;
 	gap: 1rem;
 }
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
+.list-news-table {
+	border: 1px solid #282c3450;
+	margin: 1rem 0;
+	border-radius: 1rem;
+	overflow: hidden;
+}
+.list-news-table .title {
+	padding: 0.4rem 1rem;
+	display: flex;
+	background-color: #bb276510;
+	justify-content: space-between;
+	align-items: center;
+	* {
+		/* width: 25%; */
+		text-align: center;
 	}
 }
 
-.App-header {
-	background-color: #282c34;
-	min-height: 100vh;
+.list-news-table .rows {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid #282c3440;
+	h6 {
+		min-height: 4rem;
+		height: max-content;
+		overflow: hidden;
+		font-size: small;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0.5rem 0.5rem;
+	}
+}
+.list-news-table .rows .buttons {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.3rem;
+	padding: 0.4rem;
+	width: 5rem;
+	border-left: 1px solid #282c3450;
+}
+
+.list-news-table .rows .buttons > button {
+	color: white;
+	border: none;
+	padding: 0.4rem;
+	border-radius: 50rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.list-news-table .rows .buttons .edit-btn {
+	background-color: #eeb13e;
+}
+.list-news-table .rows .buttons .delete-btn {
+	background-color: rgb(226, 20, 20);
+}
+
+.list-news-table .no-news {
 	align-items: center;
 	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
-}
-
-.App-link {
-	color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
 }

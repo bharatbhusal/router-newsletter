@@ -47,7 +47,7 @@ const AddNews = () => {
 		<Fragment>
 			{localStorage.getItem("user-jwt-token") && (
 				<form
-					className="d-flex mt-5 input_news"
+					className="d-flex input_news"
 					onSubmit={onSubmitForm}
 				>
 					<TextField
@@ -93,7 +93,7 @@ const AddNews = () => {
 						type="submit"
 						color="success"
 						variant="contained"
-						sx={{ mt: 3, mb: 2, padding: "10px 3rem" }}
+						sx={{ mt: 1, mb: 0, padding: "10px 3rem" }}
 					>
 						Add
 					</Button>
