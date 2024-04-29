@@ -41,6 +41,29 @@ exports.getNewsById = async (req, res) => {
 	}
 };
 
+// Read by ID
+exports.getNewsByUser = async (req, res) => {
+	try {
+		console.log("Request body =====> ", req.body);
+		const { reporter } = req.body;
+		const newsItems = await News.find({
+			reporter,
+		});
+		if (!newsItems) {
+			return res
+				.status(404)
+				.json({ message: "News not found" });
+		}
+		console.log("Returned news =====> ", newsItems);
+		res.status(200).json(newsItems);
+	} catch (error) {
+		res.status(500).json({
+			error: "Internal server error",
+			message: error.message,
+		});
+	}
+};
+
 // Read
 
 exports.getNewsOfMonth = async (req, res) => {

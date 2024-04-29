@@ -14,6 +14,7 @@ import {
 } from "./components/Auth";
 import { DateProvider } from "./context/dateContext";
 import { NewsProvider } from "./context/newsContext";
+import { UserProvider } from "./context/userContext";
 import AddNews from "./components/AddNews";
 import ListNews from "./components/ListNews";
 import PageNotFound from "./components/PageNotFound";
@@ -21,6 +22,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { register } from "./serviceWorker"; // Import the register function
 import "./index.css";
+import Profile from "./components/Profile";
 
 const divContainer = document.getElementById("root");
 const root = createRoot(divContainer);
@@ -42,18 +44,35 @@ const router = createBrowserRouter([
 			},
 			{ path: "/login", element: <LogIn /> },
 			{ path: "/signup", element: <SignUp /> },
+			// userMenu
+			{ path: "/profile", element: <Profile /> },
+			{
+				path: "/dashboard",
+				element: <>Hi this is Dashboard</>,
+			},
+
+			//pagesMenu
+			{
+				path: "/contributors",
+				element: <>Hi this is Contributors</>,
+			},
+			{ path: "/about-us", element: <>Hi this is About Us</> },
+			{ path: "/donate", element: <>Hi this is Donate</> },
+
 			{ path: "/reset", element: <ForgotPassword /> },
 		],
 	},
 ]);
 
 root.render(
-	<NewsProvider>
-		<DateProvider>
-			<ToastContainer />
-			<RouterProvider router={router} />
-		</DateProvider>
-	</NewsProvider>
+	<UserProvider>
+		<NewsProvider>
+			<DateProvider>
+				<ToastContainer />
+				<RouterProvider router={router} />
+			</DateProvider>
+		</NewsProvider>
+	</UserProvider>
 );
 
 // Register the service worker

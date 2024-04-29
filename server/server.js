@@ -12,6 +12,7 @@ require("dotenv").config({
 const app = express();
 
 // Use body-parser to parse JSON bodies
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(cors());

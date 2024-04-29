@@ -1,17 +1,13 @@
 import React, { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 import "./App.css";
+import { NavBar } from "./components/NavBar";
 
 const App = () => {
 	return (
 		<Fragment>
+			<NavBar />
 			<div className="container" style={{ maxWidth: "700px" }}>
-				<h1
-					className="text-center mt-5"
-					style={{ color: "#bb2765", maxWidth: "842px" }}
-				>
-					Router Protocol Daily Newsletter
-				</h1>
 				<Outlet />
 			</div>
 		</Fragment>

@@ -21,6 +21,10 @@ const userSchema = new mongoose.Schema({
 		type: Boolean,
 		default: false,
 	},
+	dp: {
+		type: String,
+		default: "no dp",
+	},
 });
 
 const User = mongoose.model("User", userSchema);

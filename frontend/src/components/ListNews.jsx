@@ -22,16 +22,6 @@ const ListNews = () => {
 		? true
 		: false;
 
-	const handleLogout = () => {
-		localStorage.removeItem("user-jwt-token");
-		localStorage.removeItem("user");
-		window.location.reload();
-	};
-
-	const handleLogIn = () => {
-		navigate("/login");
-	};
-
 	const handleCopyToClipboard = async () => {
 		await copyToClipboard(
 			generateTextContent(
@@ -73,25 +63,6 @@ const ListNews = () => {
 						Tap on the headline or summary for detail
 					</h6>
 				</div>
-				{isLoggedIn ? (
-					<Button
-						onClick={handleLogout}
-						type="submit"
-						variant="contained"
-						color="error"
-					>
-						Log Out
-					</Button>
-				) : (
-					<Button
-						onClick={handleLogIn}
-						type="submit"
-						variant="contained"
-						color="primary"
-					>
-						Log In
-					</Button>
-				)}
 			</div>
 			<div className="tools">
 				<Calendar />
@@ -109,13 +80,15 @@ const ListNews = () => {
 				</div>
 
 				{newsOfGivenDate.length !== 0 ? (
-					newsOfGivenDate.map((news) => (
-						<NewsItem
-							key={news._id}
-							news={news}
-							isLoggedIn={isLoggedIn}
-						/>
-					))
+					newsOfGivenDate
+						.reverse()
+						.map((news) => (
+							<NewsItem
+								key={news._id}
+								news={news}
+								isLoggedIn={isLoggedIn}
+							/>
+						))
 				) : (
 					<div className="rows no-news">
 						<h6>No news available</h6>

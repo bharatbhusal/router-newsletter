@@ -1,5 +1,6 @@
 // usersAPIs.js
-
+import env from "../utils/validateEnv";
+import { toast } from "react-toastify";
 // Function to create a new user
 const createUser = async (userData) => {
 	try {
@@ -10,7 +11,7 @@ const createUser = async (userData) => {
 				headers: {
 					"Content-Type": "application/json",
 				},
-				body: JSON.stringify(userData),
+				body: userData,
 			}
 		);
 		const data = await response.json();
@@ -77,7 +78,6 @@ const getUserById = async (userId) => {
 		throw new Error(error.message || "Failed to fetch user");
 	}
 };
-
 // Function to update a user by ID
 const updateUserById = async (userId, userData) => {
 	try {
@@ -97,11 +97,16 @@ const updateUserById = async (userId, userData) => {
 		);
 		const data = await response.json();
 		if (response.ok) {
+			// localStorage.setItem("user", JSON.stringify(data));
+			// Show success message using react-toastify
+			toast.success("User updated successfully");
 			return data;
 		} else {
 			throw new Error(data.message || "Failed to update user");
 		}
 	} catch (error) {
+		// Show error message using react-toastify
+		toast.error(error.message || "Failed to update user");
 		throw new Error(error.message || "Failed to update user");
 	}
 };

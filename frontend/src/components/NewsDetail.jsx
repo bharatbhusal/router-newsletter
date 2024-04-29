@@ -22,8 +22,14 @@ const NewsDetail = ({ news }) => {
 	const { date } = useDateContext();
 	return (
 		<Fragment>
-			<div className="modal" id={`idDetail${news.id}`}>
-				<div className="modal-dialog">
+			<div
+				className="modal fade"
+				id={`idDetail${news.id}`}
+				style={{
+					zIndex: "10000",
+				}}
+			>
+				<div className="modal-dialog modal-dialog-centered">
 					<div className="modal-content">
 						{/* <!-- Modal Header --> */}
 						<div className="modal-header">

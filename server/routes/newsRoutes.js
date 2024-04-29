@@ -13,6 +13,11 @@ router.post(
 );
 
 // Get news
+router.post(
+	"/user",
+	authenticateToken,
+	newsController.getNewsByUser
+);
 router.get("/:year/:month", newsController.getNewsOfMonth);
 router.get("/:id", newsController.getNewsById);
 // Get news

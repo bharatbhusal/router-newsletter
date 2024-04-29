@@ -45,11 +45,14 @@ const DeleteNews = ({ news }) => {
 		<div className="delete-news">
 			{/* <!-- The Modal --> */}
 			<div
-				className="modal"
+				className="modal fade"
 				id={`idDelete${newNews.id}`}
 				onClick={() => setNewNews(newNews)}
+				style={{
+					zIndex: "10000",
+				}}
 			>
-				<div className="modal-dialog">
+				<div className="modal-dialog modal-dialog-centered">
 					<div className="modal-content">
 						{/* <!-- Modal Header --> */}
 						<div className="modal-header">

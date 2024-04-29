@@ -8,6 +8,9 @@
 	text-decoration: none;
 }
 
+.container {
+	margin-top: 7vh;
+}
 form.input_news {
 	display: flex;
 	flex-direction: column;
@@ -74,7 +77,6 @@ form.input_news {
 	color: white;
 	background-color: #bb2765;
 }
-
 .modal-footer {
 	display: flex;
 	justify-content: space-between;
@@ -142,6 +144,10 @@ form.input_news {
 }
 .list-news-table .rows .buttons .edit-btn {
 	background-color: #eeb13e;
+}
+.user-profile .edit-btn {
+	width: 10rem;
+	height: 3rem;
 }
 .list-news-table .rows .buttons .delete-btn {
 	background-color: rgb(226, 20, 20);
