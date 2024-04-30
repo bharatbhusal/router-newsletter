@@ -23,6 +23,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { register } from "./serviceWorker"; // Import the register function
 import "./index.css";
 import Profile from "./components/Profile";
+import Dashboard from "./components/Dashboard";
+import Contributors from "./components/Contributors";
 
 const divContainer = document.getElementById("root");
 const root = createRoot(divContainer);
@@ -48,13 +50,13 @@ const router = createBrowserRouter([
 			{ path: "/profile", element: <Profile /> },
 			{
 				path: "/dashboard",
-				element: <>Hi this is Dashboard</>,
+				element: <Dashboard />,
 			},
 
 			//pagesMenu
 			{
 				path: "/contributors",
-				element: <>Hi this is Contributors</>,
+				element: <Contributors />,
 			},
 			{ path: "/about-us", element: <>Hi this is About Us</> },
 			{ path: "/donate", element: <>Hi this is Donate</> },

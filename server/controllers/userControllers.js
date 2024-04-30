@@ -14,7 +14,7 @@ const createUser = async (req, res) => {
 // Controller for getting all users
 const getUsers = async (req, res) => {
 	try {
-		const users = await User.find();
+		const users = await User.find({}, "-password");
 		res.status(200).json(users);
 	} catch (error) {
 		res.status(500).json({ message: error.message });
