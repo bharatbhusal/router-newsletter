@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from "react";
-import { useNewsContext } from "../context/newsContext";
-import { useDateContext } from "../context/dateContext";
+import { useNewsContext } from "../../context/newsContext";
+import { useDateContext } from "../../context/dateContext";
 import Button from "@mui/material/Button";
 
-import { deleteNewsById } from "../apis/newsAPIs";
+import { deleteNewsById } from "../../apis/newsAPIs";
 
 const DeleteNews = ({ news }) => {
 	var hostname = "";

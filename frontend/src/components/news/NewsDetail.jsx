@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { useDateContext } from "../context/dateContext";
+import { useDateContext } from "../../context/dateContext";
 
 const NewsDetail = ({ news }) => {
 	var hostname = "";

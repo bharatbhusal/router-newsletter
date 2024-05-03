@@ -9,10 +9,10 @@ const signup = async (userData) => {
 			`${env.REACT_APP_SERVER_URL}/auth/signup`,
 			{
 				method: "POST",
-				// headers: {
-				// 	"Content-Type": "application/json",
-				// },
-				body: { dp: userData.dp },
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(userData),
 			}
 		);
 		const data = await response.json();

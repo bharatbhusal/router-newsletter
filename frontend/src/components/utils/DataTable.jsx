@@ -33,7 +33,7 @@ export default function DataTable({ rows }) {
 	});
 
 	return (
-		<div style={{ height: "80vh", width: "100%" }}>
+		<div style={{ height: "70vh", maxWidth: "670px" }}>
 			<DataGrid
 				style={{ border: "1px solid black", marginTop: "1rem" }}
 				rows={rows}

@@ -4,6 +4,7 @@ const { generateToken } = require("../middlewares/auth");
 
 // Controller for user signup
 const signup = async (req, res) => {
+	console.log(req.body);
 	const { firstName, lastName, email, password } = req.body;
 	try {
 		// Check if the user already exists

@@ -8,8 +8,12 @@
 	text-decoration: none;
 }
 
+body {
+	padding-top: 5rem;
+}
 .container {
-	margin-top: 7vh;
+	overflow-y: scroll;
+	max-width: 700px;
 }
 form.input_news {
 	display: flex;
@@ -99,7 +103,6 @@ form.input_news {
 	justify-content: space-between;
 	align-items: center;
 	* {
-		/* width: 25%; */
 		text-align: center;
 	}
 }
@@ -145,6 +148,7 @@ form.input_news {
 .list-news-table .rows .buttons .edit-btn {
 	background-color: #eeb13e;
 }
+
 .user-profile .edit-btn {
 	width: 10rem;
 	height: 3rem;

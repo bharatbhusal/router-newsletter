@@ -1,6 +1,5 @@
 import React from "react";
 import NewsDetail from "./NewsDetail";
-import Button from "@mui/material/Button";
 import EditNews from "./EditNews";
 import DeleteNews from "./DeleteNews";
 import { AiOutlineDelete } from "react-icons/ai";

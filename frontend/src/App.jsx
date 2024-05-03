@@ -1,13 +1,13 @@
 import React, { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 import "./App.css";
-import { NavBar } from "./components/NavBar";
+import Header from "./components/Header";
 
 const App = () => {
 	return (
 		<Fragment>
-			<NavBar />
-			<div className="container" style={{ maxWidth: "700px" }}>
+			<Header />
+			<div className="container">
 				<Outlet />
 			</div>
 		</Fragment>

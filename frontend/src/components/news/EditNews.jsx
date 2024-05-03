@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from "react";
-import { updateNewsById } from "../apis/newsAPIs";
-import { useNewsContext } from "../context/newsContext";
-import { useDateContext } from "../context/dateContext";
-import { getNewsByDate } from "../apis/newsAPIs";
+import { updateNewsById } from "../../apis/newsAPIs";
+import { useNewsContext } from "../../context/newsContext";
+import { useDateContext } from "../../context/dateContext";
+import { getNewsByDate } from "../../apis/newsAPIs";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 

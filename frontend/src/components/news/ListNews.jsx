@@ -1,20 +1,18 @@
 import React, { Fragment, useEffect } from "react";
-import { getNewsByDate } from "../apis/newsAPIs";
+import { getNewsByDate } from "../../apis/newsAPIs";
 import NewsItem from "./NewsItem";
-import Calendar from "./Calendar";
-import { useDateContext } from "../context/dateContext";
-import { useNewsContext } from "../context/newsContext";
-import { useNavigate } from "react-router-dom";
+import Calendar from "../utils/Calendar";
+import { useDateContext } from "../../context/dateContext";
+import { useNewsContext } from "../../context/newsContext";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import {
 	generateTextContent,
 	copyToClipboard,
-} from "../utils/downloader";
-import Button from "@mui/material/Button";
+} from "../../utils/downloader";
 
 const ListNews = () => {
 	const { date } = useDateContext();
-	const navigate = useNavigate();
+
 	const { newsOfGivenDate, setNewsOfGivenDate } =
 		useNewsContext();
 

@@ -7,24 +7,26 @@ import {
 	RouterProvider,
 } from "react-router-dom";
 import App from "./App";
-import {
-	LogIn,
-	SignUp,
-	ForgotPassword,
-} from "./components/Auth";
+// import {
+// 	LogIn,
+// 	SignUp,
+// 	ForgotPassword,
+// } from "./components/auth/Auth";
+import LogIn from "./components/auth/LogIn";
+import SignUp from "./components/auth/SignUp";
+import ForgotPassword from "./components/auth/ForgotPassword";
+
 import { DateProvider } from "./context/dateContext";
 import { NewsProvider } from "./context/newsContext";
 import { UserProvider } from "./context/userContext";
-import AddNews from "./components/AddNews";
-import ListNews from "./components/ListNews";
-import PageNotFound from "./components/PageNotFound";
+import AddNews from "./components/news/AddNews";
+import ListNews from "./components/news/ListNews";
+import PageNotFound from "./components/utils/PageNotFound";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { register } from "./serviceWorker"; // Import the register function
 import "./index.css";
-import Profile from "./components/Profile";
-import Dashboard from "./components/Dashboard";
-import Contributors from "./components/Contributors";
+import UserProfile from "./components/UserProfile";
 
 const divContainer = document.getElementById("root");
 const root = createRoot(divContainer);
@@ -37,29 +39,13 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: "/",
-				element: (
-					<>
-						<AddNews />
-						<ListNews />
-					</>
-				),
+				element: <ListNews />,
 			},
 			{ path: "/login", element: <LogIn /> },
+			{ path: "/add-news", element: <AddNews /> },
 			{ path: "/signup", element: <SignUp /> },
 			// userMenu
-			{ path: "/profile", element: <Profile /> },
-			{
-				path: "/dashboard",
-				element: <Dashboard />,
-			},
-
-			//pagesMenu
-			{
-				path: "/contributors",
-				element: <Contributors />,
-			},
-			{ path: "/about-us", element: <>Hi this is About Us</> },
-			{ path: "/donate", element: <>Hi this is Donate</> },
+			{ path: "/profile", element: <UserProfile /> },
 
 			{ path: "/reset", element: <ForgotPassword /> },
 		],
@@ -78,4 +64,4 @@ root.render(
 );
 
 // Register the service worker
-register();
+// register();

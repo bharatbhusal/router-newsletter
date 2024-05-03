@@ -6,11 +6,9 @@ import Button from "@mui/material/Button";
 import { FaEdit } from "react-icons/fa";
 import TextField from "@mui/material/TextField";
 import { useUserContext } from "../context/userContext";
-import DataTable, {
-	CustomPaginationActionsTable,
-} from "./UserNewsTable";
+import DataTable from "./utils/DataTable";
 
-const Profile = () => {
+const UserProfile = () => {
 	const navigate = useNavigate();
 	const {
 		user,
@@ -161,7 +159,7 @@ const Profile = () => {
 						</div>
 					</div>
 				</div>
-				{/* <div className="news-reported">
+				<div className="news-reported">
 					<h4 style={{ marginTop: "1rem" }}>News</h4>
 					<h6 style={{ fontStyle: "italic" }}>
 						You have {newsByGivenUser.length} news reported so
@@ -172,10 +170,10 @@ const Profile = () => {
 						newsByGivenUser[0]._id && (
 							<DataTable rows={newsByGivenUser} />
 						)}
-				</div> */}
+				</div>
 			</div>
 		)
 	);
 };
 
-export default Profile;
+export default UserProfile;
