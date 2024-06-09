@@ -6,6 +6,9 @@ import {
 	LOGOUT_START,
 	LOGOUT_SUCCESS,
 	LOGOUT_FAIL,
+	UPDATE_USER_START,
+	UPDATE_USER_SUCCESS,
+	UPDATE_USER_FAILURE,
 } from "../actions/ActionTypes";
 
 const initialState = {
@@ -13,7 +16,6 @@ const initialState = {
 	loading: false,
 	error: null,
 	logoutLoading: false,
-	retrieving: false,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -43,6 +45,19 @@ const authReducer = (state = initialState, action) => {
 				break;
 			case LOGOUT_FAIL:
 				draft.logoutLoading = false;
+				draft.error = action.error;
+				break;
+			case UPDATE_USER_START:
+				draft.loading = true;
+				draft.error = null;
+				break;
+			case UPDATE_USER_SUCCESS:
+				draft.authData = action.response;
+				draft.loading = false;
+				draft.error = null;
+				break;
+			case UPDATE_USER_FAILURE:
+				draft.loading = false;
 				draft.error = action.error;
 				break;
 			default:

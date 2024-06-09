@@ -3,9 +3,6 @@ import {
 	USER_RETRIEVE_START,
 	USER_RETRIEVE_SUCCESS,
 	USER_RETRIEVE_FAIL,
-	USER_UPDATE_START,
-	USER_UPDATE_SUCCESS,
-	USER_UPDATE_FAIL,
 	USER_DELETE_START,
 	USER_DELETE_SUCCESS,
 	USER_DELETE_FAIL,
@@ -41,21 +38,6 @@ const userReducer = (state = initialState, action) => {
 				break;
 			case USER_RETRIEVE_FAIL:
 				draft.retrieving = false;
-				draft.error = action.error;
-				break;
-			case USER_UPDATE_START:
-				draft.updating = true;
-				draft.error = null;
-				break;
-			case USER_UPDATE_SUCCESS:
-				draft.updating = false;
-				draft.users = draft.users.map((user) =>
-					user.id === action.data.id ? action.data : user
-				);
-				draft.error = null;
-				break;
-			case USER_UPDATE_FAIL:
-				draft.updating = false;
 				draft.error = action.error;
 				break;
 			case USER_DELETE_START:

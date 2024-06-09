@@ -9,15 +9,6 @@ export const getUser = (userId) =>
 			throw error;
 		});
 
-export const updateUser = (formData) =>
-	API.put(`/user`, formData)
-		.then((response) => {
-			return response;
-		})
-		.catch((error) => {
-			throw error;
-		});
-
 export const getAllUsers = () =>
 	API.get("/user")
 		.then((response) => {

@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ProfileModal.css";
 import { Modal, useMantineTheme } from "@mantine/core";
 import { useDispatch, useSelector } from "react-redux";
-import { updateUser } from "../../actions/UserAction";
-import { getUser } from "../../api/UserRequest";
+import { updateUser } from "../../actions/AuthAction";
 
 function ProfileModal({
 	modalOpened,

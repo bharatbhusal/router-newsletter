@@ -34,9 +34,9 @@ const LeftSide = () => {
 						<img
 							className="profile-picture"
 							src={
-								user.profilePicture
-									? serverPublic + user.profilePicture
-									: serverPublic + "default_profile.png"
+								user.profile_picture
+									? serverPublic + "profile/" + user.profile_picture
+									: serverPublic + "profile/" + "default_profile.png"
 							}
 							alt=""
 						/>

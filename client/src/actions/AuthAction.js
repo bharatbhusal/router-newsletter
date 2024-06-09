@@ -6,6 +6,9 @@ import {
 	LOGOUT_START,
 	LOGOUT_SUCCESS,
 	LOGOUT_FAIL,
+	UPDATE_USER_START,
+	UPDATE_USER_SUCCESS,
+	UPDATE_USER_FAILURE,
 } from "./ActionTypes";
 
 // Handler function
@@ -53,6 +56,15 @@ export const signUp = (formData) =>
 		AUTH_START,
 		AUTH_SUCCESS,
 		AUTH_FAIL
+	);
+
+// Update user
+export const updateUser = (id, formData) =>
+	handleAsyncAuthAction(
+		() => AuthApi.updateUser(id, formData),
+		UPDATE_USER_START,
+		UPDATE_USER_SUCCESS,
+		UPDATE_USER_FAILURE
 	);
 
 export const logOut = () =>

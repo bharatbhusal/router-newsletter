@@ -100,7 +100,6 @@ export const updateUser = async (req, res) => {
 			works_at,
 			bio,
 		} = req.body;
-		console.log(req.body);
 
 		// Extract user ID from JWT token
 		const token = req.cookies.authToken;

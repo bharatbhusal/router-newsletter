@@ -11,8 +11,8 @@ const UserFollow = ({ person }) => {
 				<img
 					src={
 						person.profilePicture
-							? serverPublic + person.profilePicture
-							: serverPublic + "default_profile.png"
+							? serverPublic + "profile/" + person.profilePicture
+							: serverPublic + "profile/" + "default_profile.png"
 					}
 					alt=""
 					className="followerImg"

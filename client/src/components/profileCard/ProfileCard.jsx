@@ -28,16 +28,16 @@ const ProfileCard = ({ location }) => {
 				<img
 					src={
 						user.cover_picture
-							? `${serverPublic}${user.cover_picture}`
-							: `${serverPublic}default_cover.png`
+							? `${serverPublic}cover/${user.cover_picture}`
+							: `${serverPublic}cover/default_cover.png`
 					}
 					alt="Cover"
 				/>
 				<img
 					src={
 						user.profile_picture
-							? `${serverPublic}${user.profile_picture}`
-							: `${serverPublic}default_profile.png`
+							? `${serverPublic}profile/${user.profile_picture}`
+							: `${serverPublic}profile/default_profile.png`
 					}
 					alt="Profile"
 				/>

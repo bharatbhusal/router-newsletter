@@ -20,6 +20,15 @@ export const signUp = (formData) =>
 			throw error;
 		});
 
+export const updateUser = (formData) =>
+	API.put(`/user`, formData)
+		.then((response) => {
+			return response;
+		})
+		.catch((error) => {
+			throw error;
+		});
+
 // API function for logging out
 export const logOut = () =>
 	API.post("/auth/logout")

@@ -3,9 +3,6 @@ import {
 	USER_RETRIEVE_START,
 	USER_RETRIEVE_SUCCESS,
 	USER_RETRIEVE_FAIL,
-	USER_UPDATE_START,
-	USER_UPDATE_SUCCESS,
-	USER_UPDATE_FAIL,
 	USER_COUNT_START,
 	USER_COUNT_SUCCESS,
 	USER_COUNT_FAIL,
@@ -39,15 +36,6 @@ export const getUser = (userId) =>
 		USER_RETRIEVE_START,
 		USER_RETRIEVE_SUCCESS,
 		USER_RETRIEVE_FAIL
-	);
-
-// Update user
-export const updateUser = (id, formData) =>
-	handleAsyncUserAction(
-		() => UserApi.updateUser(id, formData),
-		USER_UPDATE_START,
-		USER_UPDATE_SUCCESS,
-		USER_UPDATE_FAIL
 	);
 
 // Retrieve all users
