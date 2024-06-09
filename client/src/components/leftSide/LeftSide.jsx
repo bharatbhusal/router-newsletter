@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import ShareModal from "../shareModal/ShareModal";
 import { FaPencil } from "react-icons/fa6";
 import { FaHome } from "react-icons/fa";
+import config from "../../../config";
 
 import NewsHistory from "../newsHistory/NewsHistory";
 
@@ -18,7 +19,7 @@ const LeftSide = () => {
 	);
 
 	const [modalOpened, setModalOpened] = useState(false);
-	const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
+	const serverPublic = config.VITE_APP_PUBLIC_FOLDER;
 	return (
 		<div className="LeftSide">
 			<div className="navIcons">
@@ -35,7 +36,7 @@ const LeftSide = () => {
 							src={
 								user.profilePicture
 									? serverPublic + user.profilePicture
-									: serverPublic + "defaultProfile.png"
+									: serverPublic + "default_profile.png"
 							}
 							alt=""
 						/>

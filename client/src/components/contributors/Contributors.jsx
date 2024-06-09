@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Contributors.css";
 import UserFollow from "../userFollow/UserFollow";
-import { useDispatch, useSelector } from "react-redux";
-import { getAllReporters } from "../../api/UserRequest";
+import { getAdmins } from "../../api/UserRequest";
 
 const Contributors = () => {
 	const [persons, setPersons] = useState([]);
 	useEffect(() => {
 		const fetchPersons = async () => {
-			const response = await getAllReporters();
+			const response = await getAdmins();
 			setPersons(response);
 		};
 		fetchPersons();

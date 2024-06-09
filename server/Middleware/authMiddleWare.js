@@ -1,42 +1,53 @@
-import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
+import User from "../Models/UserModel.js";
 import config from "../config.js";
+import jwt from "jsonwebtoken";
 
-dotenv.config();
+const generateToken = (id, email) => {
+	const secretKey = config.JWT_KEY;
+	const dataToSign = `${id}_${email}`;
+	const token = jwt.sign({ dataToSign }, secretKey, {
+		expiresIn: "30d",
+	});
+	return token;
+};
 
-const secret = config.JWT_KEY;
-
-const authMiddleWare = async (req, res, next) => {
+const decodeToken = (token) => {
+	const secretKey = config.JWT_KEY;
 	try {
-		const authHeader = req.headers.authorization;
-		console.log(req.headers);
-		if (!authHeader || !authHeader.startsWith("Bearer ")) {
-			return res.status(401).json({
-				message: "Authorization header is missing or malformed",
-			});
-		}
-
-		const token = authHeader.split(" ")[1];
-		console.log("Token: ", token);
-
-		if (token) {
-			const decoded = jwt.verify(token, secret);
-			console.log("Decoded: ", decoded);
-
-			req.body._id = decoded?.id;
-		} else {
-			return res
-				.status(401)
-				.json({ message: "Token is missing" });
-		}
-
-		next();
+		const decoded = jwt.verify(token, secretKey);
+		const dataToSign = decoded.dataToSign;
+		const [id, email] = dataToSign.split("_");
+		return { id, email };
 	} catch (error) {
-		console.error("Auth Middleware Error: ", error);
-		return res
-			.status(401)
-			.json({ message: "Unauthorized", error: error.message });
+		return { userId: "", email: "" };
 	}
 };
 
-export default authMiddleWare;
+const authenticateToken = async (req, res, next) => {
+	try {
+		const token = req.cookies.authToken;
+		if (!token) {
+			return res.status(401).json({ message: "Unauthorized" });
+		}
+
+		const { id, email } = decodeToken(token);
+		if (!id || !email) {
+			return res
+				.status(403)
+				.json({ message: "Invalid token" });
+		}
+		const user = await User.findById(id).select("-password");
+		if (!user) {
+			return res
+				.status(401)
+				.json({ message: "Invalid token" });
+		}
+		next();
+	} catch (error) {
+		return res
+			.status(500)
+			.json({ message: "Internal Server Error" });
+	}
+};
+
+export { generateToken, decodeToken, authenticateToken };

@@ -52,8 +52,8 @@ export const countThisYearPosts = () =>
 		});
 
 // Get my posts
-export const getMyPosts = (id) =>
-	API.get(`/post/${id}/myPosts`)
+export const getMyPosts = () =>
+	API.get(`/post/myPosts`)
 		.then((response) => {
 			return response;
 		})

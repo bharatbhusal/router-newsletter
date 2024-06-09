@@ -64,14 +64,14 @@ const InfoCard = () => {
 				<span>
 					<b>Lives in </b>
 				</span>
-				<span>{profileUser.livesin}</span>
+				<span>{profileUser.lives_in}</span>
 			</div>
 
 			<div className="info">
 				<span>
 					<b>Works at </b>
 				</span>
-				<span>{profileUser.worksAt}</span>
+				<span>{profileUser.works_at}</span>
 			</div>
 
 			<button

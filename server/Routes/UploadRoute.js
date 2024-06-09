@@ -4,6 +4,7 @@ import express from "express";
 import multer from "multer";
 import fs from "fs";
 import path from "path";
+import { v4 as uuidv4 } from "uuid"; // Import uuid for filename generation
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -16,6 +17,7 @@ const uploadFolder = path.join(
 	"images"
 );
 
+// Ensure upload folder exists
 if (!fs.existsSync(uploadFolder)) {
 	fs.mkdirSync(uploadFolder, { recursive: true });
 }
@@ -25,21 +27,50 @@ const storage = multer.diskStorage({
 		cb(null, uploadFolder);
 	},
 	filename: (req, file, cb) => {
-		cb(null, req.body.name);
+		// Generate a unique filename using uuid
+		const uniqueFilename =
+			uuidv4() + path.extname(file.originalname);
+		cb(null, uniqueFilename);
 	},
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({
+	storage: storage,
+	limits: { fileSize: 1024 * 1024 * 10 }, // Limit file size to 10MB
+	fileFilter: (req, file, cb) => {
+		// Validate file types (e.g., allow only images)
+		if (file.mimetype.startsWith("image/")) {
+			cb(null, true);
+		} else {
+			cb(
+				new Error(
+					"Unsupported file type. Please upload an image."
+				),
+				false
+			);
+		}
+	},
+});
 
 router.post("/", upload.single("file"), (req, res) => {
 	try {
-		console.log(req.file);
-		res
-			.status(200)
-			.json({ message: "File uploaded successfully" });
+		if (!req.file) {
+			// No file was uploaded
+			return res
+				.status(400)
+				.json({ error: "No file uploaded" });
+		}
+		// File uploaded successfully
+		res.status(200).json({
+			message: "File uploaded successfully",
+			filename: req.file.filename,
+		});
 	} catch (error) {
-		console.error(error);
-		res.status(500).json({ error: "Internal server error" });
+		// Multer or other internal server error
+		res.status(500).json({
+			error: "Internal server error",
+			details: error.message,
+		});
 	}
 });
 

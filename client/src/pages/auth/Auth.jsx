@@ -11,11 +11,11 @@ const Auth = () => {
 		(state) => state.authReducer?.loading
 	);
 	const [data, setData] = useState({
-		firstName: "Bharat",
-		lastName: "Bhusal",
+		first_name: "Bharat",
+		last_name: "Bhusal",
 		email: "bharat@gmail.com",
 		password: "aaa",
-		confirmPass: "aaa",
+		confirm_password: "aaa",
 	});
 
 	const [confirmPass, setConfirmPass] = useState(true);
@@ -31,7 +31,7 @@ const Auth = () => {
 		e.preventDefault();
 
 		if (isSignUp) {
-			data.password === data.confirmPass
+			data.password === data.confirm_password
 				? dispatch(signUp(data))
 				: setConfirmPass(false);
 		} else {
@@ -42,11 +42,11 @@ const Auth = () => {
 	const resetForm = () => {
 		setConfirmPass(true);
 		setData({
-			firstName: "",
-			lastName: "",
+			first_name: "",
+			last_name: "",
 			email: "",
 			password: "",
-			confirmPass: "",
+			confirm_password: "",
 		});
 	};
 
@@ -73,19 +73,19 @@ const Auth = () => {
 								type="text"
 								placeholder="First Name"
 								className="infoInput"
-								name="firstName"
+								name="first_name"
 								required
 								onChange={handleChange}
-								value={data.firstName}
+								value={data.first_name}
 							/>
 							<input
 								type="text"
 								placeholder="Last Name"
 								className="infoInput"
-								name="lastName"
+								name="last_name"
 								required
 								onChange={handleChange}
-								value={data.lastName}
+								value={data.last_name}
 							/>
 						</div>
 					)}
@@ -117,10 +117,10 @@ const Auth = () => {
 								type="password"
 								placeholder="Confirm Password"
 								className="infoInput"
-								name="confirmPass"
+								name="confirm_password"
 								required
 								onChange={handleChange}
-								value={data.confirmPass}
+								value={data.confirm_password}
 							/>
 						)}
 					</div>

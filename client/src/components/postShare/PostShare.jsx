@@ -27,7 +27,7 @@ const PostShare = ({ setModalOpened }) => {
 		e.preventDefault();
 
 		const newPost = {
-			userId: user._id,
+			user_id: user._id,
 			headline: headline.current.value,
 			summary: summary.current.value,
 			source: source.current.value,

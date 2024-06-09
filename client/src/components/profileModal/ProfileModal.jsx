@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ProfileModal.css";
 import { Modal, useMantineTheme } from "@mantine/core";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../../actions/UserAction";
+import { getUser } from "../../api/UserRequest";
 
 function ProfileModal({
 	modalOpened,
@@ -10,13 +11,19 @@ function ProfileModal({
 	data: initialUserData,
 }) {
 	const theme = useMantineTheme();
-	const [userData, setUserData] = useState(initialUserData);
-	const [profileImage, setProfileImage] = useState(null);
-	const [coverImage, setCoverImage] = useState(null);
+	const [userData, setUserData] = useState({});
+	const [profilePicture, setProfilePicture] = useState(null);
+	const [coverPicture, setCoverPicture] = useState(null);
 	const dispatch = useDispatch();
 	const { user } = useSelector(
 		(state) => state.authReducer.authData
 	);
+
+	useEffect(() => {
+		if (initialUserData) {
+			setUserData(initialUserData);
+		}
+	}, [initialUserData]);
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -29,10 +36,10 @@ function ProfileModal({
 	const handleImageChange = (e) => {
 		const file = e.target.files[0];
 		const name = e.target.name;
-		if (name === "profileImage") {
-			setProfileImage(file);
-		} else if (name === "coverImage") {
-			setCoverImage(file);
+		if (name === "profile_picture") {
+			setProfilePicture(file);
+		} else if (name === "cover_picture") {
+			setCoverPicture(file);
 		}
 	};
 
@@ -40,19 +47,21 @@ function ProfileModal({
 		e.preventDefault();
 
 		const formData = new FormData();
-		if (profileImage) {
-			formData.append("profileImage", profileImage);
+		if (profilePicture) {
+			formData.append("profile_picture", profilePicture);
 		}
-		if (coverImage) {
-			formData.append("coverImage", coverImage);
+		if (coverPicture) {
+			formData.append("cover_picture", coverPicture);
 		}
-		formData.append("firstName", userData.firstName.trim());
-		formData.append("lastName", userData.lastName.trim());
-		formData.append("worksAt", userData.worksAt);
-		formData.append("livesIn", userData.livesIn);
-		formData.append("country", userData.country);
+		formData.append(
+			"first_name",
+			userData.first_name?.trim()
+		);
+		formData.append("last_name", userData.last_name?.trim());
+		formData.append("works_at", userData.works_at?.trim());
+		formData.append("lives_in", userData.lives_in?.trim());
 
-		dispatch(updateUser(user._id, formData));
+		dispatch(updateUser(formData));
 		setModalOpened(false);
 	};
 
@@ -77,8 +86,8 @@ function ProfileModal({
 						type="text"
 						placeholder="First Name"
 						className="infoInput"
-						name="firstName"
-						value={userData.firstName}
+						name="first_name"
+						value={userData.first_name || ""}
 						onChange={handleChange}
 						required
 					/>
@@ -86,19 +95,19 @@ function ProfileModal({
 						type="text"
 						placeholder="Last Name"
 						className="infoInput"
-						name="lastName"
-						value={userData.lastName}
+						name="last_name"
+						value={userData.last_name || ""}
 						onChange={handleChange}
 						required
 					/>
 				</div>
-				<div className="worksAt">
+				<div className="works_at">
 					<input
 						type="text"
 						placeholder="Works At"
 						className="infoInput"
-						name="worksAt"
-						value={userData.worksAt}
+						name="works_at"
+						value={userData.works_at || ""}
 						onChange={handleChange}
 					/>
 				</div>
@@ -107,33 +116,25 @@ function ProfileModal({
 						type="text"
 						placeholder="Lives in"
 						className="infoInput"
-						name="livesIn"
-						value={userData.livesIn}
-						onChange={handleChange}
-					/>
-					<input
-						type="text"
-						placeholder="Country"
-						className="infoInput"
-						name="country"
-						value={userData.country}
+						name="lives_in"
+						value={userData.lives_in || ""}
 						onChange={handleChange}
 					/>
 				</div>
 				<div className="image">
-					<div className="profileImage">
+					<div className="profilePicture">
 						<h5>Profile Image</h5>
 						<input
 							type="file"
-							name="profileImage"
+							name="profile_picture"
 							onChange={handleImageChange}
 						/>
 					</div>
-					<div className="coverImage">
+					<div className="coverPicture">
 						<h5>Cover Image</h5>
 						<input
 							type="file"
-							name="coverImage"
+							name="cover_picture"
 							onChange={handleImageChange}
 						/>
 					</div>

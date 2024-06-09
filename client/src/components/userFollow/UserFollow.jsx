@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import config from "../../../config";
 
 const UserFollow = ({ person }) => {
-	const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
+	const serverPublic = config.VITE_APP_PUBLIC_FOLDER;
 
 	return (
 		<div className="follower">
@@ -11,7 +12,7 @@ const UserFollow = ({ person }) => {
 					src={
 						person.profilePicture
 							? serverPublic + person.profilePicture
-							: serverPublic + "defaultProfile.png"
+							: serverPublic + "default_profile.png"
 					}
 					alt=""
 					className="followerImg"

@@ -18,15 +18,21 @@ const logEvents = async (message, logFileName) => {
 	const logItem = `dateTime: ${dateTime}\tid: ${uuid()}\t${message}\n`;
 
 	try {
-		if (!fs.existsSync(path.join(__dirname, "..", "logs"))) {
-			await fsPromises.mkdir(
-				path.join(__dirname, "..", "logs")
-			);
+		const logsDir = path.join(__dirname, "..", "logs");
+		const logFilePath = path.join(logsDir, logFileName);
+
+		// Create logs directory if it doesn't exist
+		if (!fs.existsSync(logsDir)) {
+			await fsPromises.mkdir(logsDir);
 		}
-		await fsPromises.appendFile(
-			path.join(__dirname, "..", "logs", logFileName),
-			logItem
-		);
+
+		// Create log file if it doesn't exist
+		if (!fs.existsSync(logFilePath)) {
+			await fsPromises.writeFile(logFilePath, "");
+		}
+
+		// Append log item to log file
+		await fsPromises.appendFile(logFilePath, logItem);
 	} catch (error) {
 		console.log(error);
 	}

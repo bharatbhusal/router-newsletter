@@ -18,7 +18,7 @@ const Profile = () => {
 
 	const dispatch = useDispatch();
 	useEffect(() => {
-		dispatch(getMyPosts(user._id));
+		dispatch(getMyPosts());
 	}, [profile]);
 
 	return (

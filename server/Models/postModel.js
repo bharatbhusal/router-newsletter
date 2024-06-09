@@ -1,17 +1,48 @@
 import mongoose from "mongoose";
 
-const postSchema = mongoose.Schema(
+const postSchema = new mongoose.Schema(
 	{
-		userId: { type: String, required: true },
-		headline: { type: String, required: true },
-		source: { type: String, required: true, unique: true },
-		summary: { type: String, required: false },
+		posted_by: {
+			type: mongoose.Schema.Types.ObjectId,
+			ref: "User",
+			required: [true, "Posted By is required"],
+		},
+		headline: {
+			type: String,
+			required: [true, "Headline is required"],
+			trim: true,
+		},
+		source: {
+			type: String,
+			required: [true, "Source is required"],
+			unique: [true, "Source must be unique"],
+			trim: true,
+		},
+		summary: {
+			type: String,
+			trim: true,
+		},
 	},
 	{
 		timestamps: true,
 	}
 );
 
-const postModel = mongoose.model("Posts", postSchema);
+// Add an index to improve query performance on user_id and source
+postSchema.index({ user_id: 1, source: 1 });
 
-export default postModel;
+// Define a virtual for populating user details
+postSchema.virtual("user", {
+	ref: "User",
+	localField: "user_id",
+	foreignField: "_id",
+	justOne: true,
+});
+
+// Ensure virtual fields are serialized
+postSchema.set("toObject", { virtuals: true });
+postSchema.set("toJSON", { virtuals: true });
+
+const PostModel = mongoose.model("Post", postSchema);
+
+export default PostModel;

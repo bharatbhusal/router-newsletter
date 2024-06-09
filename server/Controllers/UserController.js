@@ -1,7 +1,9 @@
-import UserModel from "../Models/userModel.js";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+import UserModel from "../Models/UserModel.js";
 import mongoose from "mongoose";
+import {
+	decodeToken,
+	generateToken,
+} from "../Middleware/authMiddleWare.js";
 
 // Helper function to remove password from user object
 const removePassword = (user) => {
@@ -34,23 +36,8 @@ export const getAllUsers = async (req, res) => {
 	}
 };
 
-// Get all reporters
-export const getAllReporters = async (req, res) => {
-	try {
-		let users = await UserModel.find({
-			isAdmin: true,
-		}).select("-password");
-		res.status(200).json(users);
-	} catch (error) {
-		res.status(500).json({
-			message: "Error retrieving reporters",
-			error: error.message,
-		});
-	}
-};
-
 // Get total users count
-export const countUsers = async (req, res) => {
+export const countAllUsers = async (req, res) => {
 	try {
 		const count = await UserModel.countDocuments();
 		res.status(200).json(count);
@@ -61,12 +48,26 @@ export const countUsers = async (req, res) => {
 		});
 	}
 };
+// Get all admins
+export const getAllAdmins = async (req, res) => {
+	try {
+		const admins = await UserModel.find({
+			is_admin: true,
+		}).select("-password");
+		res.status(200).json(admins);
+	} catch (error) {
+		res.status(500).json({
+			message: "Error retrieving admins",
+			error: error.message,
+		});
+	}
+};
 
 // Get total admins count
 export const countAdmins = async (req, res) => {
 	try {
 		const count = await UserModel.countDocuments({
-			isAdmin: true,
+			is_admin: true,
 		});
 		res.status(200).json(count);
 	} catch (error) {
@@ -76,7 +77,6 @@ export const countAdmins = async (req, res) => {
 		});
 	}
 };
-
 // Get a user by ID
 export const getUser = async (req, res) => {
 	const id = req.params.id;
@@ -89,35 +89,68 @@ export const getUser = async (req, res) => {
 	}
 };
 
-// Update a user
 export const updateUser = async (req, res) => {
-	const id = req.params.id;
-	const { _id, password } = req.body;
-	if (id !== _id) {
-		return res
-			.status(403)
-			.json(
-				"Access Denied! You can only update your own profile"
-			);
-	}
 	try {
-		if (password) {
-			const salt = await bcrypt.genSalt(10);
-			req.body.password = await bcrypt.hash(
-				password.toString(),
-				salt
-			);
+		const {
+			username,
+			email,
+			first_name,
+			last_name,
+			lives_in,
+			works_at,
+			bio,
+		} = req.body;
+		console.log(req.body);
+
+		// Extract user ID from JWT token
+		const token = req.cookies.authToken;
+		if (!token) {
+			return res.status(401).json({ message: "Unauthorized" });
 		}
-		const user = await UserModel.findByIdAndUpdate(
+
+		const { id } = decodeToken(token);
+		if (!id) {
+			return res
+				.status(403)
+				.json({ message: "Invalid token" });
+		}
+
+		// Get filenames of uploaded images from req.files
+		let profileImage = "";
+		let coverImage = "";
+		if (req.files) {
+			if (req.files["profile_picture"]) {
+				profileImage = req.files["profile_picture"]
+					? req.files["profile_picture"][0].filename
+					: null;
+			}
+			if (req.files["cover_picture"]) {
+				coverImage = req.files["cover_picture"]
+					? req.files["cover_picture"][0].filename
+					: null;
+			}
+		}
+
+		// Update user with profileImage and coverImage
+		const updatedUser = await UserModel.findByIdAndUpdate(
 			id,
-			req.body,
+			{
+				username,
+				email,
+				first_name,
+				last_name,
+				lives_in,
+				works_at,
+				bio,
+				profile_picture: profileImage,
+				cover_picture: coverImage,
+			},
 			{ new: true }
 		);
-		const token = jwt.sign(
-			{ email: user.email, id: user._id },
-			process.env.JWT_KEY
-		);
-		res.status(200).json({ user, token });
+
+		res.status(200).json({
+			user: removePassword(updatedUser),
+		});
 	} catch (error) {
 		res.status(500).json({
 			message: "Error updating user",
@@ -143,64 +176,6 @@ export const deleteUser = async (req, res) => {
 	} catch (error) {
 		res.status(500).json({
 			message: "Error deleting user",
-			error: error.message,
-		});
-	}
-};
-
-// Follow a user
-export const followUser = async (req, res) => {
-	const id = req.params.id;
-	const { _id } = req.body;
-	if (_id === id) {
-		return res.status(403).json("Action forbidden");
-	}
-	try {
-		const followUser = await UserModel.findById(id);
-		const followingUser = await UserModel.findById(_id);
-		if (!followUser.followers.includes(_id)) {
-			await followUser.updateOne({
-				$push: { followers: _id },
-			});
-			await followingUser.updateOne({
-				$push: { following: id },
-			});
-			res.status(200).json("User Followed!");
-		} else {
-			res.status(403).json("User is already followed by you");
-		}
-	} catch (error) {
-		res.status(500).json({
-			message: "Error following user",
-			error: error.message,
-		});
-	}
-};
-
-// Unfollow a user
-export const UnFollowUser = async (req, res) => {
-	const id = req.params.id;
-	const { _id } = req.body;
-	if (_id === id) {
-		return res.status(403).json("Action forbidden");
-	}
-	try {
-		const followUser = await UserModel.findById(id);
-		const followingUser = await UserModel.findById(_id);
-		if (followUser.followers.includes(_id)) {
-			await followUser.updateOne({
-				$pull: { followers: _id },
-			});
-			await followingUser.updateOne({
-				$pull: { following: id },
-			});
-			res.status(200).json("User Unfollowed!");
-		} else {
-			res.status(403).json("User is not followed by you");
-		}
-	} catch (error) {
-		res.status(500).json({
-			message: "Error unfollowing user",
 			error: error.message,
 		});
 	}

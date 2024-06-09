@@ -7,7 +7,6 @@ import UploadRoute from "./Routes/UploadRoute.js";
 import root from "./Routes/Root.js";
 import path from "path";
 import cookieParser from "cookie-parser";
-import bodyParser from "body-parser";
 import cors from "cors";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
@@ -21,22 +20,24 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
+
+// Logger middleware
 app.use(requestLogger);
+
+// CORS middleware
 app.use(cors(corsOptions));
-app.use(express.json());
+
+// Body parsing middleware
+app.use(express.json({ limit: "30mb" }));
+app.use(
+	express.urlencoded({ limit: "30mb", extended: true })
+);
+
+// Cookie parser middleware
 app.use(cookieParser());
 
-// Middleware
-app.use(bodyParser.json({ limit: "30mb", extended: true }));
-app.use(
-	bodyParser.urlencoded({ limit: "30mb", extended: true })
-);
-
 // Serve static files from 'public' directory
-app.use(
-	"/",
-	express.static(path.join(__dirname, "Public"))
-);
+app.use(express.static(path.join(__dirname, "Public")));
 
 // Define routes
 app.use("/", root);
@@ -64,6 +65,7 @@ app.all("*", (req, res) => {
 	}
 });
 
+// Error logging middleware
 app.use(errorLogger);
 
 export default app;

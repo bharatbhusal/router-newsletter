@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import EditIcon from "@mui/icons-material/Edit";
 import ProfileModal from "../profileModal/ProfileModal";
+import config from "../../../config";
 
 const ProfileCard = ({ location }) => {
 	const params = useParams();
@@ -11,35 +12,39 @@ const ProfileCard = ({ location }) => {
 	const { user } = useSelector(
 		(state) => state.authReducer.authData
 	);
-	const profileUserId = params.id;
 	const posts = useSelector(
 		(state) => state.postReducer.posts
 	);
-	const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
+	const serverPublic = config.VITE_APP_PUBLIC_FOLDER;
+	const profileUserId = params.id;
+
+	if (!user) {
+		return null; // or a loading spinner, or any placeholder
+	}
 
 	return (
 		<div className="ProfileCard">
 			<div className="ProfileImages">
 				<img
 					src={
-						user.coverPicture
-							? serverPublic + user.coverPicture
-							: serverPublic + "defaultCover.jpg"
+						user.cover_picture
+							? `${serverPublic}${user.cover_picture}`
+							: `${serverPublic}default_cover.png`
 					}
-					alt=""
+					alt="Cover"
 				/>
 				<img
 					src={
-						user.profilePicture
-							? serverPublic + user.profilePicture
-							: serverPublic + "defaultProfile.png"
+						user.profile_picture
+							? `${serverPublic}${user.profile_picture}`
+							: `${serverPublic}default_profile.png`
 					}
-					alt=""
+					alt="Profile"
 				/>
 			</div>
 			<div className="ProfileName">
 				<span>
-					{user.firstName} {user.lastName}
+					{user.first_name} {user.last_name}
 				</span>
 				{user._id === profileUserId && (
 					<div>
@@ -48,7 +53,6 @@ const ProfileCard = ({ location }) => {
 							height="1.2rem"
 							onClick={() => setModalOpened(true)}
 						/>
-
 						<ProfileModal
 							modalOpened={modalOpened}
 							setModalOpened={setModalOpened}
@@ -58,19 +62,21 @@ const ProfileCard = ({ location }) => {
 				)}
 			</div>
 			<div className="details">
-				{user.worksAt ? user.livesIn : "Lives in ..."}
+				{user.lives_in
+					? `Lives in ${user.lives_in}`
+					: "Lives in ..."}
 			</div>
 			<div className="userDetails">
 				<hr />
 				<div>
-					<span>{user.worksAt || "Works At"}</span>
+					<span>{user.works_at || "Works At"}</span>
 					{location === "profilePage" && (
 						<>
 							<div className="vl"></div>
 							<div className="follow">
 								<span>
 									{
-										posts.filter((post) => post?.userId === user._id)
+										posts.filter((post) => post?.user_id === user._id)
 											.length
 									}
 								</span>

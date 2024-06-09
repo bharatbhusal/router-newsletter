@@ -60,9 +60,9 @@ export const getAllUsers = () =>
 	);
 
 // Retrieve all reporters
-export const getAllReporters = () =>
+export const getAdmins = () =>
 	handleAsyncUserAction(
-		UserApi.getAllReporters,
+		UserApi.getAdmins,
 		USER_RETRIEVE_START,
 		USER_RETRIEVE_SUCCESS,
 		USER_RETRIEVE_FAIL

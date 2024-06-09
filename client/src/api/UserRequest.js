@@ -9,8 +9,8 @@ export const getUser = (userId) =>
 			throw error;
 		});
 
-export const updateUser = (id, formData) =>
-	API.put(`/user/${id}`, formData)
+export const updateUser = (formData) =>
+	API.put(`/user`, formData)
 		.then((response) => {
 			return response;
 		})
@@ -27,8 +27,8 @@ export const getAllUsers = () =>
 			throw error;
 		});
 
-export const getAllReporters = () =>
-	API.get("/user/reporter")
+export const getAdmins = () =>
+	API.get("/user/admins")
 		.then((response) => {
 			return response;
 		})

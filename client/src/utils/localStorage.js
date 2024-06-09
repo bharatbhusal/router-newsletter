@@ -1,4 +1,6 @@
 // utils/localStorage.js
+import { useSelector } from "react-redux";
+
 export function saveToLocalStorage(store) {
 	try {
 		const serializedStore = JSON.stringify(store.getState());
