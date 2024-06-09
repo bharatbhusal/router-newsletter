@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 import config from "../../../config";
 
 const UserFollow = ({ person }) => {
@@ -10,8 +9,8 @@ const UserFollow = ({ person }) => {
 			<div>
 				<img
 					src={
-						person.profilePicture
-							? serverPublic + "profile/" + person.profilePicture
+						person.profile_picture
+							? serverPublic + "profile/" + person.profile_picture
 							: serverPublic + "profile/" + "default_profile.png"
 					}
 					alt=""

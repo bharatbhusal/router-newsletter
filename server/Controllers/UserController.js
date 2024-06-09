@@ -4,6 +4,10 @@ import {
 	decodeToken,
 	generateToken,
 } from "../Middleware/authMiddleWare.js";
+import {
+	deleteCoverPicture,
+	deleteProfilePicture,
+} from "../utils/deleteFiles.js";
 
 // Helper function to remove password from user object
 const removePassword = (user) => {
@@ -88,7 +92,6 @@ export const getUser = async (req, res) => {
 		res.status(500).json({ message: error.message });
 	}
 };
-
 export const updateUser = async (req, res) => {
 	try {
 		const {
@@ -113,20 +116,19 @@ export const updateUser = async (req, res) => {
 				.status(403)
 				.json({ message: "Invalid token" });
 		}
+		const user = await UserModel.findById(id);
+		deleteProfilePicture(user.profile_picture);
+		deleteCoverPicture(user.cover_picture);
 
 		// Get filenames of uploaded images from req.files
 		let profileImage = "";
 		let coverImage = "";
 		if (req.files) {
 			if (req.files["profile_picture"]) {
-				profileImage = req.files["profile_picture"]
-					? req.files["profile_picture"][0].filename
-					: null;
+				profileImage = req.files["profile_picture"][0].filename;
 			}
 			if (req.files["cover_picture"]) {
-				coverImage = req.files["cover_picture"]
-					? req.files["cover_picture"][0].filename
-					: null;
+				coverImage = req.files["cover_picture"][0].filename;
 			}
 		}
 
