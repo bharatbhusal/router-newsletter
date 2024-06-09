@@ -1,0 +1,19 @@
+.navBar {
+	background-color: var(--hrColor);
+	border-bottom: 5px solid var(--white);
+	top: 0;
+	display: none;
+
+	justify-content: space-around;
+	align-items: center;
+	font-weight: 700;
+	height: 60px;
+	border-radius: 1rem;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.navBar {
+		display: flex;
+	}
+}

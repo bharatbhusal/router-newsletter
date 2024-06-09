@@ -1,0 +1,31 @@
+.NewsHistory {
+	padding: 1rem;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.NewsHistory h3 {
+	margin-bottom: 1rem;
+}
+
+.NewsHistory div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem;
+	margin: 0.5rem 0;
+	background-color: var(--hrColor);
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.NewsHistory div:hover {
+	background-color: #e0e0e0;
+}
+
+.count {
+	font-weight: bold;
+	color: #333;
+}

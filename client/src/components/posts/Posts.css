@@ -1,0 +1,26 @@
+.Posts {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	height: 95vh;
+	overflow: auto;
+	background: var(--hrColor);
+	padding: 0.5rem;
+	border-radius: 1rem;
+	border: 5px solid var(--hrColor);
+}
+
+.noPostsFetching {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	font-size: 1.5rem;
+	color: var(--primary);
+}
+
+@media screen and (max-width: 768px) {
+	.Posts {
+		height: 87vh;
+	}
+}
