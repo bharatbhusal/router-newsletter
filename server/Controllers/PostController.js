@@ -188,7 +188,7 @@ export const createPost = async (req, res) => {
 
 // Update a post
 export const updatePost = async (req, res) => {
-	const { id } = req.params;
+	const { postId } = req.params;
 	const { headline, source, summary } = req.body;
 	const token = req.cookies.authToken;
 
@@ -200,7 +200,7 @@ export const updatePost = async (req, res) => {
 				.json({ message: "Invalid token" });
 		}
 
-		const post = await PostModel.findById(id);
+		const post = await PostModel.findById(postId);
 		if (!post) {
 			return res
 				.status(404)
@@ -214,7 +214,7 @@ export const updatePost = async (req, res) => {
 		}
 
 		const updatedPost = await PostModel.findByIdAndUpdate(
-			id,
+			postId,
 			{ $set: { headline, source, summary } },
 			{ new: true }
 		);
@@ -229,7 +229,7 @@ export const updatePost = async (req, res) => {
 
 // Delete a post
 export const deletePost = async (req, res) => {
-	const { id } = req.params;
+	const { postId } = req.params;
 	const token = req.cookies.authToken;
 
 	try {
@@ -239,8 +239,7 @@ export const deletePost = async (req, res) => {
 				.status(403)
 				.json({ message: "Invalid token" });
 		}
-
-		const post = await PostModel.findById(id);
+		const post = await PostModel.findById(postId);
 		if (!post) {
 			return res
 				.status(404)
@@ -253,7 +252,7 @@ export const deletePost = async (req, res) => {
 				.json({ message: "Action forbidden" });
 		}
 
-		await PostModel.findByIdAndDelete(id);
+		await PostModel.findByIdAndDelete(postId);
 		res
 			.status(200)
 			.json({ message: "Post deleted successfully" });

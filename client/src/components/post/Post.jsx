@@ -103,7 +103,7 @@ const Post = ({ data }) => {
 					</button>
 				</form>
 			</Modal>
-			{user._id === data.userId && (
+			{user._id === data.posted_by && (
 				<div className="action-btn">
 					<div className="edit" onClick={handleEdit}>
 						<FaPencil />

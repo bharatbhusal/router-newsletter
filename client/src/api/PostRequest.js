@@ -132,8 +132,8 @@ export const updatePost = (postId, updatedData) =>
 		});
 
 // Delete a post
-export const deletePost = (postId, body) =>
-	API.delete(`/post/${postId}`, { data: body })
+export const deletePost = (postId) =>
+	API.delete(`/post/${postId}`)
 		.then((response) => {
 			return response;
 		})

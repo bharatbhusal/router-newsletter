@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ProfileCard.css";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import EditIcon from "@mui/icons-material/Edit";
 import ProfileModal from "../profileModal/ProfileModal";
 import config from "../../../config";
+import { useDispatch } from "react-redux";
+import { getMyPosts } from "../../actions/PostAction";
 
 const ProfileCard = ({ location }) => {
 	const params = useParams();
+	const dispatch = useDispatch();
 	const [modalOpened, setModalOpened] = useState(false);
 	const { user } = useSelector(
 		(state) => state.authReducer.authData
@@ -18,6 +21,9 @@ const ProfileCard = ({ location }) => {
 	const serverPublic = config.VITE_APP_PUBLIC_FOLDER;
 	const profileUserId = params.id;
 
+	useEffect(() => {
+		dispatch(getMyPosts());
+	}, []);
 	if (!user) {
 		return null; // or a loading spinner, or any placeholder
 	}

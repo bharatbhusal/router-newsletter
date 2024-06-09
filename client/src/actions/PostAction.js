@@ -46,7 +46,7 @@ const handleAsyncPostAction =
 
 export const getMyPosts = (id) =>
 	handleAsyncPostAction(
-		() => PostApi.getMyPosts(id),
+		() => PostApi.getMyPosts(),
 		POST_RETRIEVE_START,
 		POST_RETRIEVE_SUCCESS,
 		POST_RETRIEVE_FAIL
@@ -105,7 +105,7 @@ export const updatePost = (postId, updatedData) =>
 // Delete post
 export const deletePost = (postId, userId) =>
 	handleAsyncPostAction(
-		() => PostApi.deletePost(postId, { userId }),
+		() => PostApi.deletePost(postId),
 		POST_DELETE_START,
 		POST_DELETE_SUCCESS,
 		POST_DELETE_FAIL
