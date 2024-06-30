@@ -2,7 +2,7 @@
 
 import React from "react";
 import Button from "./Button";
-
+import "../../../variables.css";
 export default {
 	title: "Components/Button", // Title of the story category in Storybook UI
 	component: Button, // Component being documented
@@ -55,13 +55,6 @@ export const Warning = Template.bind({});
 Warning.args = {
 	type: "warning",
 	label: "Warning Button",
-};
-
-// Hover Button
-export const Hover = Template.bind({});
-Hover.args = {
-	type: "hover",
-	label: "Hover Button",
 };
 
 // Disabled Button

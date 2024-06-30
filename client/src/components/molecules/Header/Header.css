@@ -1,0 +1,25 @@
+/* Header.css */
+
+@import "../../../variables.css"; /* Import variables.css for access to variables */
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(
+		--spacing-md
+	); /* Use spacing variable for consistent padding */
+	background-color: #f0f0f0;
+	border-bottom: 1px solid #ccc;
+}
+
+.logo-container {
+	width: 5rem; /* Adjust width as needed */
+}
+
+.nav {
+	display: flex;
+	gap: var(
+		--spacing-md
+	); /* Use spacing variable for consistent gap between items */
+}

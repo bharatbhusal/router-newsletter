@@ -9,7 +9,7 @@ const Button = ({
 	type = "primary",
 	disabled = false,
 }) => {
-	const buttonClass = `button button-${type}`;
+	const buttonClass = `button button-${type} `;
 
 	return (
 		<button

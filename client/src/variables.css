@@ -1,0 +1,73 @@
+:root {
+	/* Colors */
+	--primary-color: #007bff;
+	--secondary-color: #6c757d;
+	--success-color: #28a745;
+	--danger-color: #dc3545;
+	--warning-color: #ffc107;
+	--info-color: #17a2b8;
+	--light-color: #f8f9fa;
+	--dark-color: #343a40;
+
+	/* Typography */
+	--font-family: "Roboto", sans-serif;
+	--font-size-base: 16px;
+	--line-height-base: 1.5;
+
+	/* Spacing */
+	--spacing-xs: 4px;
+	--spacing-sm: 8px;
+	--spacing-md: 16px;
+	--spacing-lg: 24px;
+	--spacing-xl: 32px;
+
+	/* Breakpoints */
+	--breakpoint-xs: 0; /* Extra small devices (phones) */
+	--breakpoint-sm: 576px; /* Small devices (landscape phones) */
+	--breakpoint-md: 768px; /* Medium devices (tablets) */
+	--breakpoint-lg: 992px; /* Large devices (desktops) */
+	--breakpoint-xl: 1200px; /* Extra large devices (large desktops) */
+
+	/* Z-index */
+	--z-index-1: 100;
+	--z-index-2: 200;
+	--z-index-3: 300;
+	--z-index-4: 400;
+	--z-index-5: 500;
+
+	/* Shadows */
+	--shadow-sm: 0 0 5px rgba(0, 0, 0, 0.1);
+	--shadow-md: 0 0 8px rgba(0, 0, 0, 0.1);
+	--shadow-lg: 0 0 10px rgba(0, 0, 0, 0.1);
+	--shadow-xl: 0 0 15px rgba(0, 0, 0, 0.1);
+	--shadow-2xl: 0 0 20px rgba(0, 0, 0, 0.1);
+	--shadow-inner: inset 0 0 6px rgba(0, 0, 0, 0.1);
+	--shadow-none: none;
+
+	/* Border radius */
+	--border-radius: 5px;
+
+	/* Transitions */
+	--transition: all 0.3s ease;
+
+	/* Widths */
+	--width-xs: 320px;
+	--width-sm: 480px;
+	--width-md: 768px;
+	--width-lg: 992px;
+	--width-xl: 1200px;
+
+	/* Heights */
+	--height-xs: 320px;
+	--height-sm: 480px;
+	--height-md: 768px;
+	--height-lg: 992px;
+	--height-xl: 1200px;
+
+	/* Opacity */
+	--opacity-0: 0;
+	--opacity-25: 0.25;
+	--opacity-50: 0.5;
+	--opacity-75: 0.75;
+	--opacity-100: 1;
+}

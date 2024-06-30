@@ -2,6 +2,7 @@
 
 import React from "react";
 import Text from "./Text";
+import "../../../variables.css";
 
 export default {
 	title: "Components/Text", // Title of the story category in Storybook UI

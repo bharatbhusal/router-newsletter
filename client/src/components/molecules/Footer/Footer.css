@@ -1,0 +1,17 @@
+/* Footer.css */
+
+@import "../../../variables.css"; /* Import variables.css for access to variables */
+
+.footer {
+	padding: var(--spacing-md);
+	background-color: var(--light-color);
+	border-top: 1px solid #ccc;
+	text-align: center;
+}
+
+.footer-content {
+	max-width: 1200px; /* Adjust max-width as needed */
+	margin: 0 auto; /* Center align content */
+	color: var(--secondary-color);
+	font-size: 14px;
+}

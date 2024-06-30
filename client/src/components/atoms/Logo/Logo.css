@@ -1,10 +1,13 @@
 /* Logo.css */
 
+@import "../../../variables.css"; /* Import variables.css for access to variables */
+
 .logo {
-	width: 150px; /* Adjust width as needed */
-	height: 150px; /* Square container by default */
 	overflow: hidden; /* Ensure the image stays within the container */
-	border-radius: 8px; /* Rounded corners for square logo */
+	border-radius: var(
+		--border-radius
+	); /* Rounded corners for square logo */
+	aspect-ratio: 1/1; /* Square shape for square logo */
 }
 
 .logo.circular {

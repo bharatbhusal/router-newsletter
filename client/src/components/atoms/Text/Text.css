@@ -1,21 +1,31 @@
 /* Text.css */
 
+@import "../../../variables.css"; /* Import variables.css for access to variables */
+
 .text {
-	font-family: Arial, sans-serif;
-	line-height: 1.5;
-	margin-bottom: 10px;
+	font-family: var(
+		--font-family
+	); /* Use defined font family variable */
+	line-height: var(
+		--line-height-base
+	); /* Use defined line height variable */
+	margin-bottom: var(
+		--spacing-md
+	); /* Use spacing variable for consistent margin */
 }
 
 .body {
-	font-size: 16px;
+	font-size: var(
+		--font-size-base
+	); /* Use base font size variable */
 }
 
 .heading {
-	font-size: 24px;
+	font-size: 24px; /* Specific size for headings */
 	font-weight: bold;
 }
 
 .subtext {
-	font-size: 14px;
+	font-size: 14px; /* Specific size for subtext */
 	color: #666;
 }

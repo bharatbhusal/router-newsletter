@@ -2,6 +2,7 @@
 
 import React from "react";
 import Logo from "./Logo";
+import "../../../variables.css";
 
 export default {
 	title: "Components/Logo", // Title of the story category in Storybook UI
