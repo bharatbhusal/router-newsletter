@@ -4,7 +4,7 @@ import React from "react";
 import Input from "./InputBox";
 
 export default {
-	title: "Components/InputBox", // Title of the story category in Storybook UI
+	title: "Components/Atoms/InputBox", // Title of the story category in Storybook UI
 	component: Input, // Component being documented
 	argTypes: {
 		type: {

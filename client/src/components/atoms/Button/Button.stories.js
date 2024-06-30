@@ -4,7 +4,7 @@ import React from "react";
 import Button from "./Button";
 import "../../../variables.css";
 export default {
-	title: "Components/Button", // Title of the story category in Storybook UI
+	title: "Components/Atoms/Button", // Title of the story category in Storybook UI
 	component: Button, // Component being documented
 	argTypes: {
 		onClick: { action: "clicked" }, // Mock action for onClick event

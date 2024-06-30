@@ -1,24 +1,20 @@
-// Card.js
-
+// Card.jsx
 import React from "react";
+import PropTypes from "prop-types";
 import "./Card.css";
 
-const Card = ({ title, content, imageUrl }) => {
+const Card = ({ title, description }) => {
 	return (
 		<div className="card">
-			{imageUrl && (
-				<img
-					className="card-image"
-					src={imageUrl}
-					alt="Card Image"
-				/>
-			)}
-			<div className="card-content">
-				<h2 className="card-title">{title}</h2>
-				<p className="card-text">{content}</p>
-			</div>
+			<h2 className="card-title">{title}</h2>
+			<p className="card-description">{description}</p>
 		</div>
 	);
+};
+
+Card.propTypes = {
+	title: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired,
 };
 
 export default Card;

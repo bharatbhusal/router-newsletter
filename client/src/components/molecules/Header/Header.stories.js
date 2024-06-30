@@ -5,7 +5,7 @@ import Header from "./Header";
 import "../../../variables.css";
 
 export default {
-	title: "Components/Header", // Title of the story category in Storybook UI
+	title: "Components/molecules/Header", // Title of the story category in Storybook UI
 	component: Header, // Component being documented
 };
 

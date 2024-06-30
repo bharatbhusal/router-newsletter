@@ -5,7 +5,7 @@ import Logo from "./Logo";
 import "../../../variables.css";
 
 export default {
-	title: "Components/Logo", // Title of the story category in Storybook UI
+	title: "Components/Atoms/Logo", // Title of the story category in Storybook UI
 	component: Logo, // Component being documented
 	argTypes: {
 		type: {

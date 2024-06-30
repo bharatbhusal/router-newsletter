@@ -5,7 +5,7 @@ import Text from "./Text";
 import "../../../variables.css";
 
 export default {
-	title: "Components/Text", // Title of the story category in Storybook UI
+	title: "Components/Atoms/Text", // Title of the story category in Storybook UI
 	component: Text, // Component being documented
 	argTypes: {
 		variant: {
