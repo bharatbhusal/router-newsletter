@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import LeftSide from "../../components/leftSide/LeftSide";
 import Posts from "../../components/posts/Posts";
-import NavBar from "../../components/navBar/NavBar";
+import { getThisMonthPosts } from "../../api/PostRequest";
 
 const Home = () => {
+	const [posts, setPosts] = useState([]);
+	useEffect(() => {
+		setPosts(getThisMonthPosts());
+	}, []);
+	console.log(posts);
 	return (
 		<>
-			<NavBar />
 			<div className="Home">
 				<LeftSide />
-				<Posts />
+				<Posts posts={posts} />
 			</div>
 		</>
 	);

@@ -15,8 +15,8 @@ const ProfileCard = ({ location }) => {
 	const { user } = useSelector(
 		(state) => state.authReducer.authData
 	);
-	const posts = useSelector(
-		(state) => state.postReducer.posts
+	const { posts } = useSelector(
+		(state) => state.postReducer
 	);
 	const serverPublic = config.VITE_APP_PUBLIC_FOLDER;
 	const profileUserId = params.id;
@@ -82,11 +82,12 @@ const ProfileCard = ({ location }) => {
 							<div className="follow">
 								<span>
 									{
-										posts.filter((post) => post?.user_id === user._id)
-											.length
+										posts.filter(
+											(post) => post?.posted_by === user._id
+										).length
 									}
+									{" Posts"}
 								</span>
-								<span>Posts</span>
 							</div>
 						</>
 					)}

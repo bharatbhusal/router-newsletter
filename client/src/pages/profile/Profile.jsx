@@ -7,7 +7,7 @@ import MyPosts from "../../components/myPosts/myPosts";
 const Profile = () => {
 	return (
 		<div className="Profile">
-			<LeftSide />
+			{/* <LeftSide /> */}
 			<div className="ProfilePage-Center">
 				<ProfileCard location="profilePage" />
 				<MyPosts />

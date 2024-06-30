@@ -5,8 +5,9 @@
 	gap: 1rem;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
 	.Home {
+		top: 2.5rem;
 		grid-template-columns: auto;
 	}
-}
+} */

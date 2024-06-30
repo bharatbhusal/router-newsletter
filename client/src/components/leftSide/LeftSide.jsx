@@ -11,6 +11,7 @@ import { FaHome } from "react-icons/fa";
 import config from "../../../config";
 
 import NewsHistory from "../newsHistory/NewsHistory";
+import NavBar from "../navBar/NavBar";
 
 const LeftSide = () => {
 	const location = useLocation();

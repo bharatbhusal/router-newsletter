@@ -5,10 +5,12 @@ import { getMyPosts } from "../../api/PostRequest";
 
 const MyPosts = () => {
 	const [posts, setPosts] = useState([]);
+	const [postEdited, setPostEdited] = useState(false);
 
 	useEffect(() => {
 		const fetchPosts = async () => {
 			try {
+				console.log("Fetching posts");
 				const fetchedPosts = await getMyPosts();
 				setPosts(fetchedPosts);
 			} catch (error) {
@@ -17,7 +19,11 @@ const MyPosts = () => {
 		};
 
 		fetchPosts();
-	}, []);
+	}, [postEdited]);
+
+	const handlePostEdited = () => {
+		setPostEdited((prev) => !prev); // Toggle the state to trigger re-fetch
+	};
 
 	return (
 		<div className="myPosts">
@@ -26,7 +32,13 @@ const MyPosts = () => {
 			) : (
 				posts.map(
 					(post, index) =>
-						post && <Post data={post} key={index} />
+						post && (
+							<Post
+								data={post}
+								key={index}
+								onPostEdited={handlePostEdited}
+							/>
+						)
 				)
 			)}
 		</div>

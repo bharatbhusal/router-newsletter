@@ -10,8 +10,9 @@ import {
 	deletePost,
 	getThisMonthPosts,
 } from "../../actions/PostAction";
+import { getMyPosts } from "../../api/PostRequest";
 
-const Post = ({ data }) => {
+const Post = ({ data, onPostEdited }) => {
 	const headline = useRef();
 	const summary = useRef();
 	const source = useRef();
@@ -50,8 +51,9 @@ const Post = ({ data }) => {
 			source: source.current.value,
 		};
 		await dispatch(updatePost(data._id, newPost));
-		dispatch(getThisMonthPosts());
+		dispatch(getMyPosts());
 		reset();
+		onPostEdited(true);
 		setModalOpened(false);
 	};
 

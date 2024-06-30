@@ -14,10 +14,10 @@ import {
 // Handler function
 const handleAsyncAuthAction =
 	(
-		apiFunction,
-		startActionType,
-		successActionType,
-		failActionType
+		apiFunction, //LOGIN
+		startActionType, //AUTH_START
+		successActionType, //AUTH_SUCCESS
+		failActionType //AUTH_FAIL
 	) =>
 	async (dispatch) => {
 		dispatch({ type: startActionType });

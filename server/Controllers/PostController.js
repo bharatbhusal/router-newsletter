@@ -1,4 +1,5 @@
 import PostModel from "../Models/PostModel.js";
+import UserModel from "../Models/UserModel.js";
 import { decodeToken } from "../Middleware/authMiddleWare.js";
 
 // Constants and Helper Functions
@@ -158,7 +159,6 @@ export const myPosts = async (req, res) => {
 		});
 	}
 };
-
 // Create new post
 export const createPost = async (req, res) => {
 	const { headline, source, summary } = req.body;
@@ -170,6 +170,14 @@ export const createPost = async (req, res) => {
 			return res
 				.status(403)
 				.json({ message: "Invalid token" });
+		}
+
+		// Check if user is admin
+		const user = await UserModel.findById(id);
+		if (!user || !user.is_admin) {
+			return res
+				.status(403)
+				.json({ message: "Action forbidden" });
 		}
 
 		const newPost = new PostModel({
