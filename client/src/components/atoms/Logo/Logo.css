@@ -1,0 +1,18 @@
+/* Logo.css */
+
+.logo {
+	width: 150px; /* Adjust width as needed */
+	height: 150px; /* Square container by default */
+	overflow: hidden; /* Ensure the image stays within the container */
+	border-radius: 8px; /* Rounded corners for square logo */
+}
+
+.logo.circular {
+	border-radius: 50%; /* Circular shape for circular logo */
+}
+
+.logo-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Ensure the logo fills the container */
+}

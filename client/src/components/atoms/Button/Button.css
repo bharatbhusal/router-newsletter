@@ -20,6 +20,22 @@
 	color: #fff;
 }
 
-.button:hover {
+.button-danger {
+	background-color: #dc3545;
+	color: #fff;
+}
+
+.button-warning {
+	background-color: #ffc107;
+	color: #000;
+}
+
+.button-hover:hover {
 	background-color: #0056b3;
+}
+
+.button-disabled {
+	background-color: #e9ecef;
+	color: #6c757d;
+	cursor: not-allowed;
 }

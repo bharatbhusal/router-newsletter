@@ -1,0 +1,10 @@
+/* TableCell.css */
+
+.table-cell {
+	padding: 8px;
+	border: 1px solid #ddd;
+}
+
+.table-cell.numeric {
+	text-align: right;
+}

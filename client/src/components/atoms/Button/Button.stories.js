@@ -8,8 +8,21 @@ export default {
 	component: Button, // Component being documented
 	argTypes: {
 		onClick: { action: "clicked" }, // Mock action for onClick event
-		primary: { control: "boolean" }, // Control for primary prop
+		type: {
+			control: {
+				type: "select",
+				options: [
+					"primary",
+					"secondary",
+					"danger",
+					"warning",
+					"hover",
+					"disabled",
+				],
+			},
+		},
 		label: { control: "text" }, // Control for label prop
+		disabled: { control: "boolean" }, // Control for disabled prop
 	},
 };
 
@@ -19,13 +32,42 @@ const Template = (args) => <Button {...args} />;
 // Primary Button
 export const Primary = Template.bind({});
 Primary.args = {
-	primary: true,
+	type: "primary",
 	label: "Primary Button",
 };
 
 // Secondary Button
 export const Secondary = Template.bind({});
 Secondary.args = {
-	primary: false,
+	type: "secondary",
 	label: "Secondary Button",
+};
+
+// Danger Button
+export const Danger = Template.bind({});
+Danger.args = {
+	type: "danger",
+	label: "Danger Button",
+};
+
+// Warning Button
+export const Warning = Template.bind({});
+Warning.args = {
+	type: "warning",
+	label: "Warning Button",
+};
+
+// Hover Button
+export const Hover = Template.bind({});
+Hover.args = {
+	type: "hover",
+	label: "Hover Button",
+};
+
+// Disabled Button
+export const Disabled = Template.bind({});
+Disabled.args = {
+	type: "disabled",
+	label: "Disabled Button",
+	disabled: true,
 };

@@ -1,0 +1,20 @@
+/* Input.css */
+
+.input {
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ced4da;
+	border-radius: 4px;
+	outline: none;
+	transition: border-color 0.3s ease;
+}
+
+.input:focus {
+	border-color: #007bff;
+}
+
+.input-disabled {
+	background-color: #e9ecef;
+	color: #6c757d;
+	cursor: not-allowed;
+}
