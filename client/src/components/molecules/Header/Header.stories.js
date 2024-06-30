@@ -14,3 +14,4 @@ const Template = (args) => <Header {...args} />;
 
 // Default Header
 export const Default = Template.bind({});
+Default.args = {};

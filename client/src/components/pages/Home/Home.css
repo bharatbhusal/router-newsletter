@@ -1,0 +1,23 @@
+/* Home.css */
+.home-page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.home-page-header {
+	background-color: var(--light-color);
+	padding: var(--spacing-md);
+	border-bottom: 1px solid var(--secondary-color);
+}
+
+.home-page-main {
+	flex-grow: 1;
+	padding: var(--spacing-lg);
+}
+
+.home-page-footer {
+	background-color: var(--light-color);
+	padding: var(--spacing-md);
+	border-top: 1px solid var(--secondary-color);
+}

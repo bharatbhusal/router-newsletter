@@ -1,0 +1,22 @@
+.home-template {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.home-template-header {
+	background-color: var(--light-color);
+	padding: var(--spacing-md);
+	border-bottom: 1px solid var(--secondary-color);
+}
+
+.home-template-main {
+	flex-grow: 1;
+	padding: var(--spacing-lg);
+}
+
+.home-template-footer {
+	background-color: var(--light-color);
+	padding: var(--spacing-md);
+	border-top: 1px solid var(--secondary-color);
+}
