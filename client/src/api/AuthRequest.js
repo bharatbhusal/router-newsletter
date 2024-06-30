@@ -1,4 +1,4 @@
-import API from "./AxiosConfig";
+import API from "./axiosConfig";
 
 // API function for logging in
 export const logIn = (formData) =>

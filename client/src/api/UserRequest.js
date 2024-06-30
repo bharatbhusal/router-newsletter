@@ -1,4 +1,4 @@
-import API from "./AxiosConfig";
+import API from "./axiosConfig";
 
 export const getUser = (userId) =>
 	API.get(`/user/${userId}`)

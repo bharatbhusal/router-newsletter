@@ -1,5 +1,5 @@
 import axios from "axios";
-import config from "../../config";
+import config from "../config";
 
 const API = axios.create({
 	baseURL: config.VITE_APP_BACKEND_URL,

@@ -1,5 +1,5 @@
 // AuthRequest.js
-import API from "./AxiosConfig";
+import API from "./axiosConfig";
 
 // Count all posts
 export const countAllPosts = () =>

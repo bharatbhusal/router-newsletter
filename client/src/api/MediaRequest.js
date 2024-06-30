@@ -1,4 +1,4 @@
-import API from "./AxiosConfig";
+import API from "./axiosConfig";
 export const uploadMedia = (formData) =>
 	API.post("/media/upload", formData)
 		.then((response) => {
